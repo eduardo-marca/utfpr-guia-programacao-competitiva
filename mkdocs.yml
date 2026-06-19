@@ -43,4 +43,8 @@ nav:
 
   - Introdução:
     - Tests: tests/test.md
-    - O que é Programação Competitiva: getting-started/what-is-cp.md
+    - O que é Programação Competitiva: introduction/what-is-cp.md
+
+  - C++:
+    - Básico do C++: cpp/basics.md
+    - Estruturas básicas: cpp/basic-structures.md
