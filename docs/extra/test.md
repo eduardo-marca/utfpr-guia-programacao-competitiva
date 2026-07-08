@@ -1,7 +1,7 @@
 # O que o Markdown básico permite
 [Introdução MkDocs](https://www.mkdocs.org/getting-started/)
 
-[Guia do Úsiario MkDocs](https://www.mkdocs.org/user-guide/)
+[Guia do Usuário MkDocs](https://www.mkdocs.org/user-guide/)
 
 ---
 ## Títulos
