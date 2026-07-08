@@ -7,7 +7,7 @@ Ele é um algoritmo de busca que opera em um espaço de busca ordenado (por exem
 !!! note
     Reforçando, esse algoritmo só funciona se o espaço de busca for ordenado (ou monótono), muitas vezes sendo possível utilizar o algoritmo de dois ponteiros também.
 
-??? example
+??? example "Exemplo"
     Por exemplo, em um vetor ordenado `{1, 3, 4, 6, 7, 8, 11}` buscando-se o valor 7, primeiro verifica-se o valor central do vetor: 6. Se esse fosse o valor alvo poderiamos para aqui, mas podemos perceber que o valor alvo é maior do que esse valor central, portando ele deve estar a direita dele, então reduzimos a nossa busca ao vetor `{7, 8, 9}` (na prática não é necessário realmente contruir um novo vetor, apenas limitar o espaço de busca). Depois verificamos o valor central desse novo vetor: 8. Como o valor alvo 7 é menor do que 8 olhamos para a esquerda dele, chegando no vetor `{7}`. Por fim, o valor central (e único valor) desse vetor é o nosso valor alvo, portando achamos o valor procurado. Se o nosso espaço de busca se tornar vazio em algum momento, então nosso valor alvo não está no espaço de busca.
 
 !!! tip
