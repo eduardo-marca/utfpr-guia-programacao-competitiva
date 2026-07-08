@@ -54,3 +54,4 @@ nav:
 
   - Algoritmos:
     - Busca Binária: algorithms/binary-search.md
+    - Programação Dinâmica: algorithms/dynamic-programming.md
