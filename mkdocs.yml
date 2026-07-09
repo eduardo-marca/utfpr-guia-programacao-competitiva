@@ -6,6 +6,7 @@ repo_name: utfpr-guia-programacao-competitiva
 theme:
   name: material
   logo: assets/logo.svg
+  language: pt-BR
   features:
     - navigation.sections
     - navigation.expand
