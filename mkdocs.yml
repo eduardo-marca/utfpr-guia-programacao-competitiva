@@ -1,11 +1,20 @@
 site_name: Guia de Programação Competitiva UTFPR
 
+repo_url: https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva
+repo_name: utfpr-guia-programacao-competitiva
+
 theme:
   name: material
   features:
     - navigation.sections
     - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
     - content.code.copy
+  icon:
+    repo: fontawesome/brands/git-alt
 
 extra:
   generator: false
@@ -42,17 +51,32 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
+    - introduction/what-is-cp.md
+    - Guia do Mkdocs: extra/test.md
 
-  - Introdução:
-    - Tests: extra/test.md
-    - O que é Programação Competitiva: introduction/what-is-cp.md
-    - Trilha de Aprendizagem: introduction/learning-path.md
+  - Trilha de Aprendizagem: introduction/learning-path.md
 
   - C++:
     - Básico do C++: cpp/basics.md
     - STL: cpp/stl.md
+  
+  - Algoritmos Básicos:
+    - Busca Binária: algorithms/basic-algorithms/binary-search.md
+    - Programação Dinâmica: algorithms/paradigms/dynamic-programming.md
 
-  - Algoritmos:
-    - Busca Binária: algorithms/binary-search.md
-    - Programação Dinâmica: algorithms/dynamic-programming.md
+  - Paradigmas:
+    - Busca Completa: algorithms/paradigms/complete-search.md
+    - Algoritmos Gulosos: algorithms/paradigms/greedy.md
+    - Programação Dinâmica: algorithms/paradigms/dynamic-programming.md
+
+  - Grafos:
+    - DFS: algorithms/graphs/dfs.md
+    - BFS: algorithms/graphs/bfs.md
+
+  - Strings:
+    - KMP: algorithms/string/kmp.md
+
+  - Matemática:
+    - Combinatória: algorithms/math/combinatorics.md

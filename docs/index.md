@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Bem vindo ao Guia de Programação Competitiva UTFPR!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Esse guia tem como objetivo fornecer uma referência para os alunos de programação competitiva do UTFPR sobre os conceitos básicos de programação competitiva, incluindo o básico de C++, paradigmas de programação, principais algoritmos e técnicas de programação.
 
-## Commands
+## Como Usar Esse Guia
+Esse guia é separado em diversas páginas. No topo você encontra os principais assuntos de programação competitiva separados por tópicos. Isso é útil se você estiver interessado em estudar um tópico específico, como C++, grafos ou algum algoritmo.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Você pode começar pela [Introdução à Programação Competitiva](introduction/what-is-cp.md)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Caso queira estudar todos os tópicos em uma ordem diferente, existe também a página [Trilha de Aprendizagem](introduction/learning-path.md) com os assuntos separados por níveis de dificuldade, em uma ordem recomendada para o aprendizado.
