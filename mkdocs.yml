@@ -18,6 +18,19 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
 
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Trocar para modo escuro
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Trocar para modo claro
+
 extra:
   generator: false
 
