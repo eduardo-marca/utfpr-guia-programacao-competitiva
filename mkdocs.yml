@@ -54,7 +54,7 @@ nav:
   - Home:
     - index.md
     - introduction/what-is-cp.md
-    - Guia do Mkdocs: extra/test.md
+    - Guia do Mkdocs: extra/mkdocs-guide.md
 
   - Trilha de Aprendizagem: introduction/learning-path.md
 

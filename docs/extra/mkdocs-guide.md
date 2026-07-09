@@ -1,7 +1,11 @@
-# O que o Markdown básico permite
-[Introdução MkDocs](https://www.mkdocs.org/getting-started/)
+# O que o MkDocs e Material permitem
 
-[Guia do Usuário MkDocs](https://www.mkdocs.org/user-guide/)
+Esta página tem como objetivo ensinar o básico do que o MkDocs e Material permitem fazer.
+
+## Referências
+- [Introdução MkDocs](https://www.mkdocs.org/getting-started/)
+- [Guia do Usuário MkDocs](https://www.mkdocs.org/user-guide/)
+- [Tema Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 
 ---
 ## Títulos
