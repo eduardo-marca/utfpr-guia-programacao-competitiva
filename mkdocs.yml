@@ -47,6 +47,7 @@ nav:
   - Introdução:
     - Tests: extra/test.md
     - O que é Programação Competitiva: introduction/what-is-cp.md
+    - Trilha de Aprendizagem: introduction/learning-path.md
 
   - C++:
     - Básico do C++: cpp/basics.md
