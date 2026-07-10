@@ -92,7 +92,8 @@ nav:
     - KMP: algorithms/string/kmp.md
 
   - Matemática:
-    - Combinatória: algorithms/math/combinatorics.md
+    - algorithms/math/combinatorics.md
+    - algorithms/math/number_theory.md
 
   - Como Contribuir:
     - contribute/index.md
