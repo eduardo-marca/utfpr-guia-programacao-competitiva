@@ -1,6 +1,6 @@
 # Básico de C++
 
-C++ é a linguagem de programação mais utilizada em programação competitiva atualmente, seguida de linguagem como Python, Java, o próprio C, entre outras.
+C++ é a linguagem de programação mais utilizada em programação competitiva atualmente, seguida de linguagens como Python, Java, o próprio C, entre outras.
 
 Ela tem muitas semelhanças com a linguagem C, mas possui muitos recursos extras.
 

@@ -1,4 +1,4 @@
-# Estruturas Básicas
+# STL
 
 A biblioteca padrão do C++ (STL) oferece uma série de estruturas de dados e funções úteis para facilitar a implementação de algoritmos em programação competitiva. A seguir, apresentamos algumas das mais comuns e suas principais características.
 

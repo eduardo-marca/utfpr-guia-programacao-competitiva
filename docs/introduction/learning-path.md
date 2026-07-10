@@ -1,5 +1,10 @@
 # Trilha de Aprendizagem
 
+Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se aprender programação competitiva.
+
+!!! warning "Aviso"
+    Essa trilha ainda está em desenvolvimento.
+
 ## Módulo 0 - Introdução
 
 ## Módulo 1 - C++

@@ -31,7 +31,6 @@ Os principais sites de prática para programação competitiva incluem:
 - [Codeforces](https://codeforces.com/) (Principal plataforma de programação competitiva do mundo).
 - [AtCoder](https://atcoder.jp/) (Principal plataforma de competições para iniciantes).
 - [LeetCode](https://leetcode.com/) (Principal plataforma de entrevistas técnicas, mas também tem competições regulares).
-- [HackerRank](https://www.hackerrank.com/)
 - [CSES](https://cses.fi/)
 - [CodeChef](https://www.codechef.com/)
 - [USACO](http://www.usaco.org/)
