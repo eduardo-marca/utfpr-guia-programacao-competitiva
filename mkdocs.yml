@@ -70,9 +70,7 @@ nav:
   - Home:
     - index.md
     - introduction/what-is-cp.md
-    - Guia do Mkdocs: extra/mkdocs-guide.md
-
-  - Trilha de Aprendizagem: introduction/learning-path.md
+    - introduction/learning-path.md
 
   - C++:
     - Básico do C++: cpp/basics.md
@@ -80,7 +78,6 @@ nav:
   
   - Algoritmos Básicos:
     - Busca Binária: algorithms/basic-algorithms/binary-search.md
-    - Programação Dinâmica: algorithms/paradigms/dynamic-programming.md
 
   - Paradigmas:
     - Busca Completa: algorithms/paradigms/complete-search.md
@@ -96,3 +93,11 @@ nav:
 
   - Matemática:
     - Combinatória: algorithms/math/combinatorics.md
+
+  - Como Contribuir:
+    - contribute/index.md
+    - contribute/installation.md
+    - contribute/github.md
+    - contribute/mkdocs.md
+    - contribute/writing-guidelines.md
+    - contribute/style-guide.md
