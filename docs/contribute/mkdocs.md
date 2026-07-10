@@ -71,7 +71,15 @@ Este é outro parágrafo.
 
 ---
 ### Links
+
+#### Links Externos
 [Codeforces](https://codeforces.com)
+
+#### Links Dentro do Site
+[Busca Binária](../algorithms/basic-algorithms/binary-search.md)
+
+#### Links Dentro da Página
+[Tabelas](#tabelas)
 
 ---
 ### Imagens
