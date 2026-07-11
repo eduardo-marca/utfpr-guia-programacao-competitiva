@@ -95,7 +95,7 @@ nav:
     - algorithms/graphs/bfs.md
 
   - Strings:
-    - KMP: algorithms/string/kmp.md
+    - algorithms/string/kmp.md
 
   - Matemática:
     - algorithms/math/combinatorics.md

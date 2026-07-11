@@ -19,4 +19,5 @@ void dfs(int v) {
 ```
 
 ## Complexidade
-A complexidade de tempo da DFS é $O(V + E)$, onde $V$ é o número de vértices e $E$ é o número de arestas no grafo. A complexidade de espaço é $O(V)$ devido à pilha de chamadas recursivas e ao armazenamento do vetor de visitados.
+- **Tempo:** $O(V + E)$, onde $V$ é o número de vértices e $E$ é o número de arestas no grafo.
+- **Espaço:** $O(V)$ devido à pilha de chamadas recursivas e ao armazenamento do vetor de visitados.
