@@ -9,8 +9,10 @@ Algumas coisas que podem ser feitas para contribuir são:
 
 - Criar uma nova página de conteúdo.
 - Corrigir erros de digitação/formatação.
+- Adicionar novos algoritmos às páginas.
 - Adicionar novos exemplos às páginas.
 - Adicionar novas imagens, vídeos ou outros recursos.
 - Atualizar a documentação e guias do site.
 - Alterar o estilo do site.
 - Correção de bugs gerais.
+- Adicionar códigos em outras linguagens de programação.
