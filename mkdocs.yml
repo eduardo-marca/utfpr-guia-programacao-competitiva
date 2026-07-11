@@ -90,6 +90,7 @@ nav:
     - Programação Dinâmica: algorithms/paradigms/dynamic-programming.md
 
   - Grafos:
+    - algorithms/graphs/graph-basics.md
     - DFS: algorithms/graphs/dfs.md
     - BFS: algorithms/graphs/bfs.md
 
