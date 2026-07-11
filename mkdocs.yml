@@ -91,8 +91,8 @@ nav:
 
   - Grafos:
     - algorithms/graphs/graph-basics.md
-    - DFS: algorithms/graphs/dfs.md
-    - BFS: algorithms/graphs/bfs.md
+    - algorithms/graphs/dfs.md
+    - algorithms/graphs/bfs.md
 
   - Strings:
     - KMP: algorithms/string/kmp.md
