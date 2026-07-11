@@ -1,0 +1,2378 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia para estudo e treinamento em Programação Competitiva da UTFPR.">
+      
+      
+      
+      
+        <link rel="prev" href="../basics/">
+      
+      
+        <link rel="next" href="../../algorithms/basic-algorithms/binary-search/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>STL - Guia de Programação Competitiva UTFPR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stl" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Guia de Programação Competitiva UTFPR" class="md-header__button md-logo" aria-label="Guia de Programação Competitiva UTFPR" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia de Programação Competitiva UTFPR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              STL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Trocar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Trocar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Trocar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Trocar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    utfpr-guia-programacao-competitiva
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../basics/" class="md-tabs__link">
+          
+  
+  
+  C++
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithms/basic-algorithms/binary-search/" class="md-tabs__link">
+          
+  
+  
+  Algoritmos Básicos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithms/paradigms/complete-search/" class="md-tabs__link">
+          
+  
+  
+  Paradigmas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithms/graphs/dfs/" class="md-tabs__link">
+          
+  
+  
+  Grafos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithms/string/kmp/" class="md-tabs__link">
+          
+  
+  
+  Strings
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithms/math/combinatorics/" class="md-tabs__link">
+          
+  
+  
+  Matemática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribute/" class="md-tabs__link">
+          
+  
+  
+  Como Contribuir
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guia de Programação Competitiva UTFPR" class="md-nav__button md-logo" aria-label="Guia de Programação Competitiva UTFPR" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Guia de Programação Competitiva UTFPR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    utfpr-guia-programacao-competitiva
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bem vindo ao Guia de Programação Competitiva UTFPR!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/what-is-cp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O Que é Programação Competitiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trilha de Aprendizagem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básico do C++
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    STL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    STL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pair
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuple
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unordered Set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unordered Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacoes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funções Úteis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algoritmos Básicos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algoritmos Básicos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/basic-algorithms/binary-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Busca Binária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paradigmas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Paradigmas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/paradigms/complete-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Busca Completa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/paradigms/greedy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algoritmos Gulosos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/paradigms/dynamic-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programação Dinâmica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grafos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Grafos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/graphs/dfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/graphs/bfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Strings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/string/kmp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Matemática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/math/combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combinatória
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/math/number_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoria dos Números
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como Contribuir
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Como Contribuir
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como Contrubir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como Usar o Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como usar o Mkdocs e Material for MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/writing-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Escrita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Estilo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pair" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pair
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuple
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unordered Set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unordered Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacoes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Queue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funções Úteis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="stl">STL</h1>
+<p>A biblioteca padrão do C++ (STL) oferece uma série de estruturas de dados e funções úteis para facilitar a implementação de algoritmos em programação competitiva. A seguir, apresentamos algumas das mais comuns e suas principais características.</p>
+<h2 id="array">Array</h2>
+<p>São espaços na memória para armazenar um número fixo de valores do mesmo tipo. O acesso a um elemento é feito através de um índice, que começa em 0. Seu tamanho deve ser definido no momento da declaração e não pode ser alterado posteriormente.</p>
+<ul>
+<li><code>int arr[n]</code> - declara um array de <span class="arithmatex">\(n\)</span> inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span> para dados primitivos.</li>
+<li><code>arr[i]</code> - acessa o elemento na posição <span class="arithmatex">\(i\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>O C++ também oferece a classe <code>std::array</code> da biblioteca padrão, mas não costuma ser utilizada em programação competitiva, pois é mais verbosa e não oferece vantagens significativas em relação a um array comum.</p>
+</div>
+<h2 id="vector">Vector</h2>
+<p>É uma estrutura de dados dinâmica que pode crescer ou diminuir de tamanho conforme necessário. Ele é implementado como um array dinâmico, o que significa que ele aloca mais memória do que o necessário para armazenar os elementos atuais, permitindo que novos elementos sejam adicionados sem a necessidade de realocar toda a estrutura.</p>
+<p>Ele oferece uma série de métodos para manipulação dos elementos, como <code>push_back</code> para adicionar um elemento no final, <code>pop_back</code> para remover o último elemento, <code>size</code> para obter o número de elementos, entre outros.</p>
+<p>Pode ser usado como array normal, apesar de ser mais verboso. É uma das estruturas de dados mais utilizadas em programação competitiva, devido a sua flexibilidade e facilidade de uso.</p>
+<ul>
+<li><code>vector&lt;int&gt; v(n, x)</code> — cria um vetor com n elementos inicializados com x. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>v.push_back(x)</code> — adiciona x ao final do vetor. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.pop_back()</code> — remove o último elemento do vetor. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.size()</code> — retorna o tamanho do vetor. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.empty()</code> — retorna true se o vetor estiver vazio. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.clear()</code> — remove todos os elementos do vetor. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>v.front()</code> — retorna o primeiro elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.back()</code> — retorna o último elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.begin()</code> — retorna iterador para o primeiro elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.end()</code> — retorna iterador para a posição após o último elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>v.insert(it, x)</code> — insere x na posição do iterador it. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>v.erase(it)</code> — remove o elemento apontado por it. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>v.erase(it1, it2)</code> — remove os elementos no intervalo [it1, it2). Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>v.resize(n)</code> — redimensiona o vetor para n elementos. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>v.resize(n, x)</code> — redimensiona o vetor para n elementos inicializados com x. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>fill(v.begin(), v.end(), x)</code> — preenche o vetor v com o valor x. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>sort(v.begin(), v.end())</code> — ordena o vetor v. Complexidade: <span class="arithmatex">\(O(n \log n)\)</span>.</li>
+<li><code>reverse(v.begin(), v.end())</code> — inverte o vetor v. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>accumulate(v.begin(), v.end(), 0)</code> — soma todos os elementos do vetor v. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>max_element(v.begin(), v.end())</code> — retorna iterador para o maior elemento. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>min_element(v.begin(), v.end())</code> — retorna iterador para o menor elemento. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>count(v.begin(), v.end(), x)</code> — retorna o número de ocorrências de x. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>find(v.begin(), v.end(), x)</code> — retorna iterador para a primeira ocorrência de x ou v.end(). Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>lower_bound(v.begin(), v.end(), x)</code> — primeiro elemento ≥ x (vetor ordenado). Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>upper_bound(v.begin(), v.end(), x)</code> — primeiro elemento &gt; x (vetor ordenado). Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>next_permutation(a.begin(), a.end())</code> — gera a próxima permutação lexicográfica. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+</ul>
+<h2 id="pair">Pair</h2>
+<p>O <code>pair</code> é uma estrutura de dados que armazena dois valores de tipos possivelmente diferentes. Ele é útil para armazenar pares de dados relacionados, como coordenadas, chaves e valores, entre outros.</p>
+<ul>
+<li><code>pair&lt;int, int&gt; p</code> — cria um par de inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>p.first</code> — retorna o primeiro elemento do par. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>p.second</code> — retorna o segundo elemento do par. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>auto [x, y] = p</code> — desempacota os elementos do par em variáveis x e y. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</p>
+</div>
+<p>Quando comparamos dois pares, eles são comparados primeiro pelo <code>first</code> e, em caso de empate, pelo <code>second</code>. Isso é útil para ordenar pares em estruturas como <code>set</code> ou <code>map</code>.</p>
+<h2 id="tuple">Tuple</h2>
+<p>A <code>tuple</code> é uma estrutura de dados que armazena um número fixo de valores de tipos possivelmente diferentes. Ela é útil para armazenar grupos de dados relacionados, como coordenadas em 3D, informações de um aluno (nome, idade, nota), entre outros.</p>
+<ul>
+<li><code>tuple&lt;int, string, double&gt; t</code> — cria uma tupla com um inteiro, uma string e um double. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>get&lt;i&gt;(t)</code> — retorna o elemento na posição i da tupla. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Não é possível acessar os elementos da tupla usando <code>t.first</code>, como em um par. É necessário usar a função <code>get</code> para acessar os elementos ou desempacotá-los diretamente.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>auto [x, y, z] = t</code> — desempacota os elementos da tupla em variáveis x, y e z. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</p>
+</div>
+<h2 id="sets">Sets</h2>
+<h3 id="set">Set</h3>
+<p>Estrutura que permite armazenar elementos únicos em uma coleção ordenada. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para armazenar elementos sem duplicatas e para realizar operações de conjunto, como união, interseção e diferença.</p>
+<h3 id="unordered-set">Unordered Set</h3>
+<p>Estrutura que permite armazenar elementos únicos em uma coleção não ordenada. Ele é implementado como uma tabela hash, o que significa que as operações de inserção, remoção e busca são realizadas em tempo constante em média.</p>
+<p>Ele funciona de forma similar ao <code>set</code>, com praticamente as mesmas operações, mas não mantém os elementos em ordem, o que pode ser útil em algumas situações onde a ordem dos elementos não é importante.</p>
+<p>Porém ele pode ser mais lento que o <code>set</code> em alguns casos, especialmente quando há muitas colisões na tabela hash, o que pode levar a um tempo de execução pior do que o esperado. Por isso, é importante avaliar qual estrutura é mais adequada para cada situação específica.</p>
+<h3 id="multiset">Multiset</h3>
+<p>Estrutura que permite armazenar elementos repetidos em uma coleção ordenada. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para 1
+armazenar elementos com repetição e para realizar operações de conjunto, como união, interseção e diferença.</p>
+<h3 id="operacoes">Operações</h3>
+<ul>
+<li><code>set&lt;int&gt; s</code> — cria um conjunto de inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.insert(x)</code> — insere o elemento x no conjunto. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>s.erase(x)</code> — remove o elemento x do conjunto. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>s.find(x)</code> — retorna iterador para x ou <code>s.end()</code> se não existir. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>s.size()</code> — retorna o tamanho do conjunto. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.empty()</code> — retorna true se o conjunto estiver vazio. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.clear()</code> — remove todos os elementos do conjunto. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>s.begin()</code> — retorna iterador para o primeiro elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.end()</code> — retorna iterador para a posição após o último elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>unordered_set&lt;int&gt; us</code> — conjunto não ordenado de inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span> para inserção, remoção e busca em média.</li>
+<li><code>multiset&lt;int&gt; ms</code> — conjunto de inteiros que permite elementos repetidos.</li>
+<li><code>ms.erase(ms.find(x))</code> — remove apenas uma ocorrência de x do multiset. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+</ul>
+<h2 id="maps">Maps</h2>
+<h3 id="map">Map</h3>
+<p>Estrutura que armazena pares de chave-valor, onde cada chave é única. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para armazenar dados associados a chaves únicas e para realizar operações de mapeamento, como busca por chave, inserção de pares chave-valor e remoção de pares chave-valor.</p>
+<h3 id="unordered-map">Unordered Map</h3>
+<p>Estrutura que armazena pares de chave-valor, onde cada chave é única. Ele é implementado como uma tabela hash, o que significa que as operações de inserção, remoção e busca são realizadas em tempo constante em média. Ele é útil para armazenar dados associados a chaves únicas e para realizar operações de mapeamento, como busca por chave, inserção de pares chave-valor e remoção de pares chave-valor.</p>
+<p>Ele funciona de forma similar ao <code>map</code>, com praticamente as mesmas operações, mas não mantém os pares chave-valor em ordem, o que pode ser útil em algumas situações onde a ordem dos elementos não é importante.</p>
+<p>Porém ele pode ser mais lento que o <code>map</code> em alguns casos, especialmente quando há muitas colisões na tabela hash, o que pode levar a um tempo de execução pior do que o esperado. Por isso, é importante avaliar qual estrutura é mais adequada para cada situação específica.</p>
+<h3 id="multimap">Multimap</h3>
+<p>Estrutura que armazena pares de chave-valor, onde as chaves podem ser repetidas. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para armazenar dados associados a chaves com repetição e para realizar operações de mapeamento, como busca por chave, inserção de pares chave-valor e remoção de pares chave-valor.</p>
+<h3 id="operacoes_1">Operações</h3>
+<ul>
+<li><code>map&lt;int,int&gt; m</code> — cria um mapa de inteiros para inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>m[key]</code> — retorna o valor associado à chave key. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>m[key] = value</code> — associa value à chave key. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>m.erase(key)</code> — remove a chave key do mapa. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>m.find(key)</code> — retorna iterador para a chave key ou m.end() se não existir. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>m.size()</code> — retorna o tamanho do mapa. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>m.empty()</code> — retorna true se o mapa estiver vazio. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>m.clear()</code> — remove todos os pares chave–valor do mapa. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>m.begin()</code> — retorna iterador para o primeiro par chave–valor. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>m.end()</code> — retorna iterador para a posição após o último elemento. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<h2 id="iterators">Iterators</h2>
+<p>Os iteradores são objetos que permitem percorrer os elementos de uma estrutura de dados, como um vetor, um conjunto ou um mapa. Eles são usados para acessar e manipular os elementos de forma eficiente, sem a necessidade de conhecer a implementação interna da estrutura.</p>
+<p>Podem ser usados para percorrer os elementos de uma estrutura de dados usando um loop, como um <code>for</code> ou um <code>while</code>, ou para realizar operações específicas, como ordenação, busca ou contagem.</p>
+<p>Funcionam com quase todas as estruturas de dados da STL, como <code>vector</code>, <code>set</code>, <code>map</code>, entre outras, e são uma parte fundamental da programação em C++.</p>
+<ul>
+<li><code>o.begin()</code> — retorna um iterador para o primeiro elemento do objeto <strong>o</strong>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>o.end()</code> — retorna um iterador para a posição após o último elemento do objeto <strong>o</strong>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>*it</code> — acessa o elemento apontado pelo iterador it. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>for (auto it = o.begin(); it != o.end(); ++it)</code> — percorre os elementos do objeto <strong>o</strong> usando um iterador. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>for (auto&amp; x : o)</code> — percorre os elementos do objeto <strong>o</strong> usando um loop for-each. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+</ul>
+<h3 id="exemplos">Exemplos</h3>
+<ul>
+<li><code>for (auto it = v.begin(); it != v.end(); ++it) { cout &lt;&lt; *it &lt;&lt; endl; }</code> — imprime os elementos do vetor <strong>v</strong> usando um iterador.</li>
+<li><code>for (auto&amp; x : v) { cout &lt;&lt; x &lt;&lt; endl; }</code> — imprime os elementos do vetor <strong>v</strong> usando um loop for-each.</li>
+<li><code>sort(v.begin(), v.end())</code> — ordena os elementos do vetor <strong>v</strong> usando iteradores. Complexidade: <span class="arithmatex">\(O(n \log n)\)</span>.</li>
+<li><code>count(v.begin(), v.end(), x)</code> — conta o número de ocorrências de x no vetor <strong>v</strong> usando iteradores. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>find(v.begin(), v.end(), x)</code> — encontra a primeira ocorrência de x no vetor <strong>v</strong> usando iteradores. Complexidade: <span class="arithmatex">\(O(n)\)</span>.</li>
+<li><code>for (auto [key, value] : m) { cout &lt;&lt; key &lt;&lt; ": " &lt;&lt; value &lt;&lt; endl; }</code> — percorre os pares chave-valor do mapa <strong>m</strong> usando um loop for-each com desempacotamento de tupla.</li>
+</ul>
+<h2 id="stack">Stack</h2>
+<p>A pilha é uma estrutura de dados que segue o princípio LIFO (Last In, First Out), ou seja, o último elemento inserido é o primeiro a ser removido. Ela é útil para armazenar dados temporários e para realizar operações de backtracking, como em algoritmos de busca em profundidade.</p>
+<ul>
+<li><code>stack&lt;int&gt; s</code> — cria uma pilha de inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.push(x)</code> — adiciona x ao topo da pilha. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.pop()</code> — remove o elemento do topo da pilha. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.top()</code> — retorna o elemento do topo da pilha. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.size()</code> — retorna o tamanho da pilha. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>s.empty()</code> — retorna true se a pilha estiver vazia. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>while (!s.empty()) { cout &lt;&lt; s.top() &lt;&lt; endl; s.pop(); }</code> — imprime os elementos da pilha <strong>s</strong> do topo para a base.</p>
+</div>
+<h2 id="queue">Queue</h2>
+<p>A fila é uma estrutura de dados que segue o princípio FIFO (First In, First Out), ou seja, o primeiro elemento inserido é o primeiro a ser removido. Ela é útil para armazenar dados temporários e para realizar operações de breadth-first search (BFS) em grafos.</p>
+<ul>
+<li><code>queue&lt;int&gt; q</code> — cria uma fila de inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>q.push(x)</code> — adiciona x ao final da fila. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>q.pop()</code> — remove o primeiro elemento da fila. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>q.front()</code> — retorna o primeiro elemento da fila. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>q.size()</code> — retorna o tamanho da fila. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>q.empty()</code> — retorna true se a fila estiver vazia. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>while (!q.empty()) { cout &lt;&lt; q.front() &lt;&lt; endl; q.pop(); }</code> — imprime os elementos da fila <strong>q</strong> do início para o final.</p>
+</div>
+<h2 id="deque">Deque</h2>
+<p>A deque (double-ended queue) é uma estrutura de dados que permite inserção e remoção de elementos em ambas as extremidades. É útil para armazenar dados temporários e para realizar operações de forma eficiente em ambas as extremidades.</p>
+<ul>
+<li><code>deque&lt;int&gt; d</code> — cria um deque de inteiros. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.push_back(x)</code> — adiciona x ao final do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.push_front(x)</code> — adiciona x ao início do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.pop_back()</code> — remove o elemento do final do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.pop_front()</code> — remove o elemento do início do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.front()</code> — retorna o primeiro elemento do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.back()</code> — retorna o último elemento do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.size()</code> — retorna o tamanho do deque. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>d.empty()</code> — retorna true se o deque estiver vazio. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>while (!d.empty()) { cout &lt;&lt; d.front() &lt;&lt; endl; d.pop_front(); }</code> — imprime os elementos do deque <strong>d</strong> do início para o final.</p>
+</div>
+<h2 id="priority-queue">Priority Queue</h2>
+<ul>
+<li><code>priority_queue&lt;int&gt; pq</code> — cria uma fila de prioridade de inteiros (máx-heap). Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>pq.push(x)</code> — adiciona o elemento x na fila de prioridade. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>pq.pop()</code> — remove o maior elemento da fila de prioridade. Complexidade: <span class="arithmatex">\(O(\log n)\)</span>.</li>
+<li><code>pq.top()</code> — retorna o maior elemento da fila de prioridade. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>pq.size()</code> — retorna o tamanho da fila de prioridade. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>pq.empty()</code> — retorna true se a fila de prioridade estiver vazia. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>while (!pq.empty()) { cout &lt;&lt; pq.top() &lt;&lt; endl; pq.pop(); }</code> — imprime os elementos da fila de prioridade <strong>pq</strong> do maior para o menor.</p>
+<p><code>priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; pq</code> — cria uma fila de prioridade de inteiros (mín-heap). Complexidade: <span class="arithmatex">\(O(1)\)</span>.</p>
+</div>
+<h2 id="funcoes-uteis">Funções Úteis</h2>
+<p>O C++ oferece uma série de funções úteis para realizar operações comuns em programação competitiva. Algumas das mais utilizadas são:</p>
+<ul>
+<li><code>min(a, b)</code> — retorna o menor entre <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>max(a, b)</code> — retorna o maior entre <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>abs(a)</code> — retorna o valor absoluto de <span class="arithmatex">\(a\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>swap(a, b)</code> — troca os valores de <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>sqrt(a)</code> — retorna a raiz quadrada de <span class="arithmatex">\(a\)</span>. Complexidade: <span class="arithmatex">\(O(\log a)\)</span>.</li>
+<li><code>ceil(a)</code> — retorna o menor inteiro <span class="arithmatex">\(\geq a\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>floor(a)</code> — retorna o maior inteiro <span class="arithmatex">\(\leq a\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+<li><code>round(a)</code> — retorna o inteiro mais próximo de <span class="arithmatex">\(a\)</span>. Complexidade: <span class="arithmatex">\(O(1)\)</span>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../basics/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Básico do C++">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Básico do C++
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../algorithms/basic-algorithms/binary-search/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Busca Binária">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Busca Binária
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/script.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

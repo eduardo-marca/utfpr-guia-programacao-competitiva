@@ -1,0 +1,2528 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia para estudo e treinamento em Programação Competitiva da UTFPR.">
+      
+      
+      
+      
+        <link rel="prev" href="../combinatorics/">
+      
+      
+        <link rel="next" href="../../../contribute/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Teoria dos Números - Guia de Programação Competitiva UTFPR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#teoria-dos-numeros" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Guia de Programação Competitiva UTFPR" class="md-header__button md-logo" aria-label="Guia de Programação Competitiva UTFPR" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia de Programação Competitiva UTFPR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Teoria dos Números
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Trocar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Trocar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Trocar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Trocar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    utfpr-guia-programacao-competitiva
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cpp/basics/" class="md-tabs__link">
+          
+  
+  
+  C++
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basic-algorithms/binary-search/" class="md-tabs__link">
+          
+  
+  
+  Algoritmos Básicos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../paradigms/complete-search/" class="md-tabs__link">
+          
+  
+  
+  Paradigmas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../graphs/dfs/" class="md-tabs__link">
+          
+  
+  
+  Grafos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../string/kmp/" class="md-tabs__link">
+          
+  
+  
+  Strings
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../combinatorics/" class="md-tabs__link">
+          
+  
+  
+  Matemática
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contribute/" class="md-tabs__link">
+          
+  
+  
+  Como Contribuir
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Guia de Programação Competitiva UTFPR" class="md-nav__button md-logo" aria-label="Guia de Programação Competitiva UTFPR" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    Guia de Programação Competitiva UTFPR
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    utfpr-guia-programacao-competitiva
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bem vindo ao Guia de Programação Competitiva UTFPR!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/what-is-cp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O Que é Programação Competitiva
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trilha de Aprendizagem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cpp/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Básico do C++
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cpp/stl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    STL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algoritmos Básicos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algoritmos Básicos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-algorithms/binary-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Busca Binária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paradigmas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Paradigmas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paradigms/complete-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Busca Completa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paradigms/greedy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algoritmos Gulosos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paradigms/dynamic-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programação Dinâmica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grafos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Grafos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphs/dfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphs/bfs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BFS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Strings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../string/kmp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Matemática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combinatória
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoria dos Números
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoria dos Números
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identidades-aritmeticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identidades Aritméticas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-primos-e-fatoracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números Primos e Fatoração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Números Primos e Fatoração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes-e-propriedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definições e Propriedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmos Básicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximo-divisor-comum-e-minimo-multiplo-comum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Máximo Divisor Comum e Mínimo Múltiplo Comum
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Máximo Divisor Comum e Mínimo Múltiplo Comum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes-e-algoritmo-de-euclides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definições e Algoritmo de Euclides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-de-euclides-estendido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmo de Euclides Estendido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcao-totiente-de-euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Função Totiente de Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aritmética Modular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aritmética Modular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes-e-propriedades_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definições e Propriedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponenciacao-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exponenciação Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pequeno-teorema-de-fermat-e-teorema-de-euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pequeno Teorema de Fermat e Teorema de Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverso-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inverso Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-chines-do-resto-crt-e-sistemas-de-congruencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema Chinês do Resto (CRT) e Sistemas de Congruências
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucao-de-equacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolução de Equações
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolução de Equações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equacoes-diofantinas-lineares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equações Diofantinas Lineares
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outros-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outros Resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outros Resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeros-de-fibonacci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números de Fibonacci
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-wilson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema de Wilson
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ultimo-teorema-de-fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Último Teorema de Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-divisibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critério de Divisibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-lagrange-sobre-numeros-quadrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema de Lagrange sobre Números Quadrados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-zeckendorf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema de Zeckendorf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triplas-pitagoricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Triplas Pitagóricas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como Contribuir
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Como Contribuir
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como Contrubir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como Usar o Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como usar o Mkdocs e Material for MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/writing-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Escrita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribute/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia de Estilo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identidades-aritmeticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identidades Aritméticas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros-primos-e-fatoracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números Primos e Fatoração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Números Primos e Fatoração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes-e-propriedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definições e Propriedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmos Básicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximo-divisor-comum-e-minimo-multiplo-comum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Máximo Divisor Comum e Mínimo Múltiplo Comum
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Máximo Divisor Comum e Mínimo Múltiplo Comum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes-e-algoritmo-de-euclides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definições e Algoritmo de Euclides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-de-euclides-estendido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmo de Euclides Estendido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcao-totiente-de-euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Função Totiente de Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aritmetica-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aritmética Modular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aritmética Modular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicoes-e-propriedades_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definições e Propriedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculo Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponenciacao-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exponenciação Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pequeno-teorema-de-fermat-e-teorema-de-euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pequeno Teorema de Fermat e Teorema de Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverso-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inverso Modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-chines-do-resto-crt-e-sistemas-de-congruencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema Chinês do Resto (CRT) e Sistemas de Congruências
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucao-de-equacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolução de Equações
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolução de Equações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equacoes-diofantinas-lineares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equações Diofantinas Lineares
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outros-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outros Resultados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outros Resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeros-de-fibonacci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números de Fibonacci
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-wilson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema de Wilson
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ultimo-teorema-de-fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Último Teorema de Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-divisibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critério de Divisibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-lagrange-sobre-numeros-quadrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema de Lagrange sobre Números Quadrados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-zeckendorf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema de Zeckendorf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triplas-pitagoricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Triplas Pitagóricas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="teoria-dos-numeros">Teoria dos Números</h1>
+<h2 id="identidades-aritmeticas">Identidades Aritméticas</h2>
+<p>Existem fórmulas conhecidas para se calcular a soma de potências <span class="arithmatex">\(k\)</span> de números de <span class="arithmatex">\(1\)</span> à <span class="arithmatex">\(n^k\)</span>. As principais são</p>
+<div class="arithmatex">\[ \sum_{i=1}^{n}i = \frac{n(n+1)}{2} \]</div>
+<div class="arithmatex">\[ \sum_{i=1}^{n}i^{2} = \frac{n(n+1)(2n+1)}{6} \]</div>
+<div class="arithmatex">\[ \sum_{i=1}^{n}i^{3} = \left[ \frac{n(n+1)}{2} \right]^{2} = \left[ \sum_{i=1}^{n}i \right]^{2} \]</div>
+<h2 id="numeros-primos-e-fatoracao">Números Primos e Fatoração</h2>
+<h3 id="definicoes-e-propriedades">Definições e Propriedades</h3>
+<p>Um número inteiro maior que 1 é chamado de \textbf{número primo} se ele não pode ser formado pela multiplicação de dois números inteiros menores que ele mesmo. Caso contrário, ele é chamado de \textbf{número composto}.</p>
+<p>Para todo número <span class="arithmatex">\(n &gt; 1\)</span>, existe uma única \textbf{fatoração prima}</p>
+<div class="arithmatex">\[ n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k} \]</div>
+<p>onde <span class="arithmatex">\(p_1,p_2,\ldots,p_k\)</span> são números primos.</p>
+<p>O \textbf{número de fatores} de um número <span class="arithmatex">\(n\)</span> é</p>
+<div class="arithmatex">\[ \tau(n)=\prod_{i=1}^k (\alpha_i+1) \]</div>
+<p>A \textbf{soma dos fatores} de <span class="arithmatex">\(n\)</span> é</p>
+<div class="arithmatex">\[ \sigma(n)=\prod_{i=1}^k (1+p_i+\cdots+p_i^{\alpha_i})=\prod_{i=1}^k \frac{p_i^{\alpha_i+1}-1}{p_i-1} \]</div>
+<p>O \textbf{produto dos fatores} de <span class="arithmatex">\(n\)</span> é
+$$ \mu(n)=n^{\tau(n)/2} $$</p>
+<p>As vezes, um número é chamado de um \textbf{número perfeito} se <span class="arithmatex">\(n = \sigma(n)-n\)</span>.</p>
+<p>Existem infinitos números primos, e a quantidade de números primos menores que <span class="arithmatex">\(n\)</span> é aproximadamente</p>
+<div class="arithmatex">\[ \pi(n)=\frac{n}{\ln n} \]</div>
+<p>Essa aproximação se torna melhor conforme <span class="arithmatex">\(n\)</span> cresce.</p>
+<h3 id="algoritmos-basicos">Algoritmos Básicos</h3>
+<p>Testa se um número <span class="arithmatex">\(n\)</span> é primo em <span class="arithmatex">\(O(\sqrt{n})\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">prime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>Constroi os fatores primos de <span class="arithmatex">\(n\)</span> em <span class="arithmatex">\(O(\sqrt{n})\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">factors</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="n">f</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>O <strong>Crivo de Eratóstenes</strong> constrói uma lista de números primos até <span class="arithmatex">\(n\)</span> em <span class="arithmatex">\(O(n \log \log n)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">sieve</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="n">sieve</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>Onde <span class="arithmatex">\(sieve[n]\)</span> indica o primeiro fator primo de <span class="arithmatex">\(n\)</span> e deve ser inicializado com <span class="arithmatex">\(0\)</span>. Se <span class="arithmatex">\(sieve[n] = n\)</span>, então <span class="arithmatex">\(n\)</span> é primo.</p>
+<p>Acha todos os divisores de <span class="arithmatex">\(n\)</span> em <span class="arithmatex">\(O(\sqrt{n})\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">findAllDivisors</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">divisors</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">            </span><span class="n">divisors</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">divisors</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">divisors</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">divisors</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"> </span><span class="c1">// sort if necessary</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">divisors</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="maximo-divisor-comum-e-minimo-multiplo-comum">Máximo Divisor Comum e Mínimo Múltiplo Comum</h2>
+<h3 id="definicoes-e-algoritmo-de-euclides">Definições e Algoritmo de Euclides</h3>
+<p>O <strong>Máximo Divisor Comum</strong> (MDC ou GCD) de dois números <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> é o maior número que divide ambos. Pode ser calculado recursivamente com o \textbf{Algoritmo de Euclides} em <span class="arithmatex">\(O(\log \min(a, b))\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>O \textbf{Mínimo Múltiplo Comum} (MMC ou LCM) de dois números <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> é o menor número que é múltiplo de ambos. Pode ser calculado em termos do MDC:</p>
+<div class="arithmatex">\[ \text{MMC}(a, b) = \frac{a \times b}{\text{MDC}(a, b)} \]</div>
+<h3 id="algoritmo-de-euclides-estendido">Algoritmo de Euclides Estendido</h3>
+<p>O \textbf{Algoritmo de Euclides Estendido} calcula o MDC de dois números <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span>, além de encontrar inteiros <span class="arithmatex">\(x\)</span> e <span class="arithmatex">\(y\)</span> tais que</p>
+<div class="arithmatex">\[ ax + by = \text{MDC}(a, b) \]</div>
+<p>Pode ser implementado em <span class="arithmatex">\(O(\log \min(a, b))\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>O algoritmo é baseado no teorema de Bezout, que diz que se existem inteiros <span class="arithmatex">\(x\)</span> e <span class="arithmatex">\(y\)</span> tais que <span class="arithmatex">\(ax + by = d\)</span>, então <span class="arithmatex">\(d\)</span> é múltiplo do MDC de <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span>.</p>
+<h3 id="funcao-totiente-de-euler">Função Totiente de Euler</h3>
+<p>Dois números inteiros <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(b\)</span> são \textbf{coprimos} se o MDC deles é 1. A \textbf{Função Totiente de Euler} <span class="arithmatex">\(\phi(n)\)</span> conta a quantidade de inteiros menores que <span class="arithmatex">\(n\)</span> e coprimos com ele. A função pode ser calculada a partir da fatoração prima de <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[ \phi(n) = \prod_{i=1}^k p_i^{\alpha_i-1}(p_i-1) \]</div>
+<p><span class="arithmatex">\(\phi(n)=n-1\)</span> se <span class="arithmatex">\(n\)</span> é primo.</p>
+<p>A função pode ser implementada em <span class="arithmatex">\(O(\sqrt{n})\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">phi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">                </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="aritmetica-modular">Aritmética Modular</h2>
+<h3 id="definicoes-e-propriedades_1">Definições e Propriedades</h3>
+<p>Dado um número inteiro <span class="arithmatex">\(n &gt; 1\)</span>, dois inteiros <span class="arithmatex">\(a\)</span> e $ b$ são \textbf{congruentes módulo} <span class="arithmatex">\(n\)</span> se <span class="arithmatex">\(n\)</span> divide a diferença <span class="arithmatex">\(a - b\)</span>. Isso é denotado como</p>
+<div class="arithmatex">\[ a \equiv b \mod n \]</div>
+<p>As principais propriedades da aritmética modular são:</p>
+<ul>
+<li>Se <span class="arithmatex">\(a \equiv b \mod n\)</span> e <span class="arithmatex">\(c \equiv d \mod n\)</span>, então<ul>
+<li><span class="arithmatex">\(a + c \equiv b + d \mod n\)</span></li>
+<li><span class="arithmatex">\(a - c \equiv b - d \mod n\)</span></li>
+<li><span class="arithmatex">\(a \times c \equiv b \times d \mod n\)</span></li>
+</ul>
+</li>
+<li>Se <span class="arithmatex">\(a \equiv b \mod n\)</span>, então para qualquer inteiro <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(a^k \equiv b^k \mod n\)</span>.</li>
+<li>Se <span class="arithmatex">\(ac \equiv bc \mod n\)</span> e MDC<span class="arithmatex">\((c, n) = 1\)</span>, então <span class="arithmatex">\(a \equiv b \mod n\)</span>.</li>
+</ul>
+<h3 id="calculo-modular">Cálculo Modular</h3>
+<p>O <strong>Cálculo Modular</strong> é uma técnica usada para evitar overflow em operações aritméticas com números grandes. Ele consiste em aplicar a operação de módulo em cada passo da operação.</p>
+<p>Aqui estão algumas operações básicas em aritmética modular:</p>
+<div class="arithmatex">\[ (a + b) \mod m = ((a \mod m) + (b \mod m)) \mod m \]</div>
+<div class="arithmatex">\[ (a - b) \mod m = ((a \mod m) - (b \mod m)) \mod m \]</div>
+<div class="arithmatex">\[ (a \times b) \mod m = ((a \mod m) \times (b \mod m)) \mod m \]</div>
+<div class="arithmatex">\[ a^{n} \mod m = {(a \mod m)}^{n} \mod m \]</div>
+<div class="arithmatex">\[ (a / b) \mod m = (a \mod m) \times (b^{-1} \mod m) \mod m \]</div>
+<p>Onde <span class="arithmatex">\(b^{-1}\)</span> é o inverso multiplicativo de <span class="arithmatex">\(b\)</span> módulo <span class="arithmatex">\(m\)</span> (ver Inverso Modular).</p>
+<p>Se o resultado for negativo, adicione <span class="arithmatex">\(m\)</span> para obter um resultado positivo.</p>
+<div class="arithmatex">\[ (x \mod m + m) \mod m \]</div>
+<h3 id="exponenciacao-modular">Exponenciação Modular</h3>
+<p>A <strong>Exponenciação Modular</strong> calcula <span class="arithmatex">\(a^b \mod m\)</span> em <span class="arithmatex">\(O(\log b)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">modpow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="o">%</span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">modpow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">m</span><span class="p">);</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="o">*</span><span class="n">u</span><span class="p">)</span><span class="o">%</span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">%</span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="pequeno-teorema-de-fermat-e-teorema-de-euler">Pequeno Teorema de Fermat e Teorema de Euler</h3>
+<p>O <strong>Pequeno Teorema de Fermat</strong> diz que, se <span class="arithmatex">\(m\)</span> é primo e <span class="arithmatex">\(x\)</span> e <span class="arithmatex">\(m\)</span> são coprimos (MDC<span class="arithmatex">\((x, m) = 1\)</span>), então</p>
+<div class="arithmatex">\[ x^{m-1} \equiv 1 \mod m \]</div>
+<div class="arithmatex">\[ x^{k} \equiv x^{k \mod (m-1)} \mod m \]</div>
+<p>Mais geralmente, o <strong>Teorema de Euler</strong> diz que, se <span class="arithmatex">\(x\)</span> e <span class="arithmatex">\(m\)</span> são coprimos, então</p>
+<div class="arithmatex">\[ x^{\phi(m)} \equiv 1 \mod m \]</div>
+<h3 id="inverso-modular">Inverso Modular</h3>
+<p>O <strong>Inverso Modular</strong> de um número <span class="arithmatex">\(a\)</span> módulo <span class="arithmatex">\(m\)</span> é um número <span class="arithmatex">\(x\)</span> tal que</p>
+<div class="arithmatex">\[ ax \equiv 1 \mod m \]</div>
+<p>O inverso modular existe se e somente se MDC<span class="arithmatex">\((a, m) = 1\)</span>. Pode ser calculado usando o Algoritmo de Euclides Estendido em <span class="arithmatex">\(O(\log m)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// pode ser otimizado com dp</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">inv</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)(</span><span class="n">m</span><span class="o">/</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">inv</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="teorema-chines-do-resto-crt-e-sistemas-de-congruencias">Teorema Chinês do Resto (CRT) e Sistemas de Congruências</h3>
+<p>O <strong>Teorema Chinês do Resto</strong> (CRT) fornece uma maneira de resolver sistemas de congruências da forma</p>
+<div class="arithmatex">\[ x \equiv a_1 \mod m_1 \]</div>
+<div class="arithmatex">\[ x \equiv a_2 \mod m_2 \]</div>
+<div class="arithmatex">\[\vdots\]</div>
+<div class="arithmatex">\[ x \equiv a_k \mod m_k \]</div>
+<p>onde os módulos <span class="arithmatex">\(m_1, m_2, \ldots, m_k\)</span> são coprimos dois a dois.</p>
+<p>Seja <span class="arithmatex">\(x_m^{-1}\)</span> o inverso de <span class="arithmatex">\(x\)</span> módulo <span class="arithmatex">\(m\)</span>, e</p>
+<div class="arithmatex">\[ X_k=\frac{m_1 m_2 \cdots m_n}{m_k} \]</div>
+<p>Então uma solução para o sistema é dada por</p>
+<div class="arithmatex">\[ x=a_1X_1X_{1_{m_1}}^{-1}+a_2X_2X_{2_{m_2}}^{-1}+\cdots+a_n X_n X_{n_{m_n}}^{-1} \]</div>
+<p>A solução pode ser encontrada em <span class="arithmatex">\(O(k \log M)\)</span>, onde <span class="arithmatex">\(M = m_1 m_2 \cdots m_k\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Congruence</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">};</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">chinese_remainder_theorem</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Congruence</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">congruences</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">congruence</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">congruences</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="n">M</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">congruence</span><span class="p">.</span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">congruence</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">congruences</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">congruence</span><span class="p">.</span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">M_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">congruence</span><span class="p">.</span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">N_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod_inv</span><span class="p">(</span><span class="n">M_i</span><span class="p">,</span><span class="w"> </span><span class="n">congruence</span><span class="p">.</span><span class="n">m</span><span class="p">);</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">        </span><span class="n">solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">solution</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M_i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">N_i</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">solution</span><span class="p">;</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="resolucao-de-equacoes">Resolução de Equações</h2>
+<h3 id="equacoes-diofantinas-lineares">Equações Diofantinas Lineares</h3>
+<p>Uma <strong>Equação Diofantina Linear</strong> é uma equação da forma</p>
+<div class="arithmatex">\[ ax + by = c \]</div>
+<p>onde <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(c\)</span> são inteiros conhecidos e <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span> são inteiros desconhecidos. A equação tem solução se e somente se GCD<span class="arithmatex">\((a, b)\)</span> divide <span class="arithmatex">\(c\)</span>.</p>
+<p>Podemos encontrar uma solução particular usando o Algoritmo de Euclides Estendido.</p>
+<p>A solução geral é obtida adicionando múltiplos de <span class="arithmatex">\(\frac{b}{\text{MDC}(a, b)}\)</span> a <span class="arithmatex">\(x\)</span> e subtraindo múltiplos de <span class="arithmatex">\(\frac{a}{\text{MDC}(a, b)}\)</span> de <span class="arithmatex">\(y\)</span>. Ou seja,</p>
+<div class="arithmatex">\[ \left( x+ \frac{kb}{\text{gcd}(a, b)}, y- \frac{ka}{\text{gcd}(a, b)} \right) \]</div>
+<p>onde <span class="arithmatex">\(k\)</span> é um número inteiro qualquer.</p>
+<h2 id="outros-resultados">Outros Resultados</h2>
+<h3 id="numeros-de-fibonacci">Números de Fibonacci</h3>
+<p>Os <strong>Números de Fibonacci</strong> são uma sequência de números inteiros definidos recursivamente da seguinte forma:</p>
+<div class="arithmatex">\[ F_0 = 0, \quad F_1 = 1 \]</div>
+<div class="arithmatex">\[ F_n = F_{n-1} + F_{n-2} \quad \text{para } n \geq 2 \]</div>
+<p>A sequência começa como <span class="arithmatex">\(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, \ldots\)</span>.</p>
+<p>Eles podem ser calculados eficientemente usando a fórmula de Binet:</p>
+<div class="arithmatex">\[ F_n = \frac{\phi^n - (1 - \phi)^n}{\sqrt{5}} \]</div>
+<p>onde <span class="arithmatex">\(\phi = \frac{1 + \sqrt{5}}{2}\)</span> é a razão áurea.</p>
+<h3 id="teorema-de-wilson">Teorema de Wilson</h3>
+<p>O <strong>Teorema de Wilson</strong> afirma que um número inteiro <span class="arithmatex">\(n &gt; 1\)</span> é primo se e somente se</p>
+<div class="arithmatex">\[ (n-1)! \equiv -1 \mod n \]</div>
+<p>Apesar de ser um critério para primalidade, o Teorema de Wilson não é usado em prática para testar se um número é primo devido à ineficiência do cálculo de fatoriais para números grandes.</p>
+<h3 id="ultimo-teorema-de-fermat">Último Teorema de Fermat</h3>
+<p>O <strong>Último Teorema de Fermat</strong> afirma que não existem inteiros positivos <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> e <span class="arithmatex">\(c\)</span> que satisfaçam a equação</p>
+<div class="arithmatex">\[ a^n + b^n = c^n \]</div>
+<p>para qualquer valor inteiro de <span class="arithmatex">\(n\)</span> maior que 2.</p>
+<h3 id="criterio-de-divisibilidade">Critério de Divisibilidade</h3>
+<p>Um número é divisível por:</p>
+<ul>
+<li>2: se o último dígito é par.</li>
+<li>3: se a soma dos dígitos é divisível por 3.</li>
+<li>4: se os dois últimos dígitos formam um número divisível por 4.</li>
+<li>5: se o último dígito é 0 ou 5.</li>
+<li>6: se é divisível por 2 e 3.</li>
+<li>7: se a diferença entre o dobro do último dígito e o restante é divisível por 7.</li>
+<li>8: se os três últimos dígitos formam um número divisível por 8.</li>
+<li>9: se a soma dos dígitos é divisível por 9.</li>
+<li>10: se o último dígito é 0.</li>
+</ul>
+<h3 id="teorema-de-lagrange-sobre-numeros-quadrados">Teorema de Lagrange sobre Números Quadrados</h3>
+<p>O <strong>Teorema de Lagrange sobre Números Quadrados</strong> afirma que qualquer número inteiro positivo pode ser escrito como a soma de, no máximo, quatro quadrados de inteiros. Ou seja, para qualquer inteiro positivo <span class="arithmatex">\(n\)</span>, existem inteiros <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(c\)</span> e <span class="arithmatex">\(d\)</span> tais que </p>
+<div class="arithmatex">\[ n = a^2 + b^2 + c^2 + d^2 \]</div>
+<h3 id="teorema-de-zeckendorf">Teorema de Zeckendorf</h3>
+<p>O <strong>Teorema de Zeckendorf</strong> afirma que qualquer número inteiro positivo pode ser escrito como a soma de números de Fibonacci diferentes e não consecutivos. Ou seja, para qualquer inteiro positivo <span class="arithmatex">\(n\)</span>, existem índices <span class="arithmatex">\(k_1, k_2, \ldots, k_m\)</span> tais que</p>
+<div class="arithmatex">\[ n = F_{k_1} + F_{k_2} + \cdots + F_{k_m} \]</div>
+<p>onde <span class="arithmatex">\(F_k\)</span> é o <span class="arithmatex">\(k\)</span>-ésimo número de Fibonacci.</p>
+<h3 id="triplas-pitagoricas">Triplas Pitagóricas</h3>
+<p>Uma <strong>Tripla Pitagórica</strong> é uma tripla de inteiros positivos <span class="arithmatex">\((a, b, c)\)</span> tal que</p>
+<div class="arithmatex">\[ a^2 + b^2 = c^2 \]</div>
+<p>Se <span class="arithmatex">\((a, b, c)\)</span> é uma tripla pitagórica, então <span class="arithmatex">\((ka, kb, kc)\)</span> também é uma tripla pitagórica para qualquer inteiro positivo <span class="arithmatex">\(k\)</span>.</p>
+<p>Se <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> e <span class="arithmatex">\(c\)</span> são coprimos dois a dois, então <span class="arithmatex">\((a, b, c)\)</span> é chamada de \textbf{tripla pitagórica primitiva}.</p>
+<p>Todas as triplas pitagóricas podem ser geradas a partir de triplas primitivas multiplicando por um inteiro positivo.</p>
+<p>As triplas pitagóricas primitivas podem ser geradas usando os seguintes parâmetros inteiros positivos <span class="arithmatex">\(m\)</span> e <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[ a = m^2 - n^2 \]</div>
+<div class="arithmatex">\[ b = 2mn \]</div>
+<div class="arithmatex">\[ c = m^2 + n^2 \]</div>
+<p>Onde <span class="arithmatex">\(0&lt;n&lt;m\)</span> <span class="arithmatex">\(m\)</span> e <span class="arithmatex">\(n\)</span> são coprimos e não são ambos ímpares.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../combinatorics/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Combinatória">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Combinatória
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../contribute/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Como Contrubir">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Como Contrubir
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/script.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
