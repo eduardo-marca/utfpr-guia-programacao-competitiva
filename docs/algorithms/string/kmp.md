@@ -10,7 +10,7 @@ A implementação do algoritmo KMP envolve duas etapas principais: a construçã
 
 ```cpp
 // Função para construir a tabela de prefixos (tabela de falhas)
-void buildTable(const char* pattern, int m, vector<int>& table) {
+void buildTable(const string pattern, int m, vector<int>& table) {
     int len = 0; // comprimento do maior prefixo que é também um sufixo
     table[0] = 0; // o primeiro valor da tabela é sempre 0
 
@@ -31,9 +31,9 @@ void buildTable(const char* pattern, int m, vector<int>& table) {
     }
 }
 // Função para realizar a busca do padrão na string
-int search(const char* text, const char* pattern) {
-    const int n = strlen(text);
-    const int m = strlen(pattern);
+int search(const string text, const string pattern) {
+    const int n = text.length();
+    const int m = pattern.length();
     vector<int> table(m);
     buildTable(pattern, m, table);
     int i = 0; // índice para text
