@@ -26,7 +26,7 @@ int factorial(int n) {
 $$ \binom{n}{k}=\frac{n!}{k!(n-k)!} $$
 
 Pode ser interpretado como o número de maneiras de escolher $k$ elementos de $n$.
-Também escrito como $C(n, k)$ ou $nCk$.
+Também escrito como $C(n, k)$ ou $_{n}C_{k}$.
 
 ### Propriedades
 

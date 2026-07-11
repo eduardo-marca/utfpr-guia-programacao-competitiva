@@ -78,16 +78,17 @@ nav:
     - introduction/learning-path.md
 
   - C++:
-    - Básico do C++: cpp/basics.md
-    - STL: cpp/stl.md
+    - cpp/basics.md
+    - cpp/stl.md
   
-  - Algoritmos Básicos:
-    - Busca Binária: algorithms/basic-algorithms/binary-search.md
+  - Algoritmos e Técnicas Básicos:
+    - algorithms/paradigms/complete-search.md
+    - algorithms/basic-algorithms/binary-search.md
+    - algorithms/paradigms/greedy.md
+    - algorithms/paradigms/dynamic-programming.md
 
-  - Paradigmas:
-    - Busca Completa: algorithms/paradigms/complete-search.md
-    - Algoritmos Gulosos: algorithms/paradigms/greedy.md
-    - Programação Dinâmica: algorithms/paradigms/dynamic-programming.md
+  - Estruturas de Dados:
+    - algorithms/data-structures/segtree.md
 
   - Grafos:
     - algorithms/graphs/graph-basics.md
@@ -98,8 +99,13 @@ nav:
     - algorithms/string/kmp.md
 
   - Matemática:
-    - algorithms/math/combinatorics.md
-    - algorithms/math/number_theory.md
+    - Álgebra:
+      - algorithms/math/algebra/number-theory-basics.md
+      - algorithms/math/algebra/modular-arithmetic.md
+    - Combinatória:
+      - algorithms/math/combinatorics/combinatorics-basics.md
+    - Geometria:
+      - algorithms/math/geometry/geometry-basics.md
 
   - Como Contribuir:
     - contribute/index.md
