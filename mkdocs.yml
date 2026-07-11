@@ -3,6 +3,10 @@ site_name: Guia de Programação Competitiva UTFPR
 repo_url: https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva
 repo_name: utfpr-guia-programacao-competitiva
 
+site_description: Guia para estudo e treinamento em Programação Competitiva da UTFPR.
+
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   logo: assets/logo.svg
