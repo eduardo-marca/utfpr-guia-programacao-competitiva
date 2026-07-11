@@ -14,26 +14,26 @@ $$ \sum_{i=1}^{n}i^{3} = \left[ \frac{n(n+1)}{2} \right]^{2} = \left[ \sum_{i=1}
 
 ### Definições e Propriedades
 
-Um número inteiro maior que 1 é chamado de \textbf{número primo} se ele não pode ser formado pela multiplicação de dois números inteiros menores que ele mesmo. Caso contrário, ele é chamado de \textbf{número composto}.
+Um número inteiro maior que 1 é chamado de **número primo** se ele não pode ser formado pela multiplicação de dois números inteiros menores que ele mesmo. Caso contrário, ele é chamado de **número composto**.
 
-Para todo número $n > 1$, existe uma única \textbf{fatoração prima}
+Para todo número $n > 1$, existe uma única **fatoração prima**
 
 $$ n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k} $$
 
 onde $p_1,p_2,\ldots,p_k$ são números primos.
 
-O \textbf{número de fatores} de um número $n$ é
+O **número de fatores** de um número $n$ é
 
 $$ \tau(n)=\prod_{i=1}^k (\alpha_i+1) $$
 
-A \textbf{soma dos fatores} de $n$ é
+A **soma dos fatores** de $n$ é
 
 $$ \sigma(n)=\prod_{i=1}^k (1+p_i+\cdots+p_i^{\alpha_i})=\prod_{i=1}^k \frac{p_i^{\alpha_i+1}-1}{p_i-1} $$
 
-O \textbf{produto dos fatores} de $n$ é
+O **produto dos fatores** de $n$ é
 $$ \mu(n)=n^{\tau(n)/2} $$
 
-As vezes, um número é chamado de um \textbf{número perfeito} se $n = \sigma(n)-n$.
+As vezes, um número é chamado de um **número perfeito** se $n = \sigma(n)-n$.
 
 Existem infinitos números primos, e a quantidade de números primos menores que $n$ é aproximadamente
 
@@ -55,7 +55,7 @@ bool prime(int n) {
 }
 ```
 
-Constroi os fatores primos de $n$ em $O(\sqrt{n})$:
+Constrói os fatores primos de $n$ em $O(\sqrt{n})$:
 
 ```cpp
 vector<int> factors(int n) {
@@ -104,7 +104,7 @@ vector<int> findAllDivisors(int n) {
 
 ### Definições e Algoritmo de Euclides
 
-O **Máximo Divisor Comum** (MDC ou GCD) de dois números $a$ e $b$ é o maior número que divide ambos. Pode ser calculado recursivamente com o \textbf{Algoritmo de Euclides} em $O(\log \min(a, b))$:
+O **Máximo Divisor Comum** (MDC ou GCD) de dois números $a$ e $b$ é o maior número que divide ambos. Pode ser calculado recursivamente com o **Algoritmo de Euclides** em $O(\log \min(a, b))$:
 
 ```cpp
 int gcd(int a, int b) {
@@ -113,13 +113,13 @@ int gcd(int a, int b) {
 }
 ```
 
-O \textbf{Mínimo Múltiplo Comum} (MMC ou LCM) de dois números $a$ e $b$ é o menor número que é múltiplo de ambos. Pode ser calculado em termos do MDC:
+O **Mínimo Múltiplo Comum** (MMC ou LCM) de dois números $a$ e $b$ é o menor número que é múltiplo de ambos. Pode ser calculado em termos do MDC:
 
 $$ \text{MMC}(a, b) = \frac{a \times b}{\text{MDC}(a, b)} $$
 
 ### Algoritmo de Euclides Estendido
 
-O \textbf{Algoritmo de Euclides Estendido} calcula o MDC de dois números $a$ e $b$, além de encontrar inteiros $x$ e $y$ tais que
+O **Algoritmo de Euclides Estendido** calcula o MDC de dois números $a$ e $b$, além de encontrar inteiros $x$ e $y$ tais que
 
 $$ ax + by = \text{MDC}(a, b) $$
 
@@ -136,7 +136,7 @@ O algoritmo é baseado no teorema de Bezout, que diz que se existem inteiros $x$
 
 ### Função Totiente de Euler
 
-Dois números inteiros $a$ e $b$ são \textbf{coprimos} se o MDC deles é 1. A \textbf{Função Totiente de Euler} $\phi(n)$ conta a quantidade de inteiros menores que $n$ e coprimos com ele. A função pode ser calculada a partir da fatoração prima de $n$:
+Dois números inteiros $a$ e $b$ são **coprimos** se o MDC deles é 1. A **Função Totiente de Euler** $\phi(n)$ conta a quantidade de inteiros menores que $n$ e coprimos com ele. A função pode ser calculada a partir da fatoração prima de $n$:
 
 $$ \phi(n) = \prod_{i=1}^k p_i^{\alpha_i-1}(p_i-1) $$
 
@@ -164,7 +164,7 @@ int phi(int n) {
 
 ### Definições e Propriedades
 
-Dado um número inteiro $n > 1$, dois inteiros $a$ e $ b$ são \textbf{congruentes módulo} $n$ se $n$ divide a diferença $a - b$. Isso é denotado como
+Dado um número inteiro $n > 1$, dois inteiros $a$ e $ b$ são **congruentes módulo** $n$ se $n$ divide a diferença $a - b$. Isso é denotado como
 
 $$ a \equiv b \mod n $$
 
@@ -373,7 +373,7 @@ $$ a^2 + b^2 = c^2 $$
 
 Se $(a, b, c)$ é uma tripla pitagórica, então $(ka, kb, kc)$ também é uma tripla pitagórica para qualquer inteiro positivo $k$.
 
-Se $a$, $b$ e $c$ são coprimos dois a dois, então $(a, b, c)$ é chamada de \textbf{tripla pitagórica primitiva}.
+Se $a$, $b$ e $c$ são coprimos dois a dois, então $(a, b, c)$ é chamada de **tripla pitagórica primitiva**.
 
 Todas as triplas pitagóricas podem ser geradas a partir de triplas primitivas multiplicando por um inteiro positivo.
 

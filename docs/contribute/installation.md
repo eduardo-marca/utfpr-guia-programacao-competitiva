@@ -1,6 +1,6 @@
 # Instalação
 
-Este guia tem como objetivo mostar como instalar, configurar e rodar o repositório locamente.
+Este guia tem como objetivo mostrar como instalar, configurar e rodar o repositório localmente.
 
 ## Pré-requisitos
 - Git
@@ -13,7 +13,7 @@ Este guia tem como objetivo mostar como instalar, configurar e rodar o repositó
 `cd utfpr-guia-programacao-competitiva`
 ```
 
-## Criando Ambiente Vitual
+## Criando Ambiente Virtual
 
 Esse repositório utiliza um ambiente virtual python.
 

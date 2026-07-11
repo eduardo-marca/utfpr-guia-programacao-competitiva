@@ -7,7 +7,7 @@ Ela tem muitas semelhanças com a linguagem C, mas possui muitos recursos extras
 O objetivo dessa sessão é mostrar como criar um programa básico em C++ e como compilá-lo. Outras páginas mostrarão como usar diversos recursos do C++.
 
 !!! warning
-    Esse guia tem como foco mostrar C++ pelo lado de programação competitiva, e não em mostrar os fundamentos de C++, como variáveis, funções e estruturas de controle. Portanto recomenda-se um conhecimento básico de C++ e programção em geral.
+    Esse guia tem como foco mostrar C++ pelo lado de programação competitiva, e não em mostrar os fundamentos de C++, como variáveis, funções e estruturas de controle. Portanto recomenda-se um conhecimento básico de C++ e programão em geral.
 
 Caso queira aprender C++ do zero, recomenda-mos os seguintes recursos:
 
@@ -60,12 +60,12 @@ Para executar o programa bastar utilizar o comando `./main` ou `./main.exe` no t
 ## Lendo e Escrevendo no Terminal
 Para ler e escrever algum valor no terminal (a forma padrão em problemas de programação competitiva) são utilizados principalmente as instruções do C++ `cin` para leitura e `cout` para escrita. Além disso é comum usar `endl` para imprimir uma quebra de linha, além do caractere `'\n'`.
 
-As váriaveis lidas com `cin` devem estar separadas por ">>".
+As variáveis lidas com `cin` devem estar separadas por ">>".
 
 Os valores escritos com `cout` devem estar separados por "<<".
 
 !!! tip
-    Também podém ser utilizadas as funções de C `scanf()` para leitura e `printf()` para escrita.
+    Também podem ser utilizadas as funções de C `scanf()` para leitura e `printf()` para escrita.
 
 Por exemplo:
 ```

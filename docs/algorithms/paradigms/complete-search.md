@@ -1,5 +1,5 @@
 # Busca Completa
-A Busca Completa (ou Complete Search) é um método geral que pode ser usado para resolver praticamente qualquer problema algoritmo (mesmo que nem sempre de forma eficiênte). Ele consiste em gerar todas as possíveis soluções para o problema através da força bruta, e testar cada uma delas até achar a solução correta.
+A Busca Completa (ou Complete Search) é um método geral que pode ser usado para resolver praticamente qualquer problema algoritmo (mesmo que nem sempre de forma eficiente). Ele consiste em gerar todas as possíveis soluções para o problema através da força bruta, e testar cada uma delas até achar a solução correta.
 
 ## Quando Usar?
 Esse método é útil se existe tempo ou recursos suficientes para gerar e testar todas as possibilidades de um problema. Ele geralmente só pode ser usado em problemas que não são tão complexos, já que gera uma quantidade enorme de possibilidades pois não usa nenhuma estratégia de busca.
@@ -7,12 +7,12 @@ Esse método é útil se existe tempo ou recursos suficientes para gerar e testa
 ## Gerando Subconjuntos
 Muitos problemas de Busca Completa envolvem gerar todos os subconjuntos de um conjunto de $n$ elementos. Por exemplo, os subconjuntos de ${0, 1, 2}$ são $\varnothing$, $\{0\}$, $\{1\}$, $\{2\}$, $\{0, 1\}$, $\{0, 2\}$, $\{1, 2\}$ e $\{0, 1, 2\}$.
 
-Existem dois métodos comums de se fazer isso: com uma busca recursiva ou com bitmask.
+Existem dois métodos comuns de se fazer isso: com uma busca recursiva ou com bitmask.
 
 ### Recursão
 A busca recursiva é uma das formas mais simples de se fazer isso. O seguinte exemplo permite criar todos os subconjuntos de $\{0, 1, 2, \dots, n-1\}$. Essa função precisa de um $vector$ para guardar o subconjunto atual. A busca começa com a chamada $search(0)$.
 ```cpp
-int n; // tamnho do conjunto
+int n; // tamanho do conjunto
 vector<int> subset; // subconjunto atual
 void search(int k) {
     if(k == n) {
@@ -25,12 +25,12 @@ void search(int k) {
     }
 }
 ```
-Quando essa função é chamada com parâmtro $k$, ela criar duas novas chamadas: uma incluindo o elemento $k$ e outra não. Assim, cada uma dessas novas chamadas vai incluir ou não $k+1$, e assim por diante, até chegar em $k=n$.
+Quando essa função é chamada com parâmero $k$, ela criar duas novas chamadas: uma incluindo o elemento $k$ e outra não. Assim, cada uma dessas novas chamadas vai incluir ou não $k+1$, e assim por diante, até chegar em $k=n$.
 
 Esse algoritmo tem complexidade $O(2^n)$ e complexidade de espaço $O(n)$.
 
 !!! tip "Implementação Alternativa"
-    Também é possível implementar o algoritmo usando outras estruturas para matner o subconjunto, como um $set$, por exemplo.
+    Também é possível implementar o algoritmo usando outras estruturas para manter o subconjunto, como um $set$, por exemplo.
     
     Além disso, é possível começar a chamada em $1$ para gerar os subconjuntos sem o $0$.
     Também é possível gerar os subconjuntos indo até $n$ se colocarmos `if(k > n)` na função.
@@ -54,10 +54,10 @@ A técnica de bitmask pode ser usada em muitas outras situações, sendo muito p
 ## Gerando Permutações
 Muitos problemas exigem achar uma permutação de um conjunto de elementos de tamanho $n$. Uma permutação é uma sequência de elementos em que a ordem dos elementos importa. Por exemplo, se temos um conjunto $\{0, 1, 2\}$, as permutações são: $\{0, 1, 2\}$, $\{0, 2, 1\}$, $\{1, 0, 2\}$, $\{1, 2, 0\}$, $\{2, 0, 1\}$ e $\{2, 1, 0\}$.
 
-Novamente temos duas formas comums de se fazer isso: com recursão e usando a função `next_permutation` da STL do C++.
+Novamente temos duas formas comuns de se fazer isso: com recursão e usando a função `next_permutation` da STL do C++.
 
 ### Recursão
-De forma parecida com os subconjuntos, podemos gerar permutações utilizando recursão. A seguinte função cria todas as permutações de $\{0, 1, 2, \dots, n-1\}$. A função constroi um vetor `permutation` que contém a permutação.
+De forma parecida com os subconjuntos, podemos gerar permutações utilizando recursão. A seguinte função cria todas as permutações de $\{0, 1, 2, \dots, n-1\}$. A função constrói um vetor `permutation` que contém a permutação.
 ```cpp
 vector<int> permutation;
 bool chosen[n];

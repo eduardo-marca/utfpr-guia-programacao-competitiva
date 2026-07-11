@@ -1,4 +1,4 @@
-# Como Contrubir
+# Como Contribuir
 
 Você pode contribuir diretamente com o repositório no GitHub. Esse é um repositório público, então você pode criar uma cópia local para trabalhar em seu computador.
 

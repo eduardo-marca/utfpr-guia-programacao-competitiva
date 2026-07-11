@@ -46,7 +46,7 @@ git add .
 git commit -m "Add BFS guide"
 ```
 
-Aqui você podera editar os arquivos do site e adicionar as mudanças à sua branch. Você pode fazer diversos commits se for necessário.
+Aqui você poderá editar os arquivos do site e adicionar as mudanças à sua branch. Você pode fazer diversos commits se for necessário.
 
 ### Push
 ```bash

@@ -13,9 +13,9 @@ Um grafo é uma estrutura de dados composta por um conjunto de vértices (ou nó
 - **Ciclo**: Um caminho que começa e termina no mesmo vértice, sem repetir arestas. Um ciclo simples não repete vértices, exceto o vértice inicial/final.
 
 ### Conectividade
-Um grafo é considerado conectado (ou conexo) se houver um caminho entre qualquer par de vértices. Caso contrário, ele é chamado de desconectado (ou disconexo).
+Um grafo é considerado conectado (ou conexo) se houver um caminho entre qualquer par de vértices. Caso contrário, ele é chamado de desconectado (ou desconexo).
 
-As partes conectadas de um grafo desconectado são chamadas de componentes conectados, componentes conexos ou simplismente componentes.
+As partes conectadas de um grafo desconectado são chamadas de componentes conectados, componentes conexos ou simplesmente componentes.
 
 ### Árvores
 Uma árvore é um tipo especial de grafo que é conectado e não possui ciclos. Em outras palavras, uma árvore é um grafo acíclico e conectado. As árvores têm várias propriedades importantes, como:
@@ -71,7 +71,7 @@ A matriz de adjacência é uma representação de grafos usando uma matriz bidim
 A matriz de adjacência é útil para grafos densos (ou seja, grafos com muitas arestas em relação ao número de vértices), mas pode ser ineficiente em termos de espaço para grafos esparsos, pois requer O(V^2) espaço, onde V é o número de vértices.
 
 ### Lista de Arestas
-A lista de arestas é uma representação de grafos onde todas as arestas do grafo são armazenadas como uma lista de pares de vértices (u, v) em alguma oredem. Esta representação é útil para algoritmos que precisam processar todas as arestas do grafo.
+A lista de arestas é uma representação de grafos onde todas as arestas do grafo são armazenadas como uma lista de pares de vértices (u, v) em alguma ordem. Esta representação é útil para algoritmos que precisam processar todas as arestas do grafo.
 
 A lista de arestas pode ser implementada com um `vector`:
 ```cpp

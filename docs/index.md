@@ -14,8 +14,7 @@ Esse guia é separado em diversas páginas. No topo você encontra os principais
 
 Você pode começar pela [Introdução à Programação Competitiva](introduction/what-is-cp.md), que explica o que é programação competitiva e como ela funciona.
 
-Caso queira estudar todos os tópicos em uma ordem mais valtada para aprendizado, existe também a página [Trilha de Aprendizagem](introduction/learning-path.md) com os assuntos separados por níveis de dificuldade, em uma ordem recomendada para aprender.
+Caso queira estudar todos os tópicos em uma ordem mais voltada para aprendizado, existe também a página [Trilha de Aprendizagem](introduction/learning-path.md) com os assuntos separados por níveis de dificuldade, em uma ordem recomendada para aprender.
 
 ## Como Contribuir
-Caso esteja interessado, é possível contribuir com este guia. Para isso siga as instruções em [Como Contrubir
-](contribute/index.md).
+Caso esteja interessado, é possível contribuir com este guia. Para isso siga as instruções em [Como Contribuir](contribute/index.md).
