@@ -2,7 +2,9 @@
 
 Você pode contribuir diretamente com o repositório no GitHub. Esse é um repositório público, então você pode criar uma cópia local para trabalhar em seu computador.
 
-Existem diversos guias de como fazer isso que você pode encontrar nas próximas páginas.
+O repositório é feito com Mkdocs e o tema Meterial, e praticamente todo o conteúdo é escrito em Markdown.
+
+Existem diversos guias de contribuir que você pode encontrar nas próximas páginas.
 
 ## O Que Posso Fazer?
 Algumas coisas que podem ser feitas para contribuir são:
