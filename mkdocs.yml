@@ -63,6 +63,12 @@ markdown_extensions:
 plugins:
   - search
   - mermaid2
+  - to-pdf:
+      output_path: "pdf/guia-de-programacao-competitiva-topdf.pdf"
+  - with-pdf:
+      output_path: "pdf/guia-de-programacao-competitiva-withpdf.pdf"
+      toc: true
+      title: Guia de Programação Competitiva UTFPR
 
 extra_css:
   - stylesheets/style.css
