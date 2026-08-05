@@ -68,7 +68,7 @@ Os valores escritos com `cout` devem estar separados por "<<".
     Também podem ser utilizadas as funções de C `scanf()` para leitura e `printf()` para escrita.
 
 Por exemplo:
-```
+```cpp
 int A, B;
 cin >> A >> B;
 cout << "Soma: " << A+B << endl;

@@ -8,6 +8,7 @@ O MkDocs é um gerador de sites estáticos rápido e simples, sem a necessidade 
 - [Introdução ao MkDocs](https://www.mkdocs.org/getting-started/)
 - [Guia do Usuário MkDocs](https://www.mkdocs.org/user-guide/)
 - [Tema Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+- [Guia do Usuário MkDocs to PDF](https://mkdocs-to-pdf.readthedocs.io/en/stable/)
 
 ## Estrutura do Site
 

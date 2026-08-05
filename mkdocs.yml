@@ -60,13 +60,27 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+  - markdown_katex:
+      no_inline_svg: false # Keeps math as vectors for clean printing
+
 plugins:
   - search
   - mermaid2
   - to-pdf:
-      output_path: "pdf/guia-de-programacao-competitiva-topdf.pdf"
-  - with-pdf:
-      output_path: "pdf/guia-de-programacao-competitiva-withpdf.pdf"
+      output_path: "pdf/guia-de-programação-competitiva-utfpr.pdf"
+      cover_title: Guia de Programação Competitiva UTFPR
+      cover_subtitle: Guia para estudo e treinamento em Programação Competitiva da UTFPR.
+      cover_logo: assets/logo.svg
+      toc_title: "Sumário"
+      toc_level: 2
+      exclude_pages:
+        - 'introduction/'
+
+  - print-site
+
+  # opção alternativa para gerar PDF com o plugin `with-pdf`
+  #- with-pdf:
+  #    output_path: "pdf/guia-de-programacao-competitiva-withpdf.pdf"
 
 extra_css:
   - stylesheets/style.css
