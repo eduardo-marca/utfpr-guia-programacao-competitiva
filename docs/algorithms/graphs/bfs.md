@@ -1,4 +1,4 @@
-# BFS
+# Busca em Largura (BFS)
 
 A Busca em Largura (Breadth First Search - BFS) é um algoritmo de busca em grafos que explora todos os vértices vizinhos antes de avançar para os próximos níveis. É uma técnica fundamental em teoria dos grafos e é amplamente utilizada em várias aplicações, como encontrar o caminho mais curto em grafos não ponderados, análise de redes sociais, e muito mais.
 

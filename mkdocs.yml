@@ -67,8 +67,6 @@ plugins:
       output_path: "pdf/guia-de-programacao-competitiva-topdf.pdf"
   - with-pdf:
       output_path: "pdf/guia-de-programacao-competitiva-withpdf.pdf"
-      toc: true
-      title: Guia de Programação Competitiva UTFPR
 
 extra_css:
   - stylesheets/style.css
@@ -100,6 +98,7 @@ nav:
     - algorithms/graphs/graph-basics.md
     - algorithms/graphs/dfs.md
     - algorithms/graphs/bfs.md
+    - algorithms/graphs/dijkstra.md
 
   - Strings:
     - algorithms/string/kmp.md

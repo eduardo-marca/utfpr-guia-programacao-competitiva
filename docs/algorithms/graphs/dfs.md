@@ -1,4 +1,4 @@
-# DFS
+# Busca em Profundidade (DFS)
 
 A Busca em Profundidade (Depth First Search - DFS) é um algoritmo de busca em grafos que explora o máximo possível cada ramo antes de retroceder. É uma técnica fundamental em teoria dos grafos e é amplamente utilizada em várias aplicações, como resolução de labirintos, análise de redes sociais, e muito mais.
 

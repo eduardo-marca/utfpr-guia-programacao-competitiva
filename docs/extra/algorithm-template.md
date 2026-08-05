@@ -20,3 +20,5 @@ Descrição.
 ### Recomendados
 
 ### Adicionais
+
+## Outros Recursos
