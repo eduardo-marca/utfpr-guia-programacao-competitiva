@@ -73,6 +73,7 @@ plugins:
       cover_logo: assets/logo.svg
       toc_title: "Sumário"
       toc_level: 2
+      enabled_if_env: ENABLE_PDF_EXPORT
       exclude_pages:
         - 'introduction/'
 
@@ -99,14 +100,14 @@ nav:
     - cpp/basics.md
     - cpp/stl.md
   
-  - Algoritmos e Técnicas Básicos:
+  - Algoritmos e Técnicas Básicas:
     - algorithms/paradigms/complete-search.md
     - algorithms/basic-algorithms/binary-search.md
-    - algorithms/paradigms/greedy.md
+    #- algorithms/paradigms/greedy.md
     - algorithms/paradigms/dynamic-programming.md
 
-  - Estruturas de Dados:
-    - algorithms/data-structures/segtree.md
+  #- Estruturas de Dados:
+  #  - algorithms/data-structures/segtree.md
 
   - Grafos:
     - algorithms/graphs/graph-basics.md
@@ -125,11 +126,16 @@ nav:
       - algorithms/math/combinatorics/combinatorics-basics.md
     - Geometria:
       - algorithms/math/geometry/geometry-basics.md
+    - Teoria dos Jogos:
+      - algorithms/math/game-theory/game-theory-basics.md
+      #- algorithms/math/game-theory/sprague-grundy-game.md
+      #- algorithms/math/game-theory/misere-games.md
+      #- algorithms/math/game-theory/other-games.md
 
   - Como Contribuir:
     - contribute/index.md
     - contribute/installation.md
     - contribute/github.md
     - contribute/mkdocs.md
-    - contribute/writing-guidelines.md
-    - contribute/style-guide.md
+    #- contribute/writing-guidelines.md
+    #- contribute/style-guide.md

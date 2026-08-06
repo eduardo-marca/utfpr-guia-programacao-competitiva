@@ -1,0 +1,2 @@
+# Jogo de Misère
+O **Jogo de Misère** é um jogo matemático de estratégia para dois jogadores que é uma variação do Jogo de Nim. As regras são semelhantes, onde os jogadores se revezam removendo qualquer número de objetos de uma única pilha. No entanto, a diferença crucial é que o jogador que remove o último objeto perde o jogo. A estratégia vencedora no Jogo de Misère é mais complexa do que no Jogo de Nim, e envolve a análise das configurações das pilhas para determinar posições vencedoras e perdedoras.
