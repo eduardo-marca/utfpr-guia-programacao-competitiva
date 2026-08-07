@@ -113,8 +113,7 @@ nav:
 
   - Grafos:
     - algorithms/graphs/graph-basics.md
-    - algorithms/graphs/dfs.md
-    - algorithms/graphs/bfs.md
+    - algorithms/graphs/graph-traversal.md
     - algorithms/graphs/dijkstra.md
 
   - Strings:

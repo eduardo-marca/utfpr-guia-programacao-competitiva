@@ -34,6 +34,7 @@ Abaixo um exemplo dos estados de um jogo representados por um grafo, onde estado
 Um jogo clássico envolve uma pilha de objetos (geralmente gravetos ou pedras) e dois jogadores que se revezam removendo objetos da pilha. O jogador que remove o último objeto vence o jogo. O número de objetos que um jogador pode remover em sua vez é limitado a um número máximo, que é definido no início do jogo. A estratégia vencedora para este tipo de jogo pode ser determinada analisando os estados do jogo e aplicando a classificação de estados vencedores e perdedores.
 
 Por exemplo, considere um jogo com uma pilha de 10 objetos, onde cada jogador pode remover 1, 2 ou 3 objetos por vez. Podemos definir cada estado como o número de objetos restantes na pilha. O estado inicial é 10. A partir desse estado, os jogadores podem alcançar os estados 9, 8 ou 7. O estado 0 é um estado terminal (pois não existem mais movimentos possíveis) e, portanto, é um estado perdedor. A partir daí, podemos classificar os estados anteriores:
+
 - Os estados 1, 2 e 3 são estados vencedores, pois o jogador pode remover todos os objetos restantes e vencer, ou seja, ele pode alcançar o estado 0, que é perdedor.
 - O estado 4 é um estado perdedor, pois qualquer movimento leva a um estado vencedor (3, 2 ou 1).
 - Os estados 5, 6 e 7 são estados vencedores, pois o jogador pode alcançar o estado 4, que é perdedor.

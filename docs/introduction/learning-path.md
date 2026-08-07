@@ -21,8 +21,7 @@ Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se
 ## Módulo 3 - Estruturas de Dados Básicas
 
 ## Módulo 4 - Introdução à Grafos
-1. [DFS](../algorithms/graphs/dfs.md)
-2. [BFS](../algorithms/graphs/bfs.md)
+1. [Básico](../algorithms/graphs/graph-basics.md)
 
 ## Módulo 5 - Programação Dinâmica
 1. [Programação Dinâmica](../algorithms/paradigms/dynamic-programming.md)
