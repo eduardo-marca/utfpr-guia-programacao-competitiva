@@ -41,6 +41,8 @@ extra:
 
 markdown_extensions:
   - admonition
+  - tables
+  
   - pymdownx.details
 
   - pymdownx.superfences:

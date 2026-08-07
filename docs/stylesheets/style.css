@@ -1,3 +1,1 @@
-.md-typeset .admonition.problem {
-    
-}
+img[src*="#center"] { display: block; margin: 0 auto; }
