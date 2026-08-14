@@ -7,6 +7,7 @@ O repositório é feito com Mkdocs e o tema Meterial, e praticamente todo o cont
 Existem diversos guias de contribuir que você pode encontrar nas próximas páginas.
 
 ## O Que Posso Fazer?
+
 Algumas coisas que podem ser feitas para contribuir são:
 
 - Criar uma nova página de conteúdo.

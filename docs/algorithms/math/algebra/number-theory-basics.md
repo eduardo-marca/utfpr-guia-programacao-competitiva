@@ -195,6 +195,7 @@ Um número é divisível por:
 ## Outros Resultados
 
 ### Números de Fibonacci
+
 Os **Números de Fibonacci** são uma sequência de números inteiros definidos recursivamente da seguinte forma:
 
 $$ F_0 = 0, \quad F_1 = 1 $$

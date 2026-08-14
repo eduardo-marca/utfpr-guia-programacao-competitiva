@@ -3,15 +3,17 @@
 A biblioteca padrão do C++ (STL) oferece uma série de estruturas de dados e funções úteis para facilitar a implementação de algoritmos em programação competitiva. A seguir, apresentamos algumas das mais comuns e suas principais características.
 
 ## Array
+
 São espaços na memória para armazenar um número fixo de valores do mesmo tipo. O acesso a um elemento é feito através de um índice, que começa em 0. Seu tamanho deve ser definido no momento da declaração e não pode ser alterado posteriormente.
 
 - `int arr[n]` - declara um array de $n$ inteiros. Complexidade: $O(1)$ para dados primitivos.
 - `arr[i]` - acessa o elemento na posição $i$. Complexidade: $O(1)$.
 
-!!! note
+!!! note "Nota"
     O C++ também oferece a classe `std::array` da biblioteca padrão, mas não costuma ser utilizada em programação competitiva, pois é mais verbosa e não oferece vantagens significativas em relação a um array comum.
 
 ## Vector
+
 É uma estrutura de dados dinâmica que pode crescer ou diminuir de tamanho conforme necessário. Ele é implementado como um array dinâmico, o que significa que ele aloca mais memória do que o necessário para armazenar os elementos atuais, permitindo que novos elementos sejam adicionados sem a necessidade de realocar toda a estrutura.
 
 Ele oferece uma série de métodos para manipulação dos elementos, como `push_back` para adicionar um elemento no final, `pop_back` para remover o último elemento, `size` para obter o número de elementos, entre outros.
@@ -53,7 +55,7 @@ O `pair` é uma estrutura de dados que armazena dois valores de tipos possivelme
 - `p.first` — retorna o primeiro elemento do par. Complexidade: $O(1)$.
 - `p.second` — retorna o segundo elemento do par. Complexidade: $O(1)$.
 
-!!! tip
+!!! tip "Dica"
     `auto [x, y] = p` — desempacota os elementos do par em variáveis x e y. Complexidade: $O(1)$.
 
 Quando comparamos dois pares, eles são comparados primeiro pelo `first` e, em caso de empate, pelo `second`. Isso é útil para ordenar pares em estruturas como `set` ou `map`.
@@ -65,17 +67,20 @@ A `tuple` é uma estrutura de dados que armazena um número fixo de valores de t
 - `tuple<int, string, double> t` — cria uma tupla com um inteiro, uma string e um double. Complexidade: $O(1)$.
 - `get<i>(t)` — retorna o elemento na posição i da tupla. Complexidade: $O(1)$.
 
-!!! danger
+!!! danger "Cuidado"
     Não é possível acessar os elementos da tupla usando `t.first`, como em um par. É necessário usar a função `get` para acessar os elementos ou desempacotá-los diretamente.
 
-!!! tip
+!!! tip "Dica"
     `auto [x, y, z] = t` — desempacota os elementos da tupla em variáveis x, y e z. Complexidade: $O(1)$.
 
 ## Sets
+
 ### Set
+
 Estrutura que permite armazenar elementos únicos em uma coleção ordenada. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para armazenar elementos sem duplicatas e para realizar operações de conjunto, como união, interseção e diferença.
 
 ### Unordered Set
+
 Estrutura que permite armazenar elementos únicos em uma coleção não ordenada. Ele é implementado como uma tabela hash, o que significa que as operações de inserção, remoção e busca são realizadas em tempo constante em média.
 
 Ele funciona de forma similar ao `set`, com praticamente as mesmas operações, mas não mantém os elementos em ordem, o que pode ser útil em algumas situações onde a ordem dos elementos não é importante.
@@ -83,10 +88,12 @@ Ele funciona de forma similar ao `set`, com praticamente as mesmas operações, 
 Porém ele pode ser mais lento que o `set` em alguns casos, especialmente quando há muitas colisões na tabela hash, o que pode levar a um tempo de execução pior do que o esperado. Por isso, é importante avaliar qual estrutura é mais adequada para cada situação específica.
 
 ### Multiset
-Estrutura que permite armazenar elementos repetidos em uma coleção ordenada. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para 1
+
+Estrutura que permite armazenar elementos repetidos em uma coleção ordenada. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para
 armazenar elementos com repetição e para realizar operações de conjunto, como união, interseção e diferença.
 
 ### Operações
+
 - `set<int> s` — cria um conjunto de inteiros. Complexidade: $O(1)$.
 - `s.insert(x)` — insere o elemento x no conjunto. Complexidade: $O(\log n)$.
 - `s.erase(x)` — remove o elemento x do conjunto. Complexidade: $O(\log n)$.
@@ -103,10 +110,12 @@ armazenar elementos com repetição e para realizar operações de conjunto, com
 ## Maps
 
 ### Map
+
 Estrutura que armazena pares de chave-valor, onde cada chave é única. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para armazenar dados associados a chaves únicas e para realizar operações de mapeamento, como busca por chave, inserção de pares chave-valor e remoção de pares chave-valor.
 
 
 ### Unordered Map
+
 Estrutura que armazena pares de chave-valor, onde cada chave é única. Ele é implementado como uma tabela hash, o que significa que as operações de inserção, remoção e busca são realizadas em tempo constante em média. Ele é útil para armazenar dados associados a chaves únicas e para realizar operações de mapeamento, como busca por chave, inserção de pares chave-valor e remoção de pares chave-valor.
 
 Ele funciona de forma similar ao `map`, com praticamente as mesmas operações, mas não mantém os pares chave-valor em ordem, o que pode ser útil em algumas situações onde a ordem dos elementos não é importante.
@@ -114,6 +123,7 @@ Ele funciona de forma similar ao `map`, com praticamente as mesmas operações, 
 Porém ele pode ser mais lento que o `map` em alguns casos, especialmente quando há muitas colisões na tabela hash, o que pode levar a um tempo de execução pior do que o esperado. Por isso, é importante avaliar qual estrutura é mais adequada para cada situação específica.
 
 ### Multimap
+
 Estrutura que armazena pares de chave-valor, onde as chaves podem ser repetidas. Ele é implementado como uma árvore binária balanceada, o que significa que as operações de inserção, remoção e busca são realizadas em tempo logarítmico. Ele é útil para armazenar dados associados a chaves com repetição e para realizar operações de mapeamento, como busca por chave, inserção de pares chave-valor e remoção de pares chave-valor.
 
 
@@ -145,6 +155,7 @@ Funcionam com quase todas as estruturas de dados da STL, como `vector`, `set`, `
 - `for (auto& x : o)` — percorre os elementos do objeto **o** usando um loop for-each. Complexidade: $O(n)$.
 
 ### Exemplos
+
 - `for (auto it = v.begin(); it != v.end(); ++it) { cout << *it << endl; }` — imprime os elementos do vetor **v** usando um iterador.
 - `for (auto& x : v) { cout << x << endl; }` — imprime os elementos do vetor **v** usando um loop for-each.
 - `sort(v.begin(), v.end())` — ordena os elementos do vetor **v** usando iteradores. Complexidade: $O(n \log n)$.
@@ -153,6 +164,7 @@ Funcionam com quase todas as estruturas de dados da STL, como `vector`, `set`, `
 - `for (auto [key, value] : m) { cout << key << ": " << value << endl; }` — percorre os pares chave-valor do mapa **m** usando um loop for-each com desempacotamento de tupla.
 
 ## Stack
+
 A pilha é uma estrutura de dados que segue o princípio LIFO (Last In, First Out), ou seja, o último elemento inserido é o primeiro a ser removido. Ela é útil para armazenar dados temporários e para realizar operações de backtracking, como em algoritmos de busca em profundidade.
 
 - `stack<int> s` — cria uma pilha de inteiros. Complexidade: $O(1)$.
@@ -176,7 +188,7 @@ A fila é uma estrutura de dados que segue o princípio FIFO (First In, First Ou
 - `q.size()` — retorna o tamanho da fila. Complexidade: $O(1)$.
 - `q.empty()` — retorna true se a fila estiver vazia. Complexidade: $O(1)$.
 
-!!! tip
+!!! tip "Dica"
     `while (!q.empty()) { cout << q.front() << endl; q.pop(); }` — imprime os elementos da fila **q** do início para o final.
 
 ## Deque
@@ -193,7 +205,7 @@ A deque (double-ended queue) é uma estrutura de dados que permite inserção e 
 - `d.size()` — retorna o tamanho do deque. Complexidade: $O(1)$.
 - `d.empty()` — retorna true se o deque estiver vazio. Complexidade: $O(1)$.
 
-!!! tip
+!!! tip "Dica"
     `while (!d.empty()) { cout << d.front() << endl; d.pop_front(); }` — imprime os elementos do deque **d** do início para o final.
 
 ## Priority Queue
@@ -205,7 +217,7 @@ A deque (double-ended queue) é uma estrutura de dados que permite inserção e 
 - `pq.size()` — retorna o tamanho da fila de prioridade. Complexidade: $O(1)$.
 - `pq.empty()` — retorna true se a fila de prioridade estiver vazia. Complexidade: $O(1)$.
 
-!!! tip
+!!! tip "Dica"
     `while (!pq.empty()) { cout << pq.top() << endl; pq.pop(); }` — imprime os elementos da fila de prioridade **pq** do maior para o menor.
 
     `priority_queue<int, vector<int>, greater<int>> pq` — cria uma fila de prioridade de inteiros (mín-heap). Complexidade: $O(1)$.

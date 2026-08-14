@@ -56,7 +56,7 @@ git push origin bfs-guide
 ### Pull Request
 Pelo site to Github é possível abir uma Pull Request para o [repositório](https://github.com/eduardo-marca/utfpr-guia-programacao-competitiva) na aba *Pull requests*.
 
-!!! tip
+!!! tip "Dica"
     Não é necessário abrir vários *pull requests* para a mesma branch. A cada revisão você pode commitar na mesma branch e o *pull request* será atualizado automaticamente.
 
 ### Review e Merge

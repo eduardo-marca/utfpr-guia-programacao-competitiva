@@ -1,4 +1,5 @@
 # Introdução à Teoria dos Jogos
+
 Teoria dos Jogos é um ramo da matemática que estuda estratégias em situações de conflito ou cooperação entre diferentes agentes racionais.
 
 Em programação competitiva, a teoria dos jogos é frequentemente aplicada para resolver problemas que envolvem decisões estratégicas entre dois jogadores, como jogos de tabuleiro, jogos de cartas, e outros cenários onde os jogadores precisam tomar decisões baseadas nas ações dos outros.
@@ -12,6 +13,7 @@ Alguns problemas envolvem apenas dizer se um certo estado do jogo é vencedor ou
 Como veremos, uma enorme quantidade de jogos podem ser resolvidos a partir de um jogo chamado *Jogo de Nim* e suas variações, mas primeiramente veremos alguns conceitos básicos da teoria dos jogos.
 
 ## Análise de Estados
+
 Muitos jogos podem ser representados como uma árvore ou grafo de estados, onde cada nó representa um estado do jogo e as arestas representam as ações possíveis que os jogadores podem tomar. Cada estado pode ser classificado como:
 
 - **Estado Vencedor**: Um estado do jogo em que o jogador que está prestes a jogar tem uma estratégia que garante a vitória, independentemente das ações do adversário.
@@ -31,6 +33,7 @@ Abaixo um exemplo dos estados de um jogo representados por um grafo, onde estado
 ![Grafo de Estados](images/states-graph.drawio.svg)
 
 ### Jogo da Pilha
+
 Um jogo clássico envolve uma pilha de objetos (geralmente gravetos ou pedras) e dois jogadores que se revezam removendo objetos da pilha. O jogador que remove o último objeto vence o jogo. O número de objetos que um jogador pode remover em sua vez é limitado a um número máximo, que é definido no início do jogo. A estratégia vencedora para este tipo de jogo pode ser determinada analisando os estados do jogo e aplicando a classificação de estados vencedores e perdedores.
 
 Por exemplo, considere um jogo com uma pilha de 10 objetos, onde cada jogador pode remover 1, 2 ou 3 objetos por vez. Podemos definir cada estado como o número de objetos restantes na pilha. O estado inicial é 10. A partir desse estado, os jogadores podem alcançar os estados 9, 8 ou 7. O estado 0 é um estado terminal (pois não existem mais movimentos possíveis) e, portanto, é um estado perdedor. A partir daí, podemos classificar os estados anteriores:
@@ -64,7 +67,7 @@ Abaixo a representação do vetor de estados do jogo da pilha, com estados perde
 
 ![Array de Estados](images/states-array.drawio.svg)
 
-!!! note
+!!! note "Nota"
     Uma outra forma de analisar o jogo da pilha é utilizando o conceito de módulo. Se o número máximo de objetos que podem ser removidos em uma jogada for `k`, então os estados do jogo podem ser classificados com base no valor do estado atual módulo `k + 1`. Se o estado atual for congruente a 0 módulo `k + 1`, então é um estado perdedor, caso contrário, é um estado vencedor.
     
     Essa análise é mais eficiente do que a análise de estados, pois não requer a construção de uma árvore de estados completa, mas é menos geral do que a análise de estados, pois não se aplica a todos os jogos de pilha, apenas àqueles com um número máximo fixo de objetos que podem ser removidos em cada jogada.
@@ -89,6 +92,7 @@ A estratégia para o jogo de Nim pode não parecer muito intuitiva a principio, 
 Representamos o estado atual do jogo como um vetor $x=[x_1, x_2, \dots, x_n]$, onde $x_k$ representa o número de elementos na pilha $k$. Chamamos de **soma de nim** o XOR (ou exclusivo) de todas as pilhas, ou seja $s=x_1 \oplus x_2 \oplus \dots \oplus x_n$. Se $s$ for zero, o jogador que está prestes a jogar está em uma posição perdedora, caso contrário, ele está em uma posição vencedora. Assim podemos determinar se um estado é vencedor olhando apenas os tamanhos das pilhas.
 
 ### Explicação
+
 Para mostrar que essa estratégia realmente funciona, iremos mostrar 3 coisas:
 
 1. O estado final $[0, 0, \dots, 0]$ é um estado perdedor e tem $s=0$, como esperado.

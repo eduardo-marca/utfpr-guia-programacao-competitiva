@@ -36,5 +36,5 @@ Os principais sites de prática para programação competitiva incluem:
 - [USACO](http://www.usaco.org/)
 - [SPOJ](https://www.spoj.com/)
 
-!!! tip
+!!! tip "Dica"
     O AtCoder realiza competições para inciantes semanalmente, normalmente aos sábados 9h (horário de Brasília), e é uma ótima maneira de começar a competir.

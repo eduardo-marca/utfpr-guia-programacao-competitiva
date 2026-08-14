@@ -80,7 +80,7 @@ plugins:
         - 'introduction/'
 
   - print-site:
-      add_to_navigation: true
+      add_to_navigation: false
       toc_title: 'Sumário'
       enumerate_headings: false
       add_cover_page: true
@@ -105,11 +105,11 @@ nav:
   - Introdução:
     - index.md
     - introduction/what-is-cp.md
-    - introduction/learning-path.md
+    #- introduction/learning-path.md
 
   - C++:
-    - cpp/basics.md
-    - cpp/stl.md
+    - algorithms/cpp/basics.md
+    - algorithms/cpp/stl.md
   
   - Algoritmos e Técnicas Básicas:
     - algorithms/paradigms/complete-search.md

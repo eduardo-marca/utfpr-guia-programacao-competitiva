@@ -3,6 +3,7 @@
 A programação dinâmica (também chamada de PD, dynamic programming ou DP) é um paradigma de programação que consiste em resolver o problema reutilizando a solução dos subproblemas (versões mais simples ou menores do problema original).
 
 ## O Paradigma
+
 Por se tratar de um paradigma, não existe um algoritmo específico para resolver o problema. A programação dinâmica é uma técnica que pode ser aplicada a qualquer problema, mas ela requer algumas considerações importantes:
 
 - Os subproblemas devem ser independentes e não inter-relacionados.

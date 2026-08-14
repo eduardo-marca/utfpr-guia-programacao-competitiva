@@ -17,7 +17,9 @@ Caso queira aprender C++ do zero, recomenda-mos os seguintes recursos:
 - [Outra Documentação Útil](https://cplusplus.com/doc/tutorial/)
 
 ## Estrutura Básica de Um Programa
+
 Um programa em de C++ típico para programação competitiva se parece assim
+
 ```cpp
 #include <bits/stdc++.h>
 #define ll long long
@@ -34,7 +36,8 @@ int main() {
 Esse programa não realiza nenhuma ação de fato, mas é um molde comum para programas.
 
 A primeira linha `#include <bits/stdc++.h>` insere **todas** as bibliotecas padrões do C++.
-!!! note
+
+!!! note "Nota"
     Em um projeto real, não seria recomendado o uso de `#include <bits/stdc++.h>`, mas para programação competitiva isso é extremamente útil, pois não exige a inclusão manual de cada biblioteca utilizada.
 
 A segunda linha `#define ll long long` define uma *macro* que permite digitar apenas `ll` em vez de `long long` (a versão com mais capacidade de `int`) de forma mais rápida. É comum se utilizar diversas macros desse tipo em programação competitiva.
@@ -48,9 +51,10 @@ Por último, a linha `ios::sync_with_stdio(false); cin.tie(nullptr);` permite qu
 O seu código normalmente vai entre as linhas `ios::sync_with_stdio(false); cin.tie(nullptr);` e `return 0;`, mas pode passar por outras funções e pode inclusive ser finalizado fora da `main` com a instrução `exit(0);`.
 
 ## Compilando e Executando um Código em C++
+
 Suponha que você tem um arquivo em C++ `main.cpp`. Para compila-lo basta utilizar o comando `g++ main.cpp -o main`. Isso irá gerar um arquivo executável (no Windows .exe, no Linux aparece sem extensão) com o nome especificado após `-o`.
 
-!!! Tip
+!!! Tip "Dica"
     Para compilar um arquivo C++ você deve ter o compilador **g++** instalado. Além disso, algums compiladores não vêm com a biblioteca `bits/stdc++.h` por padrão.
 
     Para mais informações veja o guia de instalação do g++.
@@ -58,21 +62,23 @@ Suponha que você tem um arquivo em C++ `main.cpp`. Para compila-lo basta utiliz
 Para executar o programa bastar utilizar o comando `./main` ou `./main.exe` no terminal, utilizando o nome do executável.
 
 ## Lendo e Escrevendo no Terminal
+
 Para ler e escrever algum valor no terminal (a forma padrão em problemas de programação competitiva) são utilizados principalmente as instruções do C++ `cin` para leitura e `cout` para escrita. Além disso é comum usar `endl` para imprimir uma quebra de linha, além do caractere `'\n'`.
 
 As variáveis lidas com `cin` devem estar separadas por ">>".
 
 Os valores escritos com `cout` devem estar separados por "<<".
 
-!!! tip
+!!! tip "Dica"
     Também podem ser utilizadas as funções de C `scanf()` para leitura e `printf()` para escrita.
 
 Por exemplo:
+
 ```cpp
 int A, B;
 cin >> A >> B;
 cout << "Soma: " << A+B << endl;
 ```
 
-!!! note
+!!! note "Nota"
     Perceba que `cin` e `cout` automaticamente reconhecem os tipos utilizados, não sendo necessário especificá-los na hora da leitura/escrita. Além disso ele permite misturar diferentes tipos na mesma linha, usar operadores e até chamadas de funções.

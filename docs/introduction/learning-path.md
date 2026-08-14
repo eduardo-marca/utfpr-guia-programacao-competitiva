@@ -9,8 +9,8 @@ Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se
 1. [O que é Programação Competitiva?](what-is-cp.md)
 
 ## Módulo 1 - C++
-1. [Básico de C++](../cpp/basics.md)
-2. [STL](../cpp/stl.md)
+1. [Básico de C++](../algorithms/cpp/basics.md)
+2. [STL](../algorithms/cpp/stl.md)
 
 ## Módulo 2 - Técnicas e Algoritmos Básicos
 1. [Busca Completa](../algorithms/paradigms/complete-search.md)
@@ -34,4 +34,5 @@ Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se
 ## Módulo 7 - Estruturas de Dados Avançadas
 
 ## Módulo Extra
+
 ### Complexidade
