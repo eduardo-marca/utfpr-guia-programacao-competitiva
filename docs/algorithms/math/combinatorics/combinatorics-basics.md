@@ -85,19 +85,29 @@ int binom(int n, int k) = {
 
 ## Principais Fórmulas
 
-### Arranjo
+### Permutação Simples
 
-### Permutação
+A permutação é usada para calcular de quantas maneiras podemos organizar ou trocar de lugar os elementos de um conjunto, onde a ordem de escolha importa.
 
-Número de arranjos ordenados de $k$ elementos entre $n$ elementos.
+$$ P(n, k) = n! $$
 
-$$ P(n, k)=\frac{n!}{(n-k)!} $$
-
-### Permutação com repetição
+### Permutação com Repetição
 
 $n$ elementos com repetições $n_1, n_2, \dots$
 
-$$ \frac{n!}{n_1!n_2!\dots n_3!} $$
+$$ P_{n}^{n_1, n_2, \dots} \frac{n!}{n_1!n_2!\dots n_3!} $$
+
+### Permutação Circular
+
+Usada quando os elementos são organizados em volta de um círculo, onde girar a posição não cria um arranjo novo.
+
+$$ PC(n) = (n-1)! $$
+
+### Arranjo
+
+Formas de escolher e organizar $k$ elementos de um grupo de $n$ elementos, onde a ordem dos elementos importa.
+
+$$ A(n, k)=\frac{n!}{(n-k)!} $$
 
 ### Combinação
 
