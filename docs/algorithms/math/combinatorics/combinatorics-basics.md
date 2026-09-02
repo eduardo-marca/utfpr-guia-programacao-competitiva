@@ -78,8 +78,8 @@ constexpr int maxN = 1e6;
 fact[i] = (fact[i-1] * i) % MOD;
 invfact[i] = modinv(fact[i], MOD);
 
-int binom(int n, int k) = {
-    fact[n] * invfact[k] % MOD * invfact[n-k] % MOD;
+int binom(int n, int k) {
+    return fact[n] * invfact[k] % MOD * invfact[n-k] % MOD;
 }
 ```
 

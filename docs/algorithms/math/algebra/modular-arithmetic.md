@@ -72,9 +72,11 @@ $$ ax \equiv 1 \mod m $$
 O inverso modular existe se e somente se MDC$(a, m) = 1$. Pode ser calculado usando o Algoritmo de Euclides Estendido em $O(\log m)$:
 
 ```cpp
+constexpr int MOD = 1e9 + 7; // Modulo precisa ser primo
+
 // pode ser otimizado com dp
 int inv(int a) {
-  return a <= 1 ? a : m - (long long)(m/a) * inv(m % a) % m;
+    return a <= 1 ? a : MOD - (long long)(MOD/a) * inv(MOD % a) % MOD;
 }
 ```
 

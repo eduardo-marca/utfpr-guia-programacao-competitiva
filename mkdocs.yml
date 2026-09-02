@@ -119,11 +119,39 @@ nav:
 
   #- Estruturas de Dados:
   #  - algorithms/data-structures/segtree.md
+  #  - algorithms/data-structures/lazy.md
+  #  - algorithms/data-structures/dsu.md
+  #  - algorithms/data-structures/sqrt-tree.md
+  #  - algorithms/data-structures/fenwick.md
 
   - Grafos:
     - algorithms/graphs/graph-basics.md
-    - algorithms/graphs/graph-traversal.md
-    - algorithms/graphs/dijkstra.md
+    - Percurso de Grafos:
+      - algorithms/graphs/traversal/dfs.md
+      - algorithms/graphs/traversal/bfs.md
+    #  - algorithms/graphs/traversal/applications.md
+    - Menor Caminho:
+      - algorithms/graphs/shortest-path/dijkstra.md
+    #  - algorithms/graphs/shortest-path/bellman-ford.md
+    #  - algorithms/graphs/shortest-path/floyd-warshall.md
+    #- Árvores:
+    #  - algorithms/graphs/trees/lca.md
+    #- Grafos Direcionados:
+    #  - algorithms/graphs/directed-graphs/cycle-detection.md
+    #  - algorithms/graphs/directed-graphs/topological-sorting.md
+    #- Árvores Geradoras:
+    #  - algorithms/graphs/spanning-trees/kruskal.md
+    #  - algorithms/graphs/spanning-trees/prim.md
+    #- Caminhos e Circuitos:
+    #  - algorithms/graphs/paths-and-circuits/eulerian-paths.md
+    #  - algorithms/graphs/paths-and-circuits/hamiltonian-paths.md
+    #- Pareamento:
+    #  - algorithms/graphs/matching/bipartite-check.md
+    #  - algorithms/graphs/matching/kuhn.md
+    #  - algorithms/graphs/matching/hungarian.md
+    #- Fluxo:
+    #  - algorithms/graphs/flow/flow-intro.md
+    #  - algorithms/graphs/flow/ford-fulkerson.md
 
   - Strings:
     - algorithms/string/kmp.md

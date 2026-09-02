@@ -1,0 +1,1 @@
+# Checagem de Grafos Bipartidos

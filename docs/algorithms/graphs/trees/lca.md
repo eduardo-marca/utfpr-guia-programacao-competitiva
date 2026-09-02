@@ -1,0 +1,1 @@
+# Menor Ancestral Comum (LCA)
