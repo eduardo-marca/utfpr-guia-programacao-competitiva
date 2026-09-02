@@ -39,14 +39,16 @@ $$ (x \mod m + m) \mod m $$
 
 ## Exponenciação Modular
 
-A **Exponenciação Modular** calcula $a^b \mod m$ em $O(\log b)$:
+A **Exponenciação Modular** calcula $a^b\ \%\ MOD$ em $O(\log b)$:
 
 ```cpp
-int modpow(int x, int n, int m) {
-    if (n == 0) return 1%m;
-    long long u = modpow(x,n/2,m);
-    u = (u*u)%m;
-    if (n%2 == 1) u = (u*x)%m;
+int MOD;
+
+int modpow(int x, int n) {
+    if (n == 0) return 1 % MOD;
+    long long u = modpow(x, n/2);
+    u = (u*u) % MOD;
+    if (n % 2 == 1) u = (u*x) % MOD;
     return u;
 }
 ```
@@ -74,7 +76,7 @@ O inverso modular existe se e somente se MDC$(a, m) = 1$. Pode ser calculado usa
 ```cpp
 // pode ser otimizado com dp
 int inv(int a) {
-  return a <= 1 ? a : m - (long long)(m/a) * inv(m % a) % m;
+  return a <= 1 ? a : MOD - (long long)(MOD/a) * inv(MOD % a) % MOD;
 }
 ```
 
