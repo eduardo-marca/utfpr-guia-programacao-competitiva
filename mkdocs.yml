@@ -114,7 +114,7 @@ nav:
   - Algoritmos e Técnicas Básicas:
     - algorithms/paradigms/complete-search.md
     - algorithms/basic-algorithms/binary-search.md
-    #- algorithms/paradigms/greedy.md
+    - algorithms/paradigms/greedy.md
     - algorithms/paradigms/dynamic-programming.md
 
   #- Estruturas de Dados:
