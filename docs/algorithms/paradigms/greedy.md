@@ -6,6 +6,8 @@ A solução é construída passo a passo, escolhendo a melhor opção disponíve
 
 Eles são frequentemente usados para resolver problemas de otimização e são conhecidos por sua simplicidade e eficiência, mas costumam ser limitados a problemas específicos e geralmente mais simples, já que nem sempre uma estratégia gulosa leva a uma solução ótima.
 
+Este tipo de problema também costuma envolver algum valor para se maximixar ou minimizar, e costuma envolver um sort no meio do caminho.
+
 ## Características dos Algoritmos Gulosos
 
 - **Escolha Localmente Ótima**: Em cada etapa, o algoritmo faz a escolha que parece ser a melhor no momento.
@@ -13,14 +15,6 @@ Eles são frequentemente usados para resolver problemas de otimização e são c
 - **Sem Reconsideração**: Uma vez que uma escolha é feita, ela não é desfeita. O algoritmo não revisita decisões anteriores.
 
 - **Eficiência**: Algoritmos gulosos geralmente têm complexidade de tempo menor do que outras abordagens, como programação dinâmica ou backtracking.
-
-## Como reconhecer
-
-Quase sempre existe uma função de valor: algo para maximizar ou minimizar.
-
-Então, no próximo passo, pega o maior (ou o menor) possível.
-
-E quase sempre tem um sort no meio do caminho.
 
 ## Exemplos
 
