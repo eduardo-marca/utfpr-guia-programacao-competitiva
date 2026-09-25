@@ -150,10 +150,27 @@ Isso é conhecido como "prova por AC" (Accepted), onde a aceitação do código 
 
 ### Recomendados
 
+1. [1D Eraser](https://codeforces.com/contest/1873/problem/D)
+2. [Two Arrays And Swaps](https://codeforces.com/contest/1353/problem/B)
+3. [Dragons](https://codeforces.com/contest/230/problem/A)
+4. [Kanade's Perfect Multiples](https://codeforces.com/problemset/problem/2173/C)
+5. [Game on Array](https://codeforces.com/problemset/problem/2147/D)
+
 ### Adicionais
+
+1. [Ticket Hoarding](https://codeforces.com/contest/1951/problem/C)
+2. [XOR-factorization](https://codeforces.com/problemset/problem/2180/C)
+3. [Path and Subsequence](https://atcoder.jp/contests/arc150/tasks/arc150_c)
+4. [Stay or Mirror](https://codeforces.com/contest/2129/problem/B)
+
+### Resolvidos
+
+- [Fractional Knapsack](https://www.geeksforgeeks.org/dsa/fractional-knapsack-problem/)
+- [Overlapping Intervals](https://www.geeksforgeeks.org/dsa/merging-intervals/)
 
 ## Outros Recursos
 
 - [GeeksforGeeks](https://www.geeksforgeeks.org/dsa/greedy-algorithms/)
 - [W3Schools](https://www.w3schools.com/dsa/dsa_ref_greedy.php)
 - [USACO Guide](https://usaco.guide/bronze/intro-greedy?lang=cpp)
+- [Codeforces](https://codeforces.com/blog/entry/150612)
