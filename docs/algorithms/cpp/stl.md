@@ -234,3 +234,16 @@ O C++ oferece uma série de funções úteis para realizar operações comuns em
 - `ceil(a)` — retorna o menor inteiro $\geq a$. Complexidade: $O(1)$.
 - `floor(a)` — retorna o maior inteiro $\leq a$. Complexidade: $O(1)$.
 - `round(a)` — retorna o inteiro mais próximo de $a$. Complexidade: $O(1)$.
+
+## Problemas
+
+### Recomendados
+1. [Ohana Cleans Up](https://codeforces.com/contest/554/problem/B)
+2. [Collecting Numbers](https://cses.fi/problemset/task/2216/)
+3. [Indian Summer](https://codeforces.com/contest/44/problem/A)
+4. [Jzzhu and Children](https://codeforces.com/contest/450/problem/A)
+5. [Sum of Two Values](https://cses.fi/problemset/task/1640/)
+
+## Outros Recursos
+- [Documentação do C++](https://cppreference.com/)
+
