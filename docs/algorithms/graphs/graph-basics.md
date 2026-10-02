@@ -21,13 +21,13 @@ Um grafo é uma estrutura de dados composta por um conjunto de vértices (ou nó
 
 Um grafo é considerado conectado (ou conexo) se houver um caminho entre qualquer par de vértices. Caso contrário, ele é chamado de desconectado (ou desconexo).
 
-As partes conectadas de um grafo desconectado são chamadas de componentes conectados, componentes conexos ou simplesmente componentes.
+As partes conectadas de um grafo desconectado são chamadas de componentes conectadas, componentes conexas ou simplesmente componentes.
 
 ![](images/connected-graph.drawio.svg#center)
 
 ### Árvores
 
-Uma árvore é um tipo especial de grafo que é conectado e não possui ciclos. Em outras palavras, uma árvore é um grafo acíclico e conectado. As árvores têm várias propriedades importantes, como:
+Uma árvore é um tipo especial de grafo que é conexo e não possui ciclos. Em outras palavras, uma árvore é um grafo acíclico e conexo. As árvores têm várias propriedades importantes, como:
 
 - Uma árvore com $n$ vértices tem exatamente $n-1$ arestas.
 - Um caminho entre dois vértices em uma árvore é sempre único.
@@ -38,9 +38,8 @@ Também é comum definir uma hierarquia entre os vértices de uma árvore, onde 
 
 ![](images/tree.drawio.svg#center)
 
-
 !!! note "Nota"
-    Na prática, qualquer vértice de uma árvore pode ser definido como a raiz da árvore.
+Na prática, qualquer vértice de uma árvore pode ser definido como a raiz da árvore.
 
 ### Grafos Direcionados e Não Direcionados
 
@@ -94,6 +93,7 @@ vector<vector<int>> adj(N);
 Se o grafo for direcionado, cada aresta (u, v) é adicionada apenas à lista de adjacência do vértice u. Se o grafo for não direcionado, a aresta (u, v) é adicionada à lista de adjacência de ambos os vértices u e v.
 
 Se o grafo for ponderado, cada aresta (u, v) pode ser armazenada como um par (v, peso) na lista de adjacência do vértice u.
+
 ```cpp
 vector<pair<int, int>> adj[N]; // (v, peso)
 ```
@@ -112,7 +112,7 @@ for(auto u : adj[v]) {
 
 A matriz de adjacência é uma representação de grafos usando uma matriz bidimensional. Cada célula da matriz indica se existe uma aresta entre dois vértices. Se o grafo for ponderado, a célula pode armazenar o peso da aresta.
 
-A matriz de adjacência é útil para grafos densos (ou seja, grafos com muitas arestas em relação ao número de vértices), mas pode ser ineficiente em termos de espaço para grafos esparsos, pois requer O(V^2) espaço, onde V é o número de vértices.
+A matriz de adjacência é útil para grafos densos (ou seja, grafos com muitas arestas em relação ao número de vértices), mas pode ser ineficiente em termos de espaço para grafos esparsos, pois requer $O(V^2)$ espaço, onde V é o número de vértices.
 
 ![](images/adj-matrix.drawio.svg#center)
 

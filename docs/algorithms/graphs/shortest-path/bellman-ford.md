@@ -6,16 +6,16 @@ Além disso, o algoritmo de Bellman-Ford pode detectar ciclos de peso negativo n
 
 ## Idea
 
-O algoritmo funciona matendo a distância de cada vértice a partir do vértice inicial. Inicialmente, a distância para o vértice inicial é definida como 0 e para todos os outros vértices como infinito.
+O algoritmo funciona mantendo a distância de cada vértice a partir do vértice inicial. Inicialmente, a distância para o vértice inicial é definida como 0 e para todos os outros vértices como infinito.
 
 Em seguida, o algoritmo busca arestas que diminuam a distância de um vértice para outro. Ele faz isso repetidamente, relaxando todas as arestas do grafo, até não ser mais possível encontrar uma aresta que possa reduzir a distância de algum vértice.
 
-O processo é repetido $V-1$ vezes, onde $V$ é o número de vértices no grafo. Isso garente que o caminho mais curto de um vértice para outro será encontrado, mesmo que haja arestas com pesos negativos.
+O processo é repetido $V-1$ vezes, onde $V$ é o número de vértices no grafo. Isso garante que o caminho mais curto de um vértice para outro será encontrado, mesmo que haja arestas com pesos negativos.
 
 O algoritmo também verifica se há ciclos de peso negativo no grafo. Se, após $V-1$ iterações, ainda for possível relaxar uma aresta, isso indica a presença de um ciclo de peso negativo.
 
 !!! note
-    Na teória, nem sempre é necessário percorrer todas as arestas $V-1$ vezes, pois o algoritmo pode parar antes se não houver mais arestas que possam reduzir a distância de algum vértice. No entanto, para garantir a correção do algoritmo, e por conta do pior caso, é comum percorrer todas as arestas $V-1$ vezes.
+Na teórica, nem sempre é necessário percorrer todas as arestas $V-1$ vezes, pois o algoritmo pode parar antes se não houver mais arestas que possam reduzir a distância de algum vértice. No entanto, para garantir a correção do algoritmo, e por conta do pior caso, é comum percorrer todas as arestas $V-1$ vezes.
 
 ## Complexidade
 

@@ -6,7 +6,7 @@ A solução é construída passo a passo, escolhendo a melhor opção disponíve
 
 Eles são frequentemente usados para resolver problemas de otimização e são conhecidos por sua simplicidade e eficiência, mas costumam ser limitados a problemas específicos e geralmente mais simples, já que nem sempre uma estratégia gulosa leva a uma solução ótima.
 
-Este tipo de problema também costuma envolver algum valor para se maximixar ou minimizar, e costuma envolver um sort no meio do caminho.
+Este tipo de problema também costuma envolver algum valor para se maximizar ou minimizar, e costuma envolver um sort no meio do caminho.
 
 ## Características dos Algoritmos Gulosos
 
@@ -110,7 +110,7 @@ A solução ótima seria:
 
 $$ 3 + 3 $$
 
-Mas a estratégia guloso escolheria:
+Mas a estratégia gulosa escolheria:
 
 $$ 4 + 1 + 1 $$
 
