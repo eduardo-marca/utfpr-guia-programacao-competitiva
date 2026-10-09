@@ -102,6 +102,7 @@ vector<int> restore_path(int s, int t, vector<int> const& p) {
 - [Codeforces - The Classic Problem](https://codeforces.com/problemset/problem/464/E)
 - [Codeforces - President and Roads](https://codeforces.com/problemset/problem/567/E)
 - [Codeforces - Complete The Graph](https://codeforces.com/problemset/problem/715/B)
+- [CSES - Investigation](https://cses.fi/problemset/task/1202)
 
 ## Outros Recursos
 - [Geeks for Geeks](https://www.geeksforgeeks.org/dsa/dijkstras-shortest-path-algorithm-greedy-algo-7/)

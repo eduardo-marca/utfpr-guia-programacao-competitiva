@@ -4,7 +4,9 @@ Muitos problemas de programação competitiva podem ser modelados como um grafo 
 
 ## Definição de Grafo
 
-Um grafo é uma estrutura de dados composta por um conjunto de vértices (ou nós) e um conjunto de arestas que conectam pares de vértices.
+Grafos são estruturas de dados que representam relações entre elementos. Eles consistem em um conjunto de vértices (ou nós) e um conjunto de arestas que conectam pares de vértices.
+
+Geralmente representamos grafos visualmente como um conjunto de pontos (vértices) conectados por linhas (arestas). Abaixo está um exemplo de um grafo simples com 6 vértices e 7 arestas.
 
 ![](images/graph-example.drawio.svg#center)
 
@@ -39,7 +41,7 @@ Também é comum definir uma hierarquia entre os vértices de uma árvore, onde 
 ![](images/tree.drawio.svg#center)
 
 !!! note "Nota"
-Na prática, qualquer vértice de uma árvore pode ser definido como a raiz da árvore.
+    Na prática, qualquer vértice de uma árvore pode ser definido como a raiz da árvore.
 
 ### Grafos Direcionados e Não Direcionados
 
@@ -54,14 +56,6 @@ Grafos que não possuem arestas com uma direção associada são chamados de nã
 Em alguns casos, as arestas de um grafo podem ter pesos associados a elas, representando custos, distâncias ou capacidades. Esses grafos são chamados de grafos ponderados. Alguns algoritmos, como o algoritmo de Dijkstra, são projetados para encontrar o caminho mais curto em grafos ponderados.
 
 ![](images/weighted.drawio.svg#center)
-
-### Coloração de Grafos
-
-A coloração de grafos é um problema em que se deseja atribuir cores aos vértices de um grafo de forma que vértices adjacentes não compartilhem a mesma cor. A coloração de grafos tem aplicações em problemas de alocação de recursos, como agendamento de tarefas e design de circuitos.
-
-Um grafo é chamado de bipartido se é possível colorir seus vértices com apenas duas cores, de forma que vértices adjacentes tenham cores diferentes. Grafos bipartidos têm propriedades especiais e são frequentemente usados em problemas de correspondência e fluxo.
-
-![](images/color.drawio.svg#center)
 
 ### Simplicidade
 
