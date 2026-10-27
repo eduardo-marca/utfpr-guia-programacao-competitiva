@@ -126,6 +126,7 @@ nav:
 
   - Grafos:
     - algorithms/graphs/graph-basics.md
+    - algorithms/graphs/other-concepts.md
     - Percurso de Grafos:
       - algorithms/graphs/traversal/dfs.md
       - algorithms/graphs/traversal/bfs.md

@@ -1,5 +1,7 @@
 # Outros Conceitos de Grafos
 
+Aqui mostraremos outros conceitos relacionados a grafos que podem aparecer em problemas de programação competitiva.
+
 ### Coloração de Grafos
 
 A coloração de grafos é um problema em que se deseja atribuir cores aos vértices de um grafo de forma que vértices adjacentes não compartilhem a mesma cor. A coloração de grafos tem aplicações em problemas de alocação de recursos, como agendamento de tarefas e design de circuitos.
