@@ -19,3 +19,8 @@ tmp/pdfs/
 
 # Linux
 .DS_Store
+
+# Local test
+test.cpp
+test
+.cph/

@@ -104,6 +104,7 @@ nav:
     - algorithms/paradigms/complete-search.md
     - algorithms/basic-algorithms/binary-search.md
     - algorithms/paradigms/greedy.md
+    - algorithms/basic-algorithms/two-pointers-sliding-window.md
     - algorithms/paradigms/dynamic-programming.md
 
   - Estruturas de Dados:
