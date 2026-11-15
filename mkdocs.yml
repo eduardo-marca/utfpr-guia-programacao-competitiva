@@ -137,9 +137,9 @@ nav:
     #  - algorithms/graphs/shortest-path/floyd-warshall.md
     #- Árvores:
     #  - algorithms/graphs/trees/lca.md
-    #- Grafos Direcionados:
+    - Grafos Direcionados:
     #  - algorithms/graphs/directed-graphs/cycle-detection.md
-    #  - algorithms/graphs/directed-graphs/topological-sorting.md
+      - algorithms/graphs/directed-graphs/topological-sorting.md
     #- Árvores Geradoras:
     #  - algorithms/graphs/spanning-trees/kruskal.md
     #  - algorithms/graphs/spanning-trees/prim.md

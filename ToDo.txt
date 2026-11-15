@@ -1,0 +1,6 @@
+- Criar mais páginas
+- Padronizar lista de exercícios, informações iniciais da página e outros elementos
+- Consertar imgagens no modos escuro
+- Melhorar conversão para PDF.
+- Adionar mais exercícios
+- Melhorar recursos visuais e visual geral do site.
