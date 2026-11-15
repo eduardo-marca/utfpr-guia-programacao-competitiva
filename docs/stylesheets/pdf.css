@@ -1,0 +1,67 @@
+/* Regras exclusivas da referência impressa. O site não perde a sua diagramação. */
+.pdf-only { display: none; }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html { font-size: 9pt; }
+
+  #print-site-page {
+    color: #111827;
+    line-height: 1.27;
+  }
+
+  /* O plugin padrão começa uma página para cada artigo; para uma referência isso
+     desperdiça muito papel. Só uma diretiva explícita força essa quebra. */
+  #print-site-page section.print-page,
+  #print-site-page > section.print-page:first-of-type {
+    break-before: auto !important;
+    page-break-before: auto !important;
+    margin-top: 1.2rem;
+  }
+
+  #print-site-page section.print-page.md-section > h1 {
+    break-before: auto;
+    page-break-before: auto;
+    padding: 0.35rem 0 0;
+    text-align: left;
+    font-size: 1.45rem;
+  }
+
+  #print-site-page h1,
+  #print-site-page h2,
+  #print-site-page h3,
+  #print-site-page h4 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+    margin: 1rem 0 0.35rem;
+  }
+
+  #print-site-page h1::after { height: auto; margin-bottom: 0; }
+  #print-site-page p { margin: 0.35rem 0; }
+  #print-site-page ul, #print-site-page ol { margin: 0.3rem 0 0.45rem 1.1rem; }
+  #print-site-page li { margin: 0.08rem 0; }
+
+  #print-site-page pre {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+    margin: 0.45rem 0;
+    font-size: 7.3pt;
+    line-height: 1.18;
+  }
+
+  #print-site-page code { font-size: 0.92em; }
+  #print-site-page table { font-size: 8pt; }
+  #print-site-page img, #print-site-page svg { max-height: 150mm; break-inside: avoid-page; }
+  #print-site-page .admonition { break-inside: avoid-page; margin: 0.45rem 0; }
+  #print-site-page .pdf-exclude { display: none !important; }
+  #print-site-page .pdf-only { display: block !important; }
+  #print-site-page .pdf-page-break { break-after: page; page-break-after: always; height: 0; }
+
+  /* A capa fica separada, mas deixa de criar uma página vazia em seguida. */
+  #print-site-cover-page { break-after: page; page-break-after: always; }
+  #print-site-cover-page + #print-page-toc { break-before: auto; page-break-before: auto; }
+}

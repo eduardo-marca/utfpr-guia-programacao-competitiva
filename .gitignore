@@ -10,6 +10,10 @@ venv/
 # MkDocs build output
 site/
 
+# PDF build artifacts
+output/pdf/
+tmp/pdfs/
+
 # VSCode
 .vscode/
 

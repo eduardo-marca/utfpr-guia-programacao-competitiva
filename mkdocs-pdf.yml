@@ -1,0 +1,21 @@
+# Perfil exclusivo da exportação. O site continua sendo construído com mkdocs.yml.
+INHERIT: mkdocs.yml
+
+plugins:
+  - search
+  - mermaid2
+  - print-site:
+      add_to_navigation: false
+      print_page_title: 'Guia de Programação Competitiva UTFPR'
+      print_page_basename: 'print_page'
+      toc_title: 'Sumário'
+      toc_depth: 2
+      enumerate_headings: false
+      enumerate_figures: false
+      add_cover_page: true
+      cover_page_template: 'docs/assets/templates/pdf_cover_page.tpl'
+      # Páginas institucionais ficam disponíveis no site, mas não na referência de prova.
+      exclude:
+        - index.md
+        - introduction/learning-path.md
+        - contribute/*
