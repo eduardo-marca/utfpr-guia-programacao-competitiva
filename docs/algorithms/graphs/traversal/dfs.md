@@ -1,3 +1,63 @@
+{% set exercises %}
+  recommended:
+    - name: Count Connected Components
+      url: https://atcoder.jp/contests/abc284/tasks/abc284_c
+      platform: AtCoder
+      difficulty: easy
+      topics: [DFS, componentes conexas]
+    - name: Kefa and Park
+      url: https://codeforces.com/problemset/problem/580/C
+      platform: Codeforces
+      difficulty: medium
+      topics: [DFS, árvores]
+    - name: Building Roads
+      url: https://cses.fi/problemset/task/1666
+      platform: CSES
+      difficulty: easy
+      topics: [DFS, componentes conexas]
+    - name: Building Teams
+      url: https://cses.fi/problemset/task/1668
+      platform: CSES
+      difficulty: medium
+      topics: [DFS, grafo bipartido]
+    - name: Round Trip
+      url: https://cses.fi/problemset/task/1669
+      platform: CSES
+      difficulty: medium
+      topics: [DFS, ciclos]
+  additional:
+    - name: "Transformation: from A to B"
+      url: https://codeforces.com/contest/727/problem/A
+      platform: Codeforces
+      difficulty: medium
+      topics: [DFS, busca reversa]
+    - name: Generate a String
+      url: https://codeforces.com/contest/710/problem/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [DFS, programação dinâmica]
+    - name: Anton and Tree
+      url: https://codeforces.com/contest/734/problem/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [DFS, contração de grafo]
+    - name: Counting Rooms
+      url: https://cses.fi/problemset/task/1192
+      platform: CSES
+      difficulty: easy
+      topics: [DFS, grid]
+    - name: Count Simple Paths
+      url: https://atcoder.jp/contests/abc284/tasks/abc284_e
+      platform: AtCoder
+      difficulty: medium
+      topics: [DFS, backtracking]
+    - name: Centroids
+      url: https://codeforces.com/contest/709/problem/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [DFS, centroide]
+{% endset %}
+
 # Busca em Profundidade (DFS)
 
 A Busca em Profundidade (Depth First Search - DFS) é um algoritmo de busca/percurso em grafos que explora o máximo possível cada ramo antes de retroceder. É uma técnica fundamental em teoria dos grafos e é amplamente utilizada em várias aplicações, como resolução de labirintos, análise de redes, e muito mais.
@@ -40,22 +100,7 @@ void dfs(int v) {
 
 ## Problemas
 
-### Recomendados
-
-- [Atcoder - Count Connected Components](https://atcoder.jp/contests/abc284/tasks/abc284_c)
-- [Codeforces - Kefa and Park](https://codeforces.com/problemset/problem/580/C)
-- [CSES - Building Roads](https://cses.fi/problemset/task/1666)
-- [CSES - Building Teams](https://cses.fi/problemset/task/1668)
-- [CSES - Round Trip](https://cses.fi/problemset/task/1669)
-
-### Adicionais
-
-- [Transformation: from A to B](https://codeforces.com/contest/727/problem/A)
-- [Codeforces - Generate a String](https://codeforces.com/contest/710/problem/E)
-- [Codeforces - Anton and Tree](https://codeforces.com/contest/734/problem/E)
-- [CSES - Counting Rooms](https://cses.fi/problemset/task/1192)
-- [Atcoder - Count Simple Paths](https://atcoder.jp/contests/abc284/tasks/abc284_e)
-- [Codeforces - Centroids](https://codeforces.com/contest/709/problem/E)
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos
 

@@ -66,6 +66,7 @@ markdown_extensions:
       no_inline_svg: false # Keeps math as vectors for clean printing
 
 plugins:
+  - macros
   - search
   - mermaid2
   - print-site:

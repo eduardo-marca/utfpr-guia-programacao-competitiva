@@ -1,3 +1,7 @@
+{% set exercises %}
+{}
+{% endset %}
+
 # Nome
 
 Descrição.
@@ -17,8 +21,6 @@ Descrição.
 
 ## Problemas
 
-### Recomendados
-
-### Adicionais
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos

@@ -1,3 +1,28 @@
+{% set exercises %}
+  recommended:
+    - name: New Year and the Permutation Concatenation
+      url: https://codeforces.com/problemset/problem/1091/D
+      platform: Codeforces
+      difficulty: hard
+      topics: [combinatória, programação dinâmica]
+    - name: Multiplicity
+      url: https://codeforces.com/problemset/problem/1061/C
+      platform: Codeforces
+      difficulty: hard
+      topics: [programação dinâmica, divisores]
+  additional:
+    - name: Appleman and Tree
+      url: https://codeforces.com/contest/461/problem/B
+      platform: Codeforces
+      difficulty: hard
+      topics: [DP em árvores]
+    - name: Complete Mirror
+      url: https://codeforces.com/problemset/problem/1182/D
+      platform: Codeforces
+      difficulty: hard
+      topics: [DP em árvores, hashes]
+{% endset %}
+
 # Programação Dinâmica
 
 A programação dinâmica (também chamada de PD, dynamic programming ou DP) é um paradigma de programação que consiste em resolver o problema reutilizando a solução dos subproblemas (versões mais simples ou menores do problema original).
@@ -50,14 +75,7 @@ As formas mais comuns de implementação da programação dinâmica são:
 
 ## Problemas
 
-### Recomendados
-1. [New Year and the Permutation Concatenation](https://codeforces.com/problemset/problem/1091/D)
-2. [Multiplicity](https://codeforces.com/problemset/problem/1061/C)
-
-
-### Adicionais
-1. [Appleman and Tree](https://codeforces.com/contest/461/problem/B)
-2. [Complete Mirror](https://codeforces.com/problemset/problem/1182/D)
+{{ exercise_list(exercises) }}
 
 ## Recursos
 - [Geeks for Geeks](https://www.geeksforgeeks.org/dsa/dynamic-programming/)

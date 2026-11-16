@@ -1,3 +1,43 @@
+{% set exercises %}
+  recommended:
+    - name: Binary Search
+      url: https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A
+      platform: Codeforces EDU
+      difficulty: easy
+      topics: [busca binária]
+    - name: Closest to the Left
+      url: https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/B
+      platform: Codeforces EDU
+      difficulty: easy
+      topics: [busca binária, lower bound]
+    - name: Closest to the Right
+      url: https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/C
+      platform: Codeforces EDU
+      difficulty: easy
+      topics: [busca binária, upper bound]
+    - name: Fast search
+      url: https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/D
+      platform: Codeforces EDU
+      difficulty: easy
+      topics: [busca binária, prefix sum]
+    - name: Factory Machines
+      url: https://cses.fi/problemset/task/1620
+      platform: CSES
+      difficulty: medium
+      topics: [busca binária na resposta]
+    - name: Multiplication Table
+      url: https://cses.fi/problemset/task/2422
+      platform: CSES
+      difficulty: medium
+      topics: [busca binária na resposta]
+  additional:
+    - name: K-th Zero
+      url: https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/E
+      platform: Codeforces EDU
+      difficulty: medium
+      topics: [busca binária, segment tree]
+{% endset %}
+
 # Busca Binária
 
 Busca binária é um dos algoritmo mais comuns e utilizados em programação competitiva, sendo muito mais eficiente que uma busca padrão.
@@ -80,16 +120,7 @@ int binarySearch(vector<int> &arr, int low, int high, int x) {
 
 ## Problemas
 
-### Recomendados
-1. [Binary Search](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A)
-2. [Closest to the Left](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/B)
-3. [Closest to the Right](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/C)
-4. [Fast search](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/D)
-5. [Factory Machines](https://cses.fi/problemset/task/1620)
-6. [Multiplication Table](https://cses.fi/problemset/task/2422)
-
-### Adicionais
-1. [K-th Zero](https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/E)
+{{ exercise_list(exercises) }}
 
 ## Recursos
 - [Binary Search - GeeksforGeeks](https://www.geeksforgeeks.org/binary-search/)

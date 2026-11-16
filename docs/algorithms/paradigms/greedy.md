@@ -1,3 +1,64 @@
+{% set exercises %}
+  recommended:
+    - name: 1D Eraser
+      url: https://codeforces.com/contest/1873/problem/D
+      platform: Codeforces
+      difficulty: medium
+      topics: [guloso, strings]
+    - name: Two Arrays And Swaps
+      url: https://codeforces.com/contest/1353/problem/B
+      platform: Codeforces
+      difficulty: easy
+      topics: [guloso, sort]
+    - name: Dragons
+      url: https://codeforces.com/contest/230/problem/A
+      platform: Codeforces
+      difficulty: easy
+      topics: [guloso, sort]
+    - name: Kanade's Perfect Multiples
+      url: https://codeforces.com/problemset/problem/2173/C
+      platform: Codeforces
+      difficulty: hard
+      topics: [guloso, teoria dos números]
+    - name: Game on Array
+      url: https://codeforces.com/problemset/problem/2147/D
+      platform: Codeforces
+      difficulty: medium
+      topics: [guloso, jogos]
+  additional:
+    - name: Ticket Hoarding
+      url: https://codeforces.com/contest/1951/problem/C
+      platform: Codeforces
+      difficulty: medium
+      topics: [guloso, simulação]
+    - name: XOR-factorization
+      url: https://codeforces.com/problemset/problem/2180/C
+      platform: Codeforces
+      difficulty: hard
+      topics: [guloso, bitwise]
+    - name: Path and Subsequence
+      url: https://atcoder.jp/contests/arc150/tasks/arc150_c
+      platform: AtCoder
+      difficulty: hard
+      topics: [guloso, grafos]
+    - name: Stay or Mirror
+      url: https://codeforces.com/contest/2129/problem/B
+      platform: Codeforces
+      difficulty: medium
+      topics: [guloso, strings]
+  solved:
+    - name: Fractional Knapsack
+      url: https://www.geeksforgeeks.org/dsa/fractional-knapsack-problem/
+      platform: GeeksforGeeks
+      difficulty: easy
+      topics: [guloso, knapsack]
+    - name: Overlapping Intervals
+      url: https://www.geeksforgeeks.org/dsa/merging-intervals/
+      platform: GeeksforGeeks
+      difficulty: easy
+      topics: [guloso, intervalos]
+{% endset %}
+
 # Algoritmos Gulosos (Greedy Algorithms)
 
 Algoritmos Gulosos são uma classe de algoritmos que seguem a abordagem de fazer a escolha localmente ótima em cada etapa, com a esperança de que essas escolhas levem a uma solução globalmente ótima.
@@ -142,25 +203,7 @@ Isso é conhecido como "prova por AC" (Accepted), onde a aceitação do código 
 
 ## Problemas
 
-### Recomendados
-
-1. [1D Eraser](https://codeforces.com/contest/1873/problem/D)
-2. [Two Arrays And Swaps](https://codeforces.com/contest/1353/problem/B)
-3. [Dragons](https://codeforces.com/contest/230/problem/A)
-4. [Kanade's Perfect Multiples](https://codeforces.com/problemset/problem/2173/C)
-5. [Game on Array](https://codeforces.com/problemset/problem/2147/D)
-
-### Adicionais
-
-1. [Ticket Hoarding](https://codeforces.com/contest/1951/problem/C)
-2. [XOR-factorization](https://codeforces.com/problemset/problem/2180/C)
-3. [Path and Subsequence](https://atcoder.jp/contests/arc150/tasks/arc150_c)
-4. [Stay or Mirror](https://codeforces.com/contest/2129/problem/B)
-
-### Resolvidos
-
-- [Fractional Knapsack](https://www.geeksforgeeks.org/dsa/fractional-knapsack-problem/)
-- [Overlapping Intervals](https://www.geeksforgeeks.org/dsa/merging-intervals/)
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos
 

@@ -1,3 +1,32 @@
+{% set exercises %}
+  recommended:
+    - name: Ohana Cleans Up
+      url: https://codeforces.com/contest/554/problem/B
+      platform: Codeforces
+      difficulty: easy
+      topics: [strings, contagem]
+    - name: Collecting Numbers
+      url: https://cses.fi/problemset/task/2216/
+      platform: CSES
+      difficulty: easy
+      topics: [vetores, permutações]
+    - name: Indian Summer
+      url: https://codeforces.com/contest/44/problem/A
+      platform: Codeforces
+      difficulty: easy
+      topics: [set, strings]
+    - name: Jzzhu and Children
+      url: https://codeforces.com/contest/450/problem/A
+      platform: Codeforces
+      difficulty: easy
+      topics: [queue]
+    - name: Sum of Two Values
+      url: https://cses.fi/problemset/task/1640/
+      platform: CSES
+      difficulty: medium
+      topics: [sort, two pointers]
+{% endset %}
+
 # STL
 
 A biblioteca padrão do C++ (STL) oferece uma série de estruturas de dados e funções úteis para facilitar a implementação de algoritmos em programação competitiva. A seguir, apresentamos algumas das mais comuns e suas principais características.
@@ -237,12 +266,7 @@ O C++ oferece uma série de funções úteis para realizar operações comuns em
 
 ## Problemas
 
-### Recomendados
-1. [Ohana Cleans Up](https://codeforces.com/contest/554/problem/B)
-2. [Collecting Numbers](https://cses.fi/problemset/task/2216/)
-3. [Indian Summer](https://codeforces.com/contest/44/problem/A)
-4. [Jzzhu and Children](https://codeforces.com/contest/450/problem/A)
-5. [Sum of Two Values](https://cses.fi/problemset/task/1640/)
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos
 - [Documentação do C++](https://cppreference.com/)

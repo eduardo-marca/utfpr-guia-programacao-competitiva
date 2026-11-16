@@ -1,4 +1,26 @@
 
+{% set exercises %}
+  recommended:
+    - name: Road Construction
+      url: https://cses.fi/problemset/task/1676/
+      platform: CSES
+      difficulty: easy
+      topics: [DSU, componentes conexas]
+      objective: Acompanhar a quantidade e o tamanho das componentes.
+    - name: Road Reparation
+      url: https://cses.fi/problemset/task/1675/
+      platform: CSES
+      difficulty: medium
+      topics: [Kruskal, DSU]
+      objective: Construir uma árvore geradora mínima.
+    - name: Decayed Bridges
+      url: "https://atcoder.jp/contests/abc120/tasks/abc120_d?lang=en"
+      platform: AtCoder
+      difficulty: medium
+      topics: [DSU, processamento reverso]
+      objective: Adicionar arestas na ordem inversa das remoções.
+{% endset %}
+
 # Disjoint Set Union (DSU)
 
 **Dificuldade:** Intermediário  
@@ -406,11 +428,7 @@ Essa técnica é importante em problemas de conectividade offline.
 
 Resolva os problemas na seguinte ordem:
 
-| Problema | Plataforma | Dificuldade sugerida | Conceito principal |
-|---|---|---|---|
-| [Road Construction](https://cses.fi/problemset/task/1676/) | CSES | Fácil | Componentes e tamanhos |
-| [Road Reparation](https://cses.fi/problemset/task/1675/) | CSES | Intermediário | Kruskal + DSU |
-| [Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d?lang=en) | AtCoder | Intermediário | Processamento reverso |
+{{ exercise_list(exercises) }}
 
 ### Desafio adicional
 

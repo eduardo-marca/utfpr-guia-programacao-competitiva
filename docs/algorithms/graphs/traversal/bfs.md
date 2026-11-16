@@ -1,3 +1,38 @@
+{% set exercises %}
+  recommended:
+    - name: Message Route
+      url: https://cses.fi/problemset/task/1667
+      platform: CSES
+      difficulty: easy
+      topics: [BFS, reconstrução de caminho]
+    - name: Labyrinth
+      url: https://cses.fi/problemset/task/1193
+      platform: CSES
+      difficulty: easy
+      topics: [BFS, grid]
+    - name: Monsters
+      url: https://cses.fi/problemset/task/1194
+      platform: CSES
+      difficulty: medium
+      topics: [BFS multi-source, grid]
+    - name: Escape Route
+      url: https://atcoder.jp/contests/abc405/tasks/abc405_d
+      platform: AtCoder
+      difficulty: medium
+      topics: [BFS, grid]
+  additional:
+    - name: Shortest Path
+      url: https://codeforces.com/contest/59/problem/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [BFS, estados]
+    - name: Police Stations
+      url: https://codeforces.com/contest/796/problem/D
+      platform: Codeforces
+      difficulty: medium
+      topics: [BFS multi-source, árvores]
+{% endset %}
+
 # Busca em Largura (BFS)
 
 A Busca em Largura (Breadth First Search - BFS) é um algoritmo de busca/percurso em grafos que explora todos os vértices vizinhos antes de avançar para os próximos níveis. É uma técnica fundamental em teoria dos grafos e é amplamente utilizada em várias aplicações, como encontrar o caminho mais curto em grafos não ponderados, análise de redes sociais, e muito mais.
@@ -45,17 +80,7 @@ void bfs(int s) {
 
 ## Problemas
 
-### Recomendados
-
-- [CSES - Message Route](https://cses.fi/problemset/task/1667)
-- [CSES - Labyrinth](https://cses.fi/problemset/task/1193)
-- [CSES - Monsters](https://cses.fi/problemset/task/1194)
-- [Atcoder - Escape Route](https://atcoder.jp/contests/abc405/tasks/abc405_d)
-
-### Adicionais
-
-- [Codeforces - Shortest Path](https://codeforces.com/contest/59/problem/E)
-- [Codeforces - Police Stations](https://codeforces.com/contest/796/problem/D)
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos
 

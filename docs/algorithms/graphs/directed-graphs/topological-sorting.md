@@ -1,3 +1,25 @@
+{% set exercises %}
+  recommended:
+    - name: Course Schedule
+      url: https://cses.fi/problemset/task/1679/
+      platform: CSES
+      difficulty: easy
+      topics: [Kahn, DAG]
+      objective: Implementar diretamente o algoritmo de Kahn.
+    - name: Longest Path
+      url: "https://atcoder.jp/contests/dp/tasks/dp_g?lang=en"
+      platform: AtCoder
+      difficulty: medium
+      topics: [DAG, programação dinâmica]
+      objective: Combinar ordenação topológica com programação dinâmica.
+    - name: Longest Flight Route
+      url: https://cses.fi/problemset/task/1680/
+      platform: CSES
+      difficulty: hard
+      topics: [DAG, programação dinâmica, reconstrução de caminho]
+      objective: Usar DP e reconstruir o caminho em um DAG.
+{% endset %}
+
 # Ordenação Topológica
 
 **Dificuldade:** Intermediário  
@@ -568,29 +590,7 @@ pois cada vértice entra e sai da fila de prioridade no máximo uma vez.
 
 ## Exercícios sugeridos
 
-### 1. [Course Schedule — CSES](https://cses.fi/problemset/task/1679/)
-
-**Dificuldade sugerida:** Fácil/Intermediário
-
-Dado um conjunto de disciplinas e seus pré-requisitos, encontre uma ordem válida para cursá-las.
-
-**Objetivo:** Implementar diretamente o algoritmo de Kahn.
-
-### 2. [Longest Path — AtCoder Educational DP Contest](https://atcoder.jp/contests/dp/tasks/dp_g?lang=en)
-
-**Dificuldade sugerida:** Intermediário
-
-Dado um DAG, encontre o comprimento do maior caminho direcionado.
-
-**Objetivo:** Combinar ordenação topológica com programação dinâmica.
-
-### 3. [Longest Flight Route — CSES](https://cses.fi/problemset/task/1680/)
-
-**Dificuldade sugerida:** Intermediário/Avançado
-
-Encontre uma rota com o maior número possível de cidades entre duas cidades especificadas.
-
-**Objetivo:** Utilizar programação dinâmica e reconstrução de caminhos em um DAG, considerando apenas os vértices relevantes quando necessário.
+{{ exercise_list(exercises) }}
 
 ## Erros comuns
 

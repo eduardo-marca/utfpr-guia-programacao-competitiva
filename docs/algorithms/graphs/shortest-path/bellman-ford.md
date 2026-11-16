@@ -1,3 +1,7 @@
+{% set exercises %}
+{}
+{% endset %}
+
 # Bellman Ford
 
 O algoritmo de Bellman-Ford é um algoritmo para encontrar o caminho mais curto de um único vértice para todos os outros vértices em um grafo ponderado, mesmo que o grafo contenha arestas com pesos negativos. Ele é especialmente útil em situações onde o algoritmo de Dijkstra não pode ser aplicado devido à presença de pesos negativos.
@@ -46,8 +50,6 @@ for (int i = 1; i <= n-1; i++) {
 
 ## Problemas
 
-### Recomendados
-
-### Adicionais
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos

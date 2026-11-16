@@ -1,3 +1,68 @@
+{% set exercises %}
+  recommended:
+    - name: Nim Game I
+      url: https://cses.fi/problemset/task/1730
+      platform: CSES
+      difficulty: easy
+      topics: [Nim, XOR]
+    - name: Nim Game II
+      url: https://cses.fi/problemset/task/1098
+      platform: CSES
+      difficulty: medium
+      topics: [Nim, XOR]
+    - name: Stones
+      url: https://atcoder.jp/contests/dp/tasks/dp_k
+      platform: AtCoder
+      difficulty: medium
+      topics: [jogos imparciais, programação dinâmica]
+    - name: Removal Game
+      url: https://cses.fi/problemset/task/1097
+      platform: CSES
+      difficulty: medium
+      topics: [jogos, programação dinâmica]
+    - name: Game on Tree
+      url: https://atcoder.jp/contests/agc017/tasks/agc017_d
+      platform: AtCoder
+      difficulty: hard
+      topics: [Nim, árvores]
+  additional:
+    - name: Tree Tag
+      url: https://codeforces.com/contest/1404/problem/B
+      platform: Codeforces
+      difficulty: medium
+      topics: [jogos, árvores]
+    - name: Game of Pairs
+      url: https://codeforces.com/contest/1404/problem/D
+      platform: Codeforces
+      difficulty: hard
+      topics: [jogos, grafos]
+    - name: Sagheer and Apple Tree
+      url: https://codeforces.com/contest/812/problem/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [Nim, árvores]
+    - name: Game of Stones
+      url: https://codeforces.com/problemset/problem/768/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [Sprague-Grundy]
+    - name: Arpa and a game with Mojtaba
+      url: https://codeforces.com/contest/850/problem/C
+      platform: Codeforces
+      difficulty: hard
+      topics: [Sprague-Grundy, fatoração]
+    - name: Interval Game 2
+      url: https://atcoder.jp/contests/abc206/tasks/abc206_f
+      platform: AtCoder
+      difficulty: hard
+      topics: [Sprague-Grundy, intervalos]
+    - name: Strange Nim
+      url: https://atcoder.jp/contests/arc091/tasks/arc091_d
+      platform: AtCoder
+      difficulty: hard
+      topics: [Nim, teoria dos jogos]
+{% endset %}
+
 # Introdução à Teoria dos Jogos
 
 Teoria dos Jogos é um ramo da matemática que estuda estratégias em situações de conflito ou cooperação entre diferentes agentes racionais.
@@ -111,21 +176,7 @@ Ou seja, nessa estratégia, estados vencedores sempre podem levar à estados per
 
 ## Problemas
 
-### Recomendados
-- [Nim Game I](https://cses.fi/problemset/task/1730)
-- [Nim Game II](https://cses.fi/problemset/task/1098)
-- [Stones](https://atcoder.jp/contests/dp/tasks/dp_k)
-- [Removal Game](https://cses.fi/problemset/task/1097)
-- [Game on Tree](https://atcoder.jp/contests/agc017/tasks/agc017_d)
-
-### Adicionais
-- [Tree Tag](https://codeforces.com/contest/1404/problem/B)
-- [Game of Pairs](https://codeforces.com/contest/1404/problem/D)
-- [Sagheer and Apple Tree](https://codeforces.com/contest/812/problem/E)
-- [Game of Stones](https://codeforces.com/problemset/problem/768/E)
-- [Arpa and a game with Mojtaba](https://codeforces.com/contest/850/problem/C)
-- [Interval Game 2](https://atcoder.jp/contests/abc206/tasks/abc206_f)
-- [Strange Nim](https://atcoder.jp/contests/arc091/tasks/arc091_d)
+{{ exercise_list(exercises) }}
 
 ## Outros Recursos
 - [Geeks For Geeks](https://www.geeksforgeeks.org/dsa/game-theory/)

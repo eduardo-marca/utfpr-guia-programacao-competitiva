@@ -1,3 +1,38 @@
+{% set exercises %}
+  recommended:
+    - name: Product of Closures
+      url: https://codeforces.com/problemset/problem/2242/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [busca completa, combinatória]
+    - name: Unstable Elements
+      url: https://codeforces.com/problemset/problem/2242/C
+      platform: Codeforces
+      difficulty: medium
+      topics: [busca completa]
+    - name: Annoying the Ghost
+      url: https://codeforces.com/problemset/problem/2237/B
+      platform: Codeforces
+      difficulty: medium
+      topics: [simulação, busca completa]
+    - name: Friendly Gifts
+      url: https://codeforces.com/problemset/problem/2236/E
+      platform: Codeforces
+      difficulty: hard
+      topics: [busca completa, grafos]
+  additional:
+    - name: Omsk Programmers
+      url: https://codeforces.com/problemset/problem/2236/C
+      platform: Codeforces
+      difficulty: medium
+      topics: [busca completa]
+    - name: Quadratic Jumps
+      url: https://codeforces.com/problemset/problem/2231/F
+      platform: Codeforces
+      difficulty: hard
+      topics: [busca completa, otimização]
+{% endset %}
+
 # Busca Completa
 A Busca Completa (ou Complete Search) é um método geral que pode ser usado para resolver praticamente qualquer problema algoritmo (mesmo que nem sempre de forma eficiente). Ele consiste em gerar todas as possíveis soluções para o problema através da força bruta, e testar cada uma delas até achar a solução correta.
 
@@ -129,12 +164,4 @@ Existem outras técnicas que usam estratégias de busca mais eficientes para res
 
 ## Problemas
 
-### Recomendados
-[Product of Closures](https://codeforces.com/problemset/problem/2242/E)
-[Unstable Elements](https://codeforces.com/problemset/problem/2242/C)
-[Annoying the Ghost](https://codeforces.com/problemset/problem/2237/B)
-[Friendly Gifts](https://codeforces.com/problemset/problem/2236/E)
-
-### Adicionais
-[Omsk Programmers](https://codeforces.com/problemset/problem/2236/C)
-[Quadratic Jumps](https://codeforces.com/problemset/problem/2231/F)
+{{ exercise_list(exercises) }}
