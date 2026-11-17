@@ -110,6 +110,7 @@ nav:
   - Algoritmos e Técnicas Básicas:
     - algorithms/paradigms/complete-search.md
     - algorithms/basic-algorithms/binary-search.md
+    - algorithms/basic-algorithms/binary-search-on-answer.md
     - algorithms/paradigms/greedy.md
     - algorithms/basic-algorithms/two-pointers-sliding-window.md
     - algorithms/paradigms/dynamic-programming.md

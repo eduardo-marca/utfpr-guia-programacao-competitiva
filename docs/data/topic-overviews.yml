@@ -6,6 +6,12 @@ algorithms/basic-algorithms/binary-search.md:
   prerequisites: [vetores, ordenação, laços]
   concepts: [invariantes, lower bound, busca na resposta]
 
+algorithms/basic-algorithms/binary-search-on-answer.md:
+  summary: Encontre o menor ou maior valor viável transformando um problema de otimização em uma verificação monotônica.
+  difficulty: intermediate
+  prerequisites: [busca binária, funções, análise de complexidade]
+  concepts: [função de viabilidade, monotonicidade, limites de busca, busca binária na resposta]
+
 algorithms/basic-algorithms/prefix-sum.md:
   summary: Pré-calcule somas acumuladas para responder consultas sobre intervalos de um vetor em tempo constante.
   difficulty: beginner
