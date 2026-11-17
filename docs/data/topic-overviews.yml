@@ -42,6 +42,18 @@ algorithms/data-structures/disjoint-set-union.md:
   prerequisites: [vetores, árvores, grafos básicos]
   concepts: [Union-Find, path compression, union by size]
 
+algorithms/data-structures/segtree.md:
+  summary: Responda consultas e aplique atualizações em intervalos mantendo resumos em uma árvore binária.
+  difficulty: intermediate
+  prerequisites: [vetores, recursão, divisão e conquista, análise de complexidade]
+  concepts: [consultas de intervalo, merge, elemento neutro, atualização pontual, nós customizados]
+
+algorithms/data-structures/lazy.md:
+  summary: Atualize intervalos inteiros com eficiência adiando a propagação de marcas para os nós necessários.
+  difficulty: advanced
+  prerequisites: [árvore de segmentos, recursão, consultas de intervalo]
+  concepts: [lazy propagation, atualização em intervalo, composição de tags, push]
+
 algorithms/graphs/directed-graphs/cycle-detection.md:
   summary: Identifique ciclos em grafos direcionados e não direcionados durante um percurso.
   difficulty: intermediate
