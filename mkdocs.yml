@@ -117,10 +117,10 @@ nav:
 
   - Estruturas de Dados:
     - algorithms/data-structures/disjoint-set-union.md
+    - algorithms/data-structures/fenwick.md
     - algorithms/data-structures/segtree.md
     - algorithms/data-structures/lazy.md
   #  - algorithms/data-structures/sqrt-tree.md
-  #  - algorithms/data-structures/fenwick.md
 
   - Grafos:
     - algorithms/graphs/graph-basics.md

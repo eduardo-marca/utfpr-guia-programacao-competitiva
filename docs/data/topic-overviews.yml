@@ -54,6 +54,12 @@ algorithms/data-structures/lazy.md:
   prerequisites: [árvore de segmentos, recursão, consultas de intervalo]
   concepts: [lazy propagation, atualização em intervalo, composição de tags, push]
 
+algorithms/data-structures/fenwick.md:
+  summary: Mantenha somas de prefixos e frequências com atualizações pontuais em tempo logarítmico.
+  difficulty: intermediate
+  prerequisites: [vetores, operações com bits, somas de prefixo]
+  concepts: [Binary Indexed Tree, lowbit, consultas de prefixo, frequências, compressão de coordenadas]
+
 algorithms/graphs/directed-graphs/cycle-detection.md:
   summary: Identifique ciclos em grafos direcionados e não direcionados durante um percurso.
   difficulty: intermediate
@@ -241,10 +247,10 @@ algorithms/paradigms/complete-search.md:
   concepts: [backtracking, bitmask, enumeração]
 
 algorithms/paradigms/dynamic-programming.md:
-  summary: Reutilize soluções de subproblemas para transformar uma recorrência em um algoritmo eficiente.
+  summary: Modele estados e transições para reutilizar soluções de subproblemas sobrepostos com eficiência.
   difficulty: intermediate
   prerequisites: [recursão, complexidade, vetores]
-  concepts: [memoização, tabulação, estados, transições]
+  concepts: [estados, transições, casos base, memoização, tabulação]
 
 algorithms/paradigms/greedy.md:
   summary: Faça escolhas locais justificadas para construir uma solução global eficiente.
