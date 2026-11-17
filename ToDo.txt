@@ -1,3 +1,4 @@
+- Melhorar organização das páginas.
 - Criar mais páginas.
 - Padronizar lista de exercícios, informações iniciais da página e outros elementos.
 - Melhorar conversão para PDF.

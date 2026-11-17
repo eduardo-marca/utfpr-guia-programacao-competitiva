@@ -47,9 +47,9 @@
 
 # Programação Dinâmica
 
-**Programação dinâmica** (PD ou *dynamic programming*) resolve problemas por subproblemas e armazena suas respostas, para que cada estado seja calculado uma única vez.
+**Programação dinâmica** (PD, *dynamic programming* ou DP) resolve problemas por subproblemas e armazena suas respostas, para que cada estado seja calculado uma única vez.
 
-O ponto principal não é criar uma tabela: é escolher um estado que contenha exatamente a informação necessária para continuar a solução.
+O ponto principal é escolher um estado que contenha exatamente a informação necessária para continuar a solução.
 
 ## 1. Quando programação dinâmica se aplica?
 
@@ -154,7 +154,9 @@ long long fib_bottom_up(int n) {
 As duas versões custam $O(N)$, enquanto a recursão ingênua repete estados e custa tempo exponencial.
 
 !!! tip "Escolha prática"
-    Comece com memoização quando a recorrência ainda está sendo descoberta. Converta para tabulação quando a ordem ficar clara ou a recursão ficar profunda.
+    Montar uma solução recursiva costuma ser mais fácil e intuitivo, mas a tabulação costuma ser mais eficiente.
+
+    Portanto, caso a recursão seja profunda, você pode começar com memoização quando a recorrência ainda está sendo descoberta. Converta para tabulação quando a ordem ficar clara ou a recursão ficar profunda.
 
 ## 4. Problema exemplo: mínimo de moedas
 
@@ -219,27 +221,176 @@ Substituir este comentário pelo Markdown abaixo quando a imagem estiver dispon�
 ![Preenchimento da DP para mínimo de moedas](../assets/images/paradigmas/programacao-dinamica/moedas-passo-a-passo.svg)
 -->
 
-## 5. A ordem de iteração muda a resposta
+## 5. Problema fundamental: mochila 0/1
 
-Na mochila 0/1, cada item pode ser escolhido no máximo uma vez. Ao processar um item de custo `cost`, atualize o orçamento **de trás para frente**:
+No problema da **mochila 0/1**, cada item possui peso e valor. Temos uma capacidade máxima e queremos escolher um subconjunto de itens com o maior valor total possível, sem ultrapassar essa capacidade. Cada item pode ser escolhido **zero ou uma vez**.
+
+Considere uma mochila de capacidade `6`:
+
+| Item | Peso | Valor |
+|---|---:|---:|
+| A | 3 | 4 |
+| B | 4 | 5 |
+| C | 2 | 3 |
+
+Escolher `B` e `C` ocupa peso `6` e gera valor `8`, que é a resposta ótima.
+
+### 5.1. Estado e transição
+
+Definimos:
+
+$$
+dp[i][b] = \text{maior valor usando os primeiros } i \text{ itens com capacidade } b
+$$
+
+Ao analisar o item `i`, existem exatamente duas opções:
+
+1. Não escolhê-lo: mantemos `dp[i-1][b]`.
+2. Escolhê-lo, se seu peso `w[i]` couber: somamos seu valor a `dp[i-1][b-w[i]]`.
+
+Portanto:
+
+$$
+dp[i][b] =
+\begin{cases}
+dp[i-1][b], & w[i] > b\\
+\max(dp[i-1][b], dp[i-1][b-w[i]] + v[i]), & w[i] \le b
+\end{cases}
+$$
+
+O caso base é `dp[0][b] = 0` para qualquer capacidade: sem itens, o melhor valor é zero.
+
+### 5.2. Tabela passo a passo
+
+As linhas representam quantos itens já consideramos e as colunas representam a capacidade disponível.
+
+| Itens considerados | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Nenhum | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| A `(3, 4)` | 0 | 0 | 0 | 4 | 4 | 4 | 4 |
+| A, B `(4, 5)` | 0 | 0 | 0 | 4 | 5 | 5 | 5 |
+| A, B, C `(2, 3)` | 0 | 0 | 3 | 4 | 5 | 7 | **8** |
+
+Na última célula, `dp[3][6]`, há duas opções:
+
+```text
+Não usar C: dp[2][6] = 5
+Usar C:     dp[2][4] + 3 = 5 + 3 = 8
+```
+
+Escolhemos `8`. Observe que a transição usa a **linha anterior**: por isso o item C não pode ser escolhido duas vezes.
+
+### 5.3. Implementação didática com tabela 2D
 
 ```cpp
-for (int b = budget; b >= cost; b--) {
-    dp[b] = max(dp[b], dp[b - cost] + value);
+struct Item {
+    int weight, value;
+};
+
+int knapsack_01(const vector<Item>& items, int capacity) {
+    int n = static_cast<int>(items.size());
+    vector dp(n + 1, vector<int>(capacity + 1, 0));
+
+    for (int i = 1; i <= n; i++) {
+        int weight = items[i - 1].weight;
+        int value = items[i - 1].value;
+
+        for (int b = 0; b <= capacity; b++) {
+            dp[i][b] = dp[i - 1][b];
+
+            if (weight <= b) {
+                dp[i][b] = max(dp[i][b], dp[i - 1][b - weight] + value);
+            }
+        }
+    }
+
+    return dp[n][capacity];
 }
 ```
 
-Se o laço fosse crescente, `dp[b-cost]` poderia já conter o item atual, permitindo reutilizá-lo por engano. Para mochila ilimitada, em que repetição é permitida, a ordem crescente é a correta.
+Essa versão usa $O(N \cdot C)$ de tempo e memória, em que `C` é a capacidade. Ela é a melhor para aprender, depurar e reconstruir os itens escolhidos.
 
-| Problema | Ordem típica | Motivo |
+### 5.4. Reconstruindo os itens escolhidos
+
+Depois de calcular a tabela, começamos em `i = n`, `b = capacity`.
+
+- Se `dp[i][b] == dp[i-1][b]`, o item `i` não foi usado.
+- Caso contrário, ele foi usado; guardamos o item e fazemos `b -= weight[i]`.
+
+```cpp
+vector<int> chosen;
+for (int i = n, b = capacity; i >= 1; i--) {
+    if (dp[i][b] != dp[i - 1][b]) {
+        chosen.push_back(i - 1);
+        b -= items[i - 1].weight;
+    }
+}
+reverse(chosen.begin(), chosen.end());
+```
+
+No exemplo, a reconstrução seleciona B e C.
+
+### 5.5. Otimização para um vetor
+
+Cada linha depende apenas da linha anterior. Podemos reduzir a memória para $O(C)$ usando um único vetor:
+
+```cpp
+int knapsack_01_optimized(const vector<Item>& items, int capacity) {
+    vector<int> dp(capacity + 1, 0);
+
+    for (const Item& item : items) {
+        for (int b = capacity; b >= item.weight; b--) {
+            dp[b] = max(dp[b], dp[b - item.weight] + item.value);
+        }
+    }
+
+    return dp[capacity];
+}
+```
+
+O laço de processamento deve ser **decrescente**. Ao atualizar `dp[b]`, o estado `dp[b-item.weight]` ainda representa os itens anteriores, e não uma solução que já contém o item atual.
+
+### 5.6. Mochila 0/1 versus mochila ilimitada
+
+Na mochila ilimitada, um mesmo tipo de item pode ser escolhido quantas vezes quisermos. A recorrência é parecida, mas a ordem do processamento muda:
+
+```cpp
+for (const Item& item : items) {
+    for (int b = item.weight; b <= capacity; b++) {
+        dp[b] = max(dp[b], dp[b - item.weight] + item.value);
+    }
+}
+```
+
+Agora o laço é crescente porque `dp[b-item.weight]` pode incluir o item atual. Esse único detalhe distingue as duas variantes mais comuns.
+
+| Problema | Ordem do processamento | Item atual pode reaparecer? |
 |---|---|---|
-| Mochila 0/1 | orçamento decrescente | Não reutilizar o item atual. |
-| Mochila ilimitada | orçamento crescente | Permitir reutilização. |
-| DP de intervalos | tamanho crescente | Intervalos menores vêm antes. |
-| DP em DAG | ordem topológica | Predecessores vêm antes. |
+| Mochila 0/1 | decrescente | Não |
+| Mochila ilimitada | crescente | Sim |
 
 !!! warning "A recorrência não basta"
-    Duas implementações podem ter a mesma fórmula e resultados diferentes se a ordem de preenchimento violar dependências ou reutilizar uma escolha indevidamente.
+    Duas implementações podem ter a mesma fórmula e resultados diferentes se a ordem de preenchimento reutilizar um item indevidamente.
+
+### 5.7. Quando a mochila não é viável?
+
+A complexidade depende da capacidade, e não apenas da quantidade de itens. Se `C` for da ordem de $10^9$, uma DP de tamanho `C` não cabe. Procure então por outra dimensão de estado, como valor total, soma de valores pequena, meet-in-the-middle ou outra técnica.
+
+<!-- AUXÍLIO VISUAL 3 — PRIORITÁRIO
+
+Criar uma visualização da tabela da mochila 0/1 para os itens A `(3,4)`, B `(4,5)`, C `(2,3)` e capacidade 6.
+
+- Destacar a célula final `dp[3][6]` e suas duas alternativas: ignorar C ou usar `dp[2][4] + 3`.
+- Incluir um painel menor mostrando a atualização 1D da direita para a esquerda.
+- Contrastar com uma seta da esquerda para a direita para indicar o comportamento da mochila ilimitada.
+
+Arquivo sugerido:
+../assets/images/paradigmas/programacao-dinamica/mochila-01.svg
+
+Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
+
+![Tabela e ordem de atualização da mochila 0/1](../assets/images/paradigmas/programacao-dinamica/mochila-01.svg)
+-->
 
 ## 6. Padrões de estado frequentes
 
@@ -286,22 +437,6 @@ if (dp[value - coin] + 1 < dp[value]) {
 No exemplo de moedas, parta de `target` e repita `value -= parent[value]` até chegar a zero.
 
 Uma tabela `dp[i][j]` pode ser comprimida para uma ou duas linhas somente depois que a versão completa estiver correta. Explique quais estados antigos continuam necessários e escolha a ordem de laço compatível.
-
-<!-- AUXÍLIO VISUAL 3
-
-Criar uma comparação entre uma tabela de mochila 0/1 completa e um vetor unidimensional.
-
-- À esquerda, linhas por item e colunas por orçamento.
-- À direita, um vetor atualizado da direita para a esquerda.
-- Usar setas para mostrar que a ordem decrescente impede reutilizar o item atual.
-
-Arquivo sugerido:
-../assets/images/paradigmas/programacao-dinamica/mochila-ordem.svg
-
-Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
-
-![Ordem de atualização na mochila 0/1](../assets/images/paradigmas/programacao-dinamica/mochila-ordem.svg)
--->
 
 ## 8. Erros comuns
 
