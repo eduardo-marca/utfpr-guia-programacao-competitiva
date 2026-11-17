@@ -1,10 +1,10 @@
 # Metadados exibidos no início das páginas de tópicos.
 # Para adicionar uma página, use seu caminho relativo a docs/ como chave.
 algorithms/basic-algorithms/binary-search.md:
-  summary: Encontre uma resposta em um espaço ordenado ou monotônico eliminando metade das possibilidades a cada passo.
+  summary: Localize valores e fronteiras em vetores ordenados eliminando metade dos candidatos a cada passo.
   difficulty: beginner
   prerequisites: [vetores, ordenação, laços]
-  concepts: [invariantes, lower bound, busca na resposta]
+  concepts: [invariantes, lower bound, upper bound, busca em vetores ordenados]
 
 algorithms/basic-algorithms/binary-search-on-answer.md:
   summary: Encontre o menor ou maior valor viável transformando um problema de otimização em uma verificação monotônica.
