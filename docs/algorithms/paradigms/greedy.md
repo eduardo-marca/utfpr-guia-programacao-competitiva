@@ -125,25 +125,25 @@ cout << cnt << endl;
 
 Vão ocorrer $N$ eventos, cada um com início e fim. Você só assiste um evento por vez - e se for assitir, assiste **inteiro**. Trocar de sala é instantâneo. Qual o máximo de eventos que dá para assistir?
 
-![](images/exemplo3_1.drawio.svg#center)
+![](../../assets/images/paradigmas/gulosos/exemplo3_1.drawio.svg#center)
 
 Algumas estratégias possíveis são:
 
 - Escolher o evento que começa antes primeiro
 
-![](images/exemplo3_2.drawio.svg#center)
+![](../../assets/images/paradigmas/gulosos/exemplo3_2.drawio.svg#center)
 
 Resulta em *WA*.
 
 - Escolher o evento mais curto primeiro
 
-![](images/exemplo3_3.drawio.svg#center)
+![](../../assets/images/paradigmas/gulosos/exemplo3_3.drawio.svg#center)
 
 Resulta em *WA* e é mais difícil de implementar.
 
 - Escolher o evento que termina antes primeiro
 
-![](images/exemplo3_4.drawio.svg#center)
+![](../../assets/images/paradigmas/gulosos/exemplo3_4.drawio.svg#center)
 
 Resulta em *AC* e é a estratégia correta. A prova de que essa estratégia funciona é um pouco mais complexa, mas a ideia é que, ao escolher o evento que termina mais cedo, você deixa mais espaço para os próximos eventos, aumentando a chance de assistir a mais eventos no total.
 
