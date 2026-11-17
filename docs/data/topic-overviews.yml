@@ -1,0 +1,247 @@
+# Metadados exibidos no início das páginas de tópicos.
+# Para adicionar uma página, use seu caminho relativo a docs/ como chave.
+algorithms/basic-algorithms/binary-search.md:
+  summary: Encontre uma resposta em um espaço ordenado ou monotônico eliminando metade das possibilidades a cada passo.
+  difficulty: beginner
+  prerequisites: [vetores, ordenação, laços]
+  concepts: [invariantes, lower bound, busca na resposta]
+
+algorithms/basic-algorithms/prefix-sum.md:
+  summary: Pré-calcule somas acumuladas para responder consultas sobre intervalos de um vetor em tempo constante.
+  difficulty: beginner
+  prerequisites: [vetores, laços]
+  concepts: [consultas de intervalo, pré-processamento, somas acumuladas]
+
+algorithms/basic-algorithms/two-pointers-sliding-window.md:
+  summary: Mantenha um intervalo móvel para processar subarrays e substrings de forma linear.
+  difficulty: intermediate
+  prerequisites: [vetores, laços, estruturas associativas]
+  concepts: [dois ponteiros, janela deslizante, subarrays]
+
+algorithms/cpp/basics.md:
+  summary: Prepare programas C++ para competições, com entrada, saída e organização adequadas para resolver problemas.
+  difficulty: beginner
+  prerequisites: [lógica de programação]
+  concepts: [compilação, entrada e saída, C++17]
+
+algorithms/cpp/stl.md:
+  summary: Conheça os contêineres e algoritmos mais úteis da biblioteca padrão de C++ em competições.
+  difficulty: beginner
+  prerequisites: [C++ básico, funções]
+  concepts: [vector, set, map, algoritmos da STL]
+
+algorithms/data-structures/disjoint-set-union.md:
+  summary: Mantenha conjuntos disjuntos com operações eficientes de consulta de representante e união.
+  difficulty: intermediate
+  prerequisites: [vetores, árvores, grafos básicos]
+  concepts: [Union-Find, path compression, union by size]
+
+algorithms/graphs/directed-graphs/cycle-detection.md:
+  summary: Identifique ciclos em grafos direcionados e não direcionados durante um percurso.
+  difficulty: intermediate
+  prerequisites: [grafos básicos, DFS]
+  concepts: [ciclo, cores na DFS, aresta de retorno]
+
+algorithms/graphs/directed-graphs/topological-sorting.md:
+  summary: Ordene dependências de um grafo direcionado acíclico para processar cada tarefa na ordem correta.
+  difficulty: intermediate
+  prerequisites: [grafos direcionados, listas de adjacência, filas]
+  concepts: [DAG, algoritmo de Kahn, DFS, grau de entrada]
+
+algorithms/graphs/flow/dinic.md:
+  summary: Calcule fluxo máximo de forma eficiente construindo grafos de níveis e enviando fluxos bloqueantes.
+  difficulty: advanced
+  prerequisites: [grafos direcionados, BFS, DFS, fluxo em grafos]
+  concepts: [fluxo máximo, grafo residual, níveis, corte mínimo]
+
+algorithms/graphs/flow/edmonds-karp.md:
+  summary: Encontre fluxo máximo usando caminhos aumentantes de menor número de arestas.
+  difficulty: advanced
+  prerequisites: [grafos direcionados, BFS, fluxo em grafos]
+  concepts: [Ford-Fulkerson, fluxo máximo, grafo residual]
+
+algorithms/graphs/flow/flow-intro.md:
+  summary: Modele capacidades e transferências em redes para resolver problemas de fluxo em grafos.
+  difficulty: intermediate
+  prerequisites: [grafos direcionados, BFS, DFS]
+  concepts: [rede de fluxo, capacidade, fluxo máximo, corte mínimo]
+
+algorithms/graphs/flow/ford-fulkerson.md:
+  summary: Construa um fluxo máximo repetindo caminhos aumentantes no grafo residual.
+  difficulty: intermediate
+  prerequisites: [grafos direcionados, DFS, fluxo em grafos]
+  concepts: [caminhos aumentantes, fluxo residual, fluxo máximo]
+
+algorithms/graphs/graph-basics.md:
+  summary: Entenda como modelar relações com vértices e arestas antes de aplicar algoritmos de grafos.
+  difficulty: beginner
+  prerequisites: [vetores, laços]
+  concepts: [vértices, arestas, listas de adjacência, conectividade]
+
+algorithms/graphs/matching/bipartite-check.md:
+  summary: Verifique se os vértices de um grafo podem ser separados em dois grupos sem arestas internas.
+  difficulty: intermediate
+  prerequisites: [grafos básicos, BFS ou DFS]
+  concepts: [bipartição, coloração em duas cores, ciclo ímpar]
+
+algorithms/graphs/matching/hungarian.md:
+  summary: Encontre uma atribuição de custo mínimo entre dois conjuntos de elementos.
+  difficulty: advanced
+  prerequisites: [grafos bipartidos, matrizes, programação competitiva intermediária]
+  concepts: [matching ponderado, atribuição, potenciais]
+
+algorithms/graphs/matching/kuhn.md:
+  summary: Encontre um pareamento máximo em um grafo bipartido por meio de caminhos aumentantes.
+  difficulty: intermediate
+  prerequisites: [grafos bipartidos, DFS]
+  concepts: [matching máximo, caminho aumentante, bipartição]
+
+algorithms/graphs/other-concepts.md:
+  summary: Explore propriedades de grafos que aparecem com frequência em modelagens e problemas de competição.
+  difficulty: beginner
+  prerequisites: [grafos básicos]
+  concepts: [coloração, bipartição, árvores, conectividade]
+
+algorithms/graphs/paths-and-circuits/eulerian-paths.md:
+  summary: Determine e construa percursos que usam cada aresta de um grafo exatamente uma vez.
+  difficulty: intermediate
+  prerequisites: [grafos básicos, DFS]
+  concepts: [caminho euleriano, circuito euleriano, graus]
+
+algorithms/graphs/paths-and-circuits/hamiltonian-paths.md:
+  summary: Procure caminhos que visitam cada vértice uma única vez em grafos pequenos ou com estrutura especial.
+  difficulty: advanced
+  prerequisites: [grafos básicos, busca completa, programação dinâmica]
+  concepts: [caminho hamiltoniano, bitmask, DP em subconjuntos]
+
+algorithms/graphs/shortest-path/bellman-ford.md:
+  summary: Calcule caminhos mínimos mesmo na presença de arestas negativas e detecte ciclos negativos.
+  difficulty: intermediate
+  prerequisites: [grafos ponderados, vetores]
+  concepts: [relaxamento, caminhos mínimos, ciclos negativos]
+
+algorithms/graphs/shortest-path/dijkstra.md:
+  summary: Encontre distâncias mínimas a partir de uma origem em grafos com pesos não negativos.
+  difficulty: intermediate
+  prerequisites: [grafos ponderados, fila de prioridade]
+  concepts: [caminhos mínimos, relaxamento, priority queue]
+
+algorithms/graphs/shortest-path/floyd-warshall.md:
+  summary: Calcule as distâncias entre todos os pares de vértices por programação dinâmica.
+  difficulty: intermediate
+  prerequisites: [grafos ponderados, matrizes, programação dinâmica básica]
+  concepts: [todos os pares, DP, caminhos mínimos]
+
+algorithms/graphs/spanning-trees/kruskal.md:
+  summary: Construa uma árvore geradora mínima escolhendo arestas de menor custo sem formar ciclos.
+  difficulty: intermediate
+  prerequisites: [grafos ponderados, ordenação, DSU]
+  concepts: [MST, Kruskal, Union-Find]
+
+algorithms/graphs/spanning-trees/prim.md:
+  summary: Construa uma árvore geradora mínima expandindo a fronteira de um conjunto de vértices.
+  difficulty: intermediate
+  prerequisites: [grafos ponderados, fila de prioridade]
+  concepts: [MST, Prim, priority queue]
+
+algorithms/graphs/traversal/applications.md:
+  summary: Aplique percursos de grafos para extrair componentes, distâncias e propriedades estruturais.
+  difficulty: intermediate
+  prerequisites: [BFS, DFS, grafos básicos]
+  concepts: [componentes conexas, distâncias, percurso]
+
+algorithms/graphs/traversal/bfs.md:
+  summary: Explore um grafo por níveis para encontrar distâncias mínimas sem pesos e caminhos.
+  difficulty: beginner
+  prerequisites: [grafos básicos, filas]
+  concepts: [BFS, níveis, menor caminho, grid]
+
+algorithms/graphs/traversal/dfs.md:
+  summary: Percorra profundamente um grafo para explorar componentes, ciclos e estruturas recursivas.
+  difficulty: beginner
+  prerequisites: [grafos básicos, recursão ou pilhas]
+  concepts: [DFS, componentes conexas, tempos de visita]
+
+algorithms/graphs/trees/lca.md:
+  summary: Responda rapidamente qual é o ancestral comum mais baixo de dois vértices em uma árvore.
+  difficulty: advanced
+  prerequisites: [árvores, DFS, tabelas esparsas]
+  concepts: [LCA, binary lifting, ancestral]
+
+algorithms/math/algebra/modular-arithmetic.md:
+  summary: Trabalhe com restos de divisões para calcular expressões grandes e resolver congruências.
+  difficulty: beginner
+  prerequisites: [operações com inteiros]
+  concepts: [módulo, congruências, inverso modular]
+
+algorithms/math/algebra/number-theory-basics.md:
+  summary: Use propriedades de números inteiros para lidar com primos, divisores e fatorações.
+  difficulty: beginner
+  prerequisites: [operações com inteiros]
+  concepts: [primos, MDC, MMC, fatoração]
+
+algorithms/math/combinatorics/combinatorics-basics.md:
+  summary: Conte escolhas e arranjos usando fórmulas combinatórias fundamentais.
+  difficulty: intermediate
+  prerequisites: [aritmética modular, operações com inteiros]
+  concepts: [fatorial, binomial, permutações, combinações]
+
+algorithms/math/game-theory/game-theory-basics.md:
+  summary: Analise jogos imparciais para decidir quais posições são vencedoras ou perdedoras.
+  difficulty: intermediate
+  prerequisites: [recursão, programação dinâmica básica]
+  concepts: [Nim, estados vencedores, jogos imparciais]
+
+algorithms/math/game-theory/misere-games.md:
+  summary: Resolva a variação de jogos em que realizar a última jogada é uma condição de derrota.
+  difficulty: intermediate
+  prerequisites: [teoria dos jogos básica, Nim]
+  concepts: [misère, posições vencedoras, estratégia]
+
+algorithms/math/game-theory/other-games.md:
+  summary: Conheça jogos combinatórios clássicos e as ideias usadas para analisar suas posições.
+  difficulty: advanced
+  prerequisites: [teoria dos jogos básica, recursão]
+  concepts: [Kayles, Chomp, Wythoff, Hackenbush]
+
+algorithms/math/game-theory/sprague-grundy-theorem.md:
+  summary: Transforme jogos imparciais em pilhas de Nim para combinar subproblemas independentes.
+  difficulty: advanced
+  prerequisites: [teoria dos jogos básica, programação dinâmica]
+  concepts: [Sprague-Grundy, mex, Nim-sum]
+
+algorithms/math/geometry/geometry-basics.md:
+  summary: Modele pontos, retas e figuras para resolver problemas geométricos com precisão numérica.
+  difficulty: intermediate
+  prerequisites: [geometria plana, operações com ponto flutuante]
+  concepts: [pontos, vetores, orientação, EPS]
+
+algorithms/paradigms/complete-search.md:
+  summary: Enumere possibilidades de forma organizada quando o espaço de busca é pequeno o suficiente.
+  difficulty: beginner
+  prerequisites: [recursão, laços]
+  concepts: [backtracking, bitmask, enumeração]
+
+algorithms/paradigms/dynamic-programming.md:
+  summary: Reutilize soluções de subproblemas para transformar uma recorrência em um algoritmo eficiente.
+  difficulty: intermediate
+  prerequisites: [recursão, complexidade, vetores]
+  concepts: [memoização, tabulação, estados, transições]
+
+algorithms/paradigms/greedy.md:
+  summary: Faça escolhas locais justificadas para construir uma solução global eficiente.
+  difficulty: intermediate
+  prerequisites: [ordenação, complexidade]
+  concepts: [estratégia gulosa, prova de corretude, ordenação]
+
+algorithms/paradigms/simulation.md:
+  summary: Reproduza diretamente as regras de um processo com atenção aos detalhes e à eficiência.
+  difficulty: beginner
+  prerequisites: [laços, condicionais, vetores]
+  concepts: [implementação, estados, casos de borda]
+
+algorithms/string/kmp.md:
+  summary: Encontre ocorrências de um padrão em uma string sem repetir comparações desnecessárias.
+  difficulty: intermediate
+  prerequisites: [strings, vetores]
+  concepts: [KMP, função de prefixo, padrões]

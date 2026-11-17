@@ -87,6 +87,7 @@ plugins:
 
 hooks:
   - scripts/pdf_markers.py
+  - scripts/topic_overview.py
 
 extra_css:
   - stylesheets/style.css

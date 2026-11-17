@@ -190,6 +190,122 @@ img[src*="#center"] { display: block; margin: 1.5rem auto; }
   color: #9dcbff;
 }
 
+/* Visão geral dos tópicos */
+.md-typeset .topic-overview {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+  border: .05rem solid var(--md-default-fg-color--lighter);
+  border-left: .22rem solid var(--md-accent-fg-color);
+  border-radius: .35rem;
+  margin: 1.2rem 0 2rem;
+  overflow: hidden;
+}
+
+.md-typeset .topic-overview__summary {
+  font-size: .84rem;
+  line-height: 1.65;
+  margin: 0;
+  padding: .85rem 1rem .7rem;
+}
+
+.md-typeset .topic-overview__details {
+  border-top: .05rem solid var(--md-default-fg-color--lighter);
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  margin: 0;
+}
+
+.md-typeset .topic-overview__item {
+  align-items: center;
+  border-bottom: .05rem solid var(--md-default-fg-color--lighter);
+  display: contents;
+}
+
+.md-typeset .topic-overview__item:last-child > * {
+  border-bottom: 0;
+}
+
+.md-typeset .topic-overview__item dt,
+.md-typeset .topic-overview__item dd {
+  margin: 0;
+  padding: .55rem 1rem;
+}
+
+.md-typeset .topic-overview__item dt {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+  border-right: .05rem solid var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color--light);
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.md-typeset .topic-overview__tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .28rem;
+}
+
+.md-typeset .topic-overview__tag,
+.md-typeset .topic-overview__difficulty {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 650;
+  line-height: 1.35;
+  padding: .12rem .48rem;
+}
+
+.md-typeset .topic-overview__tag {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 10%, transparent);
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset .topic-overview__difficulty--beginner {
+  background: #e0f5e9;
+  color: #17633b;
+}
+
+.md-typeset .topic-overview__difficulty--intermediate {
+  background: #fff1d2;
+  color: #8a5513;
+}
+
+.md-typeset .topic-overview__difficulty--advanced {
+  background: #ffe4da;
+  color: #91371c;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-overview {
+  background: rgba(98, 181, 255, .06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-overview__item dt {
+  background: rgba(98, 181, 255, .04);
+  color: #b8ddff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-overview__tag {
+  background: rgba(98, 181, 255, .16);
+  color: #b8ddff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-overview__difficulty--beginner {
+  background: rgba(71, 190, 128, .2);
+  color: #9ce3b9;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-overview__difficulty--intermediate {
+  background: rgba(255, 194, 82, .18);
+  color: #ffd17a;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-overview__difficulty--advanced {
+  background: rgba(255, 130, 91, .2);
+  color: #ffb39a;
+}
+
 .md-typeset .exercise-list {
   counter-reset: exercise;
   list-style: none;
@@ -302,6 +418,23 @@ img[src*="#center"] { display: block; margin: 1.5rem auto; }
 [data-md-color-scheme="slate"] .md-typeset .exercise-list__meta--hard { color: #ffab83; }
 
 @media screen and (max-width: 44.9375em) {
+  .md-typeset .topic-overview__details {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .topic-overview__item {
+    display: block;
+  }
+
+  .md-typeset .topic-overview__item dt {
+    border-right: 0;
+    padding-bottom: .2rem;
+  }
+
+  .md-typeset .topic-overview__item dd {
+    padding-top: .2rem;
+  }
+
   .md-typeset .exercise-list__item { padding-left: 2.5rem; }
 }
 
