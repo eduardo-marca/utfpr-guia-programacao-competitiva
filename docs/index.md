@@ -12,9 +12,9 @@ Ele também serve como ponto de partida para quem está interessado em estudar p
 ## Como Usar Esse Guia
 Esse guia é separado em diversas páginas. No topo você encontra os principais assuntos de programação competitiva separados por tópicos. Isso é útil se você estiver interessado em estudar um tópico específico, como C++, grafos ou algum algoritmo.
 
-Você pode começar pela [Introdução à Programação Competitiva](introduction/what-is-cp.md), que explica o que é programação competitiva e como ela funciona.
+Você pode começar pela [Introdução à Programação Competitiva](comecar/what-is-cp.md), que explica o que é programação competitiva e como ela funciona.
 
-Caso queira estudar todos os tópicos em uma ordem mais voltada para aprendizado, existe também a página [Trilha de Aprendizagem](introduction/learning-path.md) com os assuntos separados por níveis de dificuldade, em uma ordem recomendada para aprender.
+Caso queira estudar todos os tópicos em uma ordem mais voltada para aprendizado, existe também a página [Trilha de Aprendizagem](pratica/roteiros/learning-path.md) com os assuntos separados por níveis de dificuldade, em uma ordem recomendada para aprender.
 
 ## Como Contribuir
-Caso esteja interessado, é possível contribuir com este guia. Para isso siga as instruções em [Como Contribuir](contribute/index.md).
+Caso esteja interessado, é possível contribuir com este guia. Para isso siga as instruções em [Como Contribuir](contribuir/index.md).

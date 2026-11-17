@@ -82,8 +82,8 @@ plugins:
       cover_page_template: "docs/assets/templates/custom_cover_page.tpl"
       exclude:
         - index.md
-        - introduction/learning-path.md
-        - contribute/*
+        - pratica/roteiros/learning-path.md
+        - contribuir/*
 
 hooks:
   - scripts/pdf_markers.py
@@ -98,82 +98,73 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Introdução:
-    - index.md
-    - introduction/what-is-cp.md
-    #- introduction/learning-path.md
-
-  - C++:
-    - algorithms/cpp/basics.md
-    - algorithms/cpp/stl.md
-  
-  - Algoritmos e Técnicas Básicas:
-    - algorithms/paradigms/complete-search.md
-    - algorithms/basic-algorithms/binary-search.md
-    - algorithms/basic-algorithms/binary-search-on-answer.md
-    - algorithms/paradigms/greedy.md
-    - algorithms/basic-algorithms/two-pointers-sliding-window.md
-    - algorithms/paradigms/dynamic-programming.md
-
-  - Estruturas de Dados:
-    - algorithms/data-structures/disjoint-set-union.md
-    - algorithms/data-structures/fenwick.md
-    - algorithms/data-structures/segtree.md
-    - algorithms/data-structures/lazy.md
-  #  - algorithms/data-structures/sqrt-tree.md
-
-  - Grafos:
-    - algorithms/graphs/graph-basics.md
-    - algorithms/graphs/other-concepts.md
-    - Percurso de Grafos:
-      - algorithms/graphs/traversal/dfs.md
-      - algorithms/graphs/traversal/bfs.md
-    #  - algorithms/graphs/traversal/applications.md
-    - Menor Caminho:
-      - algorithms/graphs/shortest-path/dijkstra.md
-    #  - algorithms/graphs/shortest-path/bellman-ford.md
-    #  - algorithms/graphs/shortest-path/floyd-warshall.md
-    #- Árvores:
-    #  - algorithms/graphs/trees/lca.md
-    - Grafos Direcionados:
-    #  - algorithms/graphs/directed-graphs/cycle-detection.md
-      - algorithms/graphs/directed-graphs/topological-sorting.md
-    #- Árvores Geradoras:
-    #  - algorithms/graphs/spanning-trees/kruskal.md
-    #  - algorithms/graphs/spanning-trees/prim.md
-    #- Caminhos e Circuitos:
-    #  - algorithms/graphs/paths-and-circuits/eulerian-paths.md
-    #  - algorithms/graphs/paths-and-circuits/hamiltonian-paths.md
-    #- Pareamento:
-    #  - algorithms/graphs/matching/bipartite-check.md
-    #  - algorithms/graphs/matching/kuhn.md
-    #  - algorithms/graphs/matching/hungarian.md
-    #- Fluxo:
-    #  - algorithms/graphs/flow/flow-intro.md
-    #  - algorithms/graphs/flow/ford-fulkerson.md
-
-  - Strings:
-    - algorithms/string/kmp.md
-
-  - Matemática:
-    - Álgebra:
-      - algorithms/math/algebra/number-theory-basics.md
-      - algorithms/math/algebra/modular-arithmetic.md
-    - Combinatória:
-      - algorithms/math/combinatorics/combinatorics-basics.md
-    - Geometria:
-      - algorithms/math/geometry/geometry-basics.md
-    - Teoria dos Jogos:
-      - algorithms/math/game-theory/game-theory-basics.md
-      #- algorithms/math/game-theory/sprague-grundy-game.md
-      #- algorithms/math/game-theory/misere-games.md
-      #- algorithms/math/game-theory/other-games.md
-
-  - Como Contribuir:
-    - contribute/index.md
-    - contribute/installation.md
-    - contribute/github.md
-    - contribute/mkdocs.md
-    - contribute/pdf.md
-    #- contribute/writing-guidelines.md
-    #- contribute/style-guide.md
+  - Início: index.md
+  - Começar:
+      - O que é programação competitiva: comecar/what-is-cp.md
+  - Fundamentos:
+      - C++: fundamentos/cpp.md
+      - STL: fundamentos/stl.md
+  - Técnicas e Estruturas:
+      - Técnicas:
+          #- Prefix Sum: tecnicas-estruturas/tecnicas/prefix-sum.md
+          - Two Pointers e Sliding Window: tecnicas-estruturas/tecnicas/two-pointers-sliding-window.md
+          - Busca Binária: tecnicas-estruturas/tecnicas/busca-binaria.md
+          - Busca Binária na Resposta: tecnicas-estruturas/tecnicas/binary-search-on-answer.md
+          - Busca Completa: tecnicas-estruturas/tecnicas/complete-search.md
+          - Algoritmos Gulosos: tecnicas-estruturas/tecnicas/greedy.md
+          #- Simulação: tecnicas-estruturas/tecnicas/simulation.md
+      - Estruturas de Dados:
+          - DSU: tecnicas-estruturas/estruturas/disjoint-set-union.md
+          - Fenwick Tree: tecnicas-estruturas/estruturas/fenwick.md
+          - Árvore de Segmentos: tecnicas-estruturas/estruturas/segtree.md
+          - Lazy Propagation: tecnicas-estruturas/estruturas/lazy.md
+  - Algoritmos:
+      - Grafos:
+          - Conceitos básicos: algoritmos/grafos/graph-basics.md
+          - Outros conceitos: algoritmos/grafos/other-concepts.md
+          - Percursos:
+              - BFS: algoritmos/grafos/bfs.md
+              - DFS: algoritmos/grafos/dfs.md
+          - Menores caminhos:
+              - Dijkstra: algoritmos/grafos/dijkstra.md
+              - Bellman-Ford: algoritmos/grafos/bellman-ford.md
+              #- Floyd-Warshall: algoritmos/grafos/floyd-warshall.md
+          - Ordenação topológica: algoritmos/grafos/topological-sorting.md
+        #   - Árvores:
+        #       - LCA: algoritmos/grafos/lca.md
+        #       - Kruskal: algoritmos/grafos/kruskal.md
+        #       - Prim: algoritmos/grafos/prim.md
+        #   - Caminhos e circuitos:
+        #       - Caminho euleriano: algoritmos/grafos/eulerian-paths.md
+        #       - Caminho hamiltoniano: algoritmos/grafos/hamiltonian-paths.md
+        #   - Fluxo em grafos:
+        #       - Introdução: algoritmos/grafos/flow-intro.md
+        #       - Ford-Fulkerson: algoritmos/grafos/ford-fulkerson.md
+        #       - Edmonds-Karp: algoritmos/grafos/edmonds-karp.md
+        #       - Dinic: algoritmos/grafos/dinic.md
+        #   - Matching:
+        #       - Checagem bipartida: algoritmos/grafos/bipartite-check.md
+        #       - Kuhn: algoritmos/grafos/kuhn.md
+        #       - Hungarian: algoritmos/grafos/hungarian.md
+      - Programação dinâmica: algoritmos/programacao-dinamica/dynamic-programming.md
+      - Strings:
+          - KMP: algoritmos/strings/kmp.md
+  - Matemática e tópicos avançados:
+      - Teoria dos números:
+          - Fundamentos: matematica-topicos-especiais/teoria-dos-numeros/number-theory-basics.md
+          - Aritmética modular: matematica-topicos-especiais/teoria-dos-numeros/modular-arithmetic.md
+      - Combinatória: matematica-topicos-especiais/combinatoria/combinatorics-basics.md
+      - Geometria: matematica-topicos-especiais/geometria/geometry-basics.md
+      - Teoria dos jogos:
+          - Fundamentos: matematica-topicos-especiais/teoria-dos-jogos/game-theory-basics.md
+          - Misère: matematica-topicos-especiais/teoria-dos-jogos/misere-games.md
+          - Sprague-Grundy: matematica-topicos-especiais/teoria-dos-jogos/sprague-grundy-theorem.md
+          - Outros jogos: matematica-topicos-especiais/teoria-dos-jogos/other-games.md
+  - Prática:
+      - Trilha de aprendizagem: pratica/roteiros/learning-path.md
+  - Contribuir:
+      - Visão geral: contribuir/index.md
+      - Instalação: contribuir/instalacao.md
+      - GitHub: contribuir/github.md
+      - MkDocs: contribuir/mkdocs.md
+      - PDF: contribuir/pdf.md
