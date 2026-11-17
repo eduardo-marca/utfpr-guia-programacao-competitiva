@@ -1,6 +1,7 @@
 - Criar mais páginas.
 - Padronizar lista de exercícios, informações iniciais da página e outros elementos.
 - Melhorar conversão para PDF.
+- Geração de PDF com Latex.
 - Consertar imagens no modo escuro.
 - Adicionar mais exercícios.
 - Melhorar recursos visuais e visual geral do site.
