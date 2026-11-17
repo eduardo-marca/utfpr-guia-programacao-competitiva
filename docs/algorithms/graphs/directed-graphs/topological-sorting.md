@@ -204,7 +204,7 @@ Para adicionar futuramente, remover o comentário abaixo.
 -->
 
 <!--
-![Execução passo a passo do algoritmo de Kahn](../assets/images/grafos/ordenacao-topologica/kahn-passos.gif)
+![Execução passo a passo do algoritmo de Kahn](../../../assets/images/grafos/ordenacao-topologica/kahn-passos.gif)
 -->
 
 ## Implementação em C++17
@@ -389,7 +389,7 @@ assets/images/grafos/ordenacao-topologica/dag-vs-ciclo.svg
 -->
 
 <!--
-![Comparação entre um DAG e um grafo com ciclo](../assets/images/grafos/ordenacao-topologica/dag-vs-ciclo.svg)
+![Comparação entre um DAG e um grafo com ciclo](../../../assets/images/grafos/ordenacao-topologica/dag-vs-ciclo.svg)
 -->
 
 !!! note "Importante"
@@ -543,7 +543,7 @@ assets/images/grafos/ordenacao-topologica/dp-dag.gif
 -->
 
 <!--
-![Programação dinâmica em DAG com ordenação topológica](../assets/images/grafos/ordenacao-topologica/dp-dag.gif)
+![Programação dinâmica em DAG com ordenação topológica](../../../assets/images/grafos/ordenacao-topologica/dp-dag.gif)
 -->
 
 ## Variações

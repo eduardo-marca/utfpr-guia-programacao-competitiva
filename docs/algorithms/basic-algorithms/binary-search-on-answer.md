@@ -92,9 +92,9 @@ Criar uma imagem SVG com uma reta numérica horizontal.
 - Destacar que a busca binária procura a fronteira.
 
 Arquivo:
-../assets/images/tecnicas/busca-binaria-na-resposta/fronteira.svg
+../../assets/images/tecnicas/busca-binaria-na-resposta/fronteira.svg
 
-![Fronteira entre valores inviáveis e viáveis](../assets/images/tecnicas/busca-binaria-na-resposta/fronteira.svg)
+![Fronteira entre valores inviáveis e viáveis](../../assets/images/tecnicas/busca-binaria-na-resposta/fronteira.svg)
 -->
 
 ## 3. Problema exemplo: Factory Machines
@@ -205,9 +205,9 @@ Destacar os sete produtos concluídos até t=8
 e o oitavo produto concluído em t=9.
 
 Arquivo:
-../assets/images/tecnicas/busca-binaria-na-resposta/maquinas-linha-tempo.svg
+../../assets/images/tecnicas/busca-binaria-na-resposta/maquinas-linha-tempo.svg
 
-![Produção simultânea das máquinas](../assets/images/tecnicas/busca-binaria-na-resposta/maquinas-linha-tempo.svg)
+![Produção simultânea das máquinas](../../assets/images/tecnicas/busca-binaria-na-resposta/maquinas-linha-tempo.svg)
 -->
 
 ## 4. Aplicando a busca binária
@@ -294,9 +294,9 @@ Destacar:
 - A região restante.
 
 Arquivo:
-../assets/images/tecnicas/busca-binaria-na-resposta/iteracoes.svg
+../../assets/images/tecnicas/busca-binaria-na-resposta/iteracoes.svg
 
-![Iterações da busca binária na resposta](../assets/images/tecnicas/busca-binaria-na-resposta/iteracoes.svg)
+![Iterações da busca binária na resposta](../../assets/images/tecnicas/busca-binaria-na-resposta/iteracoes.svg)
 -->
 
 ## 5. Implementação completa em C++17

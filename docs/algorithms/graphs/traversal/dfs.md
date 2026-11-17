@@ -66,11 +66,11 @@ A Busca em Profundidade (Depth First Search - DFS) é um algoritmo de busca/perc
 
 Considere o seguinte grafo:
 
-![](images/dfs-bfs-reference.drawio.svg#center)
+![](../../../assets/images/grafos/percursos/dfs-bfs-reference.drawio.svg#center)
 
 Um algoritmo de DFS começaria a partir do vértice 0, visitando um vizinho não visitado (por exemplo, 1), e continuaria a explorar os vizinhos de 1 (como 2 e 3) antes de retroceder para explorar outros vizinhos de 0 (como 4 e 5). O percurso resultante poderia ser algo como: 0 → 1 → 4 → 7 → 2 → 3 → 5 → 8 → 6 → 9.
 
-![](images/dfs-example.drawio.svg#center)
+![](../../../assets/images/grafos/percursos/dfs-example.drawio.svg#center)
 
 Perceba que a ordem que visitamos os vizinhos de um vértice pode variar dependendo da implementação, mas a característica principal da DFS é que ela explora profundamente cada caminho antes de retroceder.
 

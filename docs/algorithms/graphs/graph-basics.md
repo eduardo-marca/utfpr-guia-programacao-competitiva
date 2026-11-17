@@ -8,7 +8,7 @@ Grafos são estruturas de dados que representam relações entre elementos. Eles
 
 Geralmente representamos grafos visualmente como um conjunto de pontos (vértices) conectados por linhas (arestas). Abaixo está um exemplo de um grafo simples com 6 vértices e 7 arestas.
 
-![](images/graph-example.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/graph-example.drawio.svg#center)
 
 ### Terminologia Básica
 
@@ -25,7 +25,7 @@ Um grafo é considerado conectado (ou conexo) se houver um caminho entre qualque
 
 As partes conectadas de um grafo desconectado são chamadas de componentes conectadas, componentes conexas ou simplesmente componentes.
 
-![](images/connected-graph.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/connected-graph.drawio.svg#center)
 
 ### Árvores
 
@@ -38,7 +38,7 @@ Essas propriedades das árvores fazem com que existam muitos algoritmos próprio
 
 Também é comum definir uma hierarquia entre os vértices de uma árvore, onde um vértice é dito ser a raiz da árvore, e à todo vértice (com exceção da raiz) pode ser atribuído um único outro vértice conectado a ele, dito ser o pai do vértice. Dois vértices não podem ser pais um do outro. Essa terminologia é utilizada em alguns algoritmos envolvendo árvores.
 
-![](images/tree.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/tree.drawio.svg#center)
 
 !!! note "Nota"
     Na prática, qualquer vértice de uma árvore pode ser definido como a raiz da árvore.
@@ -49,19 +49,19 @@ Em um grafo direcionado (ou dígrafo), as arestas têm uma direção associada, 
 
 Grafos que não possuem arestas com uma direção associada são chamados de não direcionados. Grafos não direcionados podem ser modelados como grafos direcionados onde cada aresta $(A, B)$ se torna duas arestas $(A, B)$ e $(B, A)$.
 
-![](images/undirected.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/undirected.drawio.svg#center)
 
 ### Grafos Ponderados e Não Ponderados
 
 Em alguns casos, as arestas de um grafo podem ter pesos associados a elas, representando custos, distâncias ou capacidades. Esses grafos são chamados de grafos ponderados. Alguns algoritmos, como o algoritmo de Dijkstra, são projetados para encontrar o caminho mais curto em grafos ponderados.
 
-![](images/weighted.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/weighted.drawio.svg#center)
 
 ### Simplicidade
 
 Um grafo é considerado simples se não possui laços (arestas que conectam um vértice a si mesmo) e não possui múltiplas arestas entre o mesmo par de vértices. Grafos simples são frequentemente usados em teoria dos grafos devido à sua simplicidade e clareza.
 
-![](images/simple.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/simple.drawio.svg#center)
 
 ## Representação de Grafos
 
@@ -69,7 +69,7 @@ Existem várias maneiras de representar grafos em um computador, sendo as mais c
 
 Como exemplo usaremos o seguinte grafo para as representações.
 
-![](images/graph-reference.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/graph-reference.drawio.svg#center)
 
 ### Lista de Adjacência
 
@@ -100,7 +100,7 @@ for(auto u : adj[v]) {
 }
 ```
 
-![](images/adj-list.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/adj-list.drawio.svg#center)
 
 ### Matriz de Adjacência
 
@@ -108,7 +108,7 @@ A matriz de adjacência é uma representação de grafos usando uma matriz bidim
 
 A matriz de adjacência é útil para grafos densos (ou seja, grafos com muitas arestas em relação ao número de vértices), mas pode ser ineficiente em termos de espaço para grafos esparsos, pois requer $O(V^2)$ espaço, onde V é o número de vértices.
 
-![](images/adj-matrix.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/adj-matrix.drawio.svg#center)
 
 ### Lista de Arestas
 
@@ -126,4 +126,4 @@ Em um grafo ponderado, cada aresta (u, v) pode ser armazenada como um triplo (u,
 vector<tuple<int, int, int>> edges; // (u, v, peso)
 ```
 
-![](images/edge-list.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/edge-list.drawio.svg#center)

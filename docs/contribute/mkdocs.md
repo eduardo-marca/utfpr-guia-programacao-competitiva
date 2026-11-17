@@ -97,7 +97,7 @@ Este é outro parágrafo.
 ---
 ### Imagens
 
-![BFS](images/bfs-dfs.png)
+![BFS](../assets/images/contribuicao/bfs-dfs.png)
 
 ---
 ### Código

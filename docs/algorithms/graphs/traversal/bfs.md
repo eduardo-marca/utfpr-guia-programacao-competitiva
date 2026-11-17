@@ -41,11 +41,11 @@ A Busca em Largura (Breadth First Search - BFS) é um algoritmo de busca/percurs
 
 Considere o seguinte grafo:
 
-![](images/dfs-bfs-reference.drawio.svg#center)
+![](../../../assets/images/grafos/percursos/dfs-bfs-reference.drawio.svg#center)
 
 Um algoritmo de BFS começaria a partir do vértice 0, visitando todos os vizinhos de 0 (como 1, 2 e 3) antes de avançar para os próximos níveis. O percurso resultante poderia ser algo como: 0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9. Ou seja, o algoritmo visita todos os vértices de um nível (a uma mesma distância) antes de passar para o próximo nível.
 
-![](images/bfs-example.drawio.svg#center)
+![](../../../assets/images/grafos/percursos/bfs-example.drawio.svg#center)
 
 Perceba que a ordem que visitamos os vizinhos de um vértice pode variar dependendo da implementação, mas a característica principal da BFS é que ela explora todos os caminhos de um nível antes de avançar para o próximo nível. Portanto, outra ordem de visitação poderia ser: 0 → 3 → 2 → 1 → 5 → 4 → 6 → 9 → 8 → 7.
 

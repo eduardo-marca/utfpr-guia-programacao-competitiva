@@ -111,11 +111,11 @@ Criar um SVG de uma árvore de segmentos para o vetor `[2, 1, 3, 4, 5, 2, 6, 1]`
 - Tornar legíveis as relações pai-filho e preservar a ordem dos índices da esquerda para a direita.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/segment-tree/arvore-de-intervalos.svg
+../../assets/images/estruturas-de-dados/segment-tree/arvore-de-intervalos.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Árvore de segmentos que armazena somas](../assets/images/estruturas-de-dados/segment-tree/arvore-de-intervalos.svg)
+![Árvore de segmentos que armazena somas](../../assets/images/estruturas-de-dados/segment-tree/arvore-de-intervalos.svg)
 -->
 
 ## 3. Consulta de intervalo passo a passo
@@ -158,11 +158,11 @@ Criar uma versão da árvore anterior para a consulta `[2, 6]`.
 - Exibir a expressão final `7 + 7 + 6 = 20` abaixo da árvore.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/segment-tree/consulta-de-intervalo.svg
+../../assets/images/estruturas-de-dados/segment-tree/consulta-de-intervalo.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Decomposição de uma consulta em uma árvore de segmentos](../assets/images/estruturas-de-dados/segment-tree/consulta-de-intervalo.svg)
+![Decomposição de uma consulta em uma árvore de segmentos](../../assets/images/estruturas-de-dados/segment-tree/consulta-de-intervalo.svg)
 -->
 
 ## 4. Atualização pontual
@@ -193,11 +193,11 @@ Criar uma animação curta ou dois painéis SVG comparando o estado antes e depo
 - Manter os nós não afetados visualmente apagados para enfatizar que não são recalculados.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/segment-tree/atualizacao-pontual.svg
+../../assets/images/estruturas-de-dados/segment-tree/atualizacao-pontual.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Propagação de uma atualização pontual](../assets/images/estruturas-de-dados/segment-tree/atualizacao-pontual.svg)
+![Propagação de uma atualização pontual](../../assets/images/estruturas-de-dados/segment-tree/atualizacao-pontual.svg)
 -->
 
 ## 5. Implementação base: soma no intervalo
@@ -453,11 +453,11 @@ Perguntas em sequência:
 6. É preciso achar uma posição? Sugerir descida guiada pela informação do nó.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/segment-tree/guia-de-adaptacao.svg
+../../assets/images/estruturas-de-dados/segment-tree/guia-de-adaptacao.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Fluxograma para adaptar uma árvore de segmentos](../assets/images/estruturas-de-dados/segment-tree/guia-de-adaptacao.svg)
+![Fluxograma para adaptar uma árvore de segmentos](../../assets/images/estruturas-de-dados/segment-tree/guia-de-adaptacao.svg)
 -->
 
 ## 7. Roteiro de implementação e depuração

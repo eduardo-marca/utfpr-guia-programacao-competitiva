@@ -79,12 +79,12 @@ Mostrar os índices, os valores e dois ponteiros L e R.
 Destacar os elementos dentro da janela.
 
 Arquivo sugerido:
-../assets/images/tecnicas/janela-deslizante/estrutura-janela.svg
+../../assets/images/tecnicas/janela-deslizante/estrutura-janela.svg
 
 Substituir este comentário pelo Markdown abaixo quando
 a imagem estiver disponível:
 
-![Representação de uma janela deslizante](../assets/images/tecnicas/janela-deslizante/estrutura-janela.svg)
+![Representação de uma janela deslizante](../../assets/images/tecnicas/janela-deslizante/estrutura-janela.svg)
 -->
 
 ## 3. Quando podemos utilizar uma janela deslizante?
@@ -298,9 +298,9 @@ Laranja: elemento sendo processado.
 Vermelho: ocorrência anterior de um elemento repetido.
 
 Arquivo sugerido:
-../assets/images/tecnicas/janela-deslizante/execucao.gif
+../../assets/images/tecnicas/janela-deslizante/execucao.gif
 
-![Execução da janela deslizante](../assets/images/tecnicas/janela-deslizante/execucao.gif)
+![Execução da janela deslizante](../../assets/images/tecnicas/janela-deslizante/execucao.gif)
 -->
 
 ## 6. Implementação em C++17
@@ -570,9 +570,9 @@ Sugestão: uma linha do tempo com os valores
 de L, R e sum após cada ajuste.
 
 Arquivo:
-../assets/images/tecnicas/janela-deslizante/soma-limitada.svg
+../../assets/images/tecnicas/janela-deslizante/soma-limitada.svg
 
-![Evolução da soma na janela](../assets/images/tecnicas/janela-deslizante/soma-limitada.svg)
+![Evolução da soma na janela](../../assets/images/tecnicas/janela-deslizante/soma-limitada.svg)
 -->
 
 ## 10. Janela fixa e janela variável
@@ -646,9 +646,9 @@ Painel direito:
 Janela de tamanho variável expandindo e contraindo.
 
 Arquivo:
-../assets/images/tecnicas/janela-deslizante/fixa-vs-variavel.svg
+../../assets/images/tecnicas/janela-deslizante/fixa-vs-variavel.svg
 
-![Janela fixa versus variável](../assets/images/tecnicas/janela-deslizante/fixa-vs-variavel.svg)
+![Janela fixa versus variável](../../assets/images/tecnicas/janela-deslizante/fixa-vs-variavel.svg)
 -->
 
 ## 11. Exercícios sugeridos

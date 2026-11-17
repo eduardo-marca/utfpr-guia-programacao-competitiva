@@ -98,82 +98,59 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Introdução:
-    - index.md
-    - introduction/what-is-cp.md
-    #- introduction/learning-path.md
+  - Início:
+      - Página inicial: index.md
+      - O que é Programação Competitiva: introduction/what-is-cp.md
+      - Trilha de Aprendizagem: introduction/learning-path.md
 
   - C++:
-    - algorithms/cpp/basics.md
-    - algorithms/cpp/stl.md
-  
-  - Algoritmos e Técnicas Básicas:
-    - algorithms/paradigms/complete-search.md
-    - algorithms/basic-algorithms/binary-search.md
-    - algorithms/basic-algorithms/binary-search-on-answer.md
-    - algorithms/paradigms/greedy.md
-    - algorithms/basic-algorithms/two-pointers-sliding-window.md
-    - algorithms/paradigms/dynamic-programming.md
+      - Básico de C++: algorithms/cpp/basics.md
+      - STL: algorithms/cpp/stl.md
+
+  - Técnicas e Paradigmas:
+      - Busca Completa: algorithms/paradigms/complete-search.md
+      - Busca Binária:
+          - Introdução: algorithms/basic-algorithms/binary-search.md
+          - Busca Binária na Resposta: algorithms/basic-algorithms/binary-search-on-answer.md
+      - Dois Ponteiros e Janela Deslizante: algorithms/basic-algorithms/two-pointers-sliding-window.md
+      - Algoritmos Gulosos: algorithms/paradigms/greedy.md
+      - Programação Dinâmica: algorithms/paradigms/dynamic-programming.md
 
   - Estruturas de Dados:
-    - algorithms/data-structures/disjoint-set-union.md
-    - algorithms/data-structures/fenwick.md
-    - algorithms/data-structures/segtree.md
-    - algorithms/data-structures/lazy.md
-  #  - algorithms/data-structures/sqrt-tree.md
+      - Disjoint Set Union (DSU): algorithms/data-structures/disjoint-set-union.md
+      - Fenwick Tree: algorithms/data-structures/fenwick.md
+      - Árvore de Segmentos: algorithms/data-structures/segtree.md
+      - Lazy Propagation: algorithms/data-structures/lazy.md
 
   - Grafos:
-    - algorithms/graphs/graph-basics.md
-    - algorithms/graphs/other-concepts.md
-    - Percurso de Grafos:
-      - algorithms/graphs/traversal/dfs.md
-      - algorithms/graphs/traversal/bfs.md
-    #  - algorithms/graphs/traversal/applications.md
-    - Menor Caminho:
-      - algorithms/graphs/shortest-path/dijkstra.md
-    #  - algorithms/graphs/shortest-path/bellman-ford.md
-    #  - algorithms/graphs/shortest-path/floyd-warshall.md
-    #- Árvores:
-    #  - algorithms/graphs/trees/lca.md
-    - Grafos Direcionados:
-    #  - algorithms/graphs/directed-graphs/cycle-detection.md
-      - algorithms/graphs/directed-graphs/topological-sorting.md
-    #- Árvores Geradoras:
-    #  - algorithms/graphs/spanning-trees/kruskal.md
-    #  - algorithms/graphs/spanning-trees/prim.md
-    #- Caminhos e Circuitos:
-    #  - algorithms/graphs/paths-and-circuits/eulerian-paths.md
-    #  - algorithms/graphs/paths-and-circuits/hamiltonian-paths.md
-    #- Pareamento:
-    #  - algorithms/graphs/matching/bipartite-check.md
-    #  - algorithms/graphs/matching/kuhn.md
-    #  - algorithms/graphs/matching/hungarian.md
-    #- Fluxo:
-    #  - algorithms/graphs/flow/flow-intro.md
-    #  - algorithms/graphs/flow/ford-fulkerson.md
+      - Conceitos Básicos: algorithms/graphs/graph-basics.md
+      - Outros Conceitos: algorithms/graphs/other-concepts.md
+      - Percursos:
+          - Busca em Profundidade (DFS): algorithms/graphs/traversal/dfs.md
+          - Busca em Largura (BFS): algorithms/graphs/traversal/bfs.md
+      - Menores Caminhos:
+          - Dijkstra: algorithms/graphs/shortest-path/dijkstra.md
+          - Bellman-Ford: algorithms/graphs/shortest-path/bellman-ford.md
+      - Grafos Direcionados:
+          - Ordenação Topológica: algorithms/graphs/directed-graphs/topological-sorting.md
 
   - Strings:
-    - algorithms/string/kmp.md
+      - KMP: algorithms/string/kmp.md
 
   - Matemática:
-    - Álgebra:
-      - algorithms/math/algebra/number-theory-basics.md
-      - algorithms/math/algebra/modular-arithmetic.md
-    - Combinatória:
-      - algorithms/math/combinatorics/combinatorics-basics.md
-    - Geometria:
-      - algorithms/math/geometry/geometry-basics.md
-    - Teoria dos Jogos:
-      - algorithms/math/game-theory/game-theory-basics.md
-      #- algorithms/math/game-theory/sprague-grundy-game.md
-      #- algorithms/math/game-theory/misere-games.md
-      #- algorithms/math/game-theory/other-games.md
+      - Teoria dos Números e Álgebra:
+          - Teoria dos Números: algorithms/math/algebra/number-theory-basics.md
+          - Aritmética Modular: algorithms/math/algebra/modular-arithmetic.md
+      - Combinatória: algorithms/math/combinatorics/combinatorics-basics.md
+      - Geometria: algorithms/math/geometry/geometry-basics.md
+      - Teoria dos Jogos:
+          - Introdução: algorithms/math/game-theory/game-theory-basics.md
+          - Teorema de Sprague-Grundy: algorithms/math/game-theory/sprague-grundy-theorem.md
+          - Jogo de Misère: algorithms/math/game-theory/misere-games.md
 
   - Como Contribuir:
-    - contribute/index.md
-    - contribute/installation.md
-    - contribute/github.md
-    - contribute/mkdocs.md
-    - contribute/pdf.md
-    #- contribute/writing-guidelines.md
-    #- contribute/style-guide.md
+      - Visão geral: contribute/index.md
+      - Instalação: contribute/installation.md
+      - GitHub: contribute/github.md
+      - MkDocs e Material: contribute/mkdocs.md
+      - Referência em PDF: contribute/pdf.md

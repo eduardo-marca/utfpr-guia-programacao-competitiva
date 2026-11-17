@@ -88,11 +88,11 @@ Criar um SVG para a Fenwick Tree do vetor `[2, 1, 3, 4, 5, 2, 6, 1]`.
 - Destacar que `lowbit(i)` determina o tamanho do bloco.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/fenwick-tree/blocos-da-bit.svg
+../../assets/images/estruturas-de-dados/fenwick-tree/blocos-da-bit.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Blocos armazenados por uma Fenwick Tree](../assets/images/estruturas-de-dados/fenwick-tree/blocos-da-bit.svg)
+![Blocos armazenados por uma Fenwick Tree](../../assets/images/estruturas-de-dados/fenwick-tree/blocos-da-bit.svg)
 -->
 
 ## 3. Consultando e atualizando
@@ -139,11 +139,11 @@ Criar um SVG ou animação curta para `add(4, +6)` na BIT do exemplo.
 - Indicar que os demais nós não mudam.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/fenwick-tree/atualizacao-pontual.svg
+../../assets/images/estruturas-de-dados/fenwick-tree/atualizacao-pontual.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Caminho de atualização em uma Fenwick Tree](../assets/images/estruturas-de-dados/fenwick-tree/atualizacao-pontual.svg)
+![Caminho de atualização em uma Fenwick Tree](../../assets/images/estruturas-de-dados/fenwick-tree/atualizacao-pontual.svg)
 -->
 
 ## 4. Implementação base

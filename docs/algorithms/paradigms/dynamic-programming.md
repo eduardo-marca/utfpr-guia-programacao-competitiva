@@ -106,11 +106,11 @@ estado → decisões e predecessores → transição → bases e impossíveis �
 Usar uma seta de retorno de transição para estado, indicando que uma fórmula confusa exige revisar a definição do estado.
 
 Arquivo sugerido:
-../assets/images/paradigmas/programacao-dinamica/roteiro-de-modelagem.svg
+../../assets/images/paradigmas/programacao-dinamica/roteiro-de-modelagem.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Roteiro para modelar programação dinâmica](../assets/images/paradigmas/programacao-dinamica/roteiro-de-modelagem.svg)
+![Roteiro para modelar programação dinâmica](../../assets/images/paradigmas/programacao-dinamica/roteiro-de-modelagem.svg)
 -->
 
 ## 3. Memoização e tabulação
@@ -212,11 +212,11 @@ Criar uma sequência de quadros para a DP de moedas `[1, 3, 4]` até a soma `6`.
 - Exibir a escolha vencedora e o valor final de cada célula.
 
 Arquivo sugerido:
-../assets/images/paradigmas/programacao-dinamica/moedas-passo-a-passo.svg
+../../assets/images/paradigmas/programacao-dinamica/moedas-passo-a-passo.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Preenchimento da DP para mínimo de moedas](../assets/images/paradigmas/programacao-dinamica/moedas-passo-a-passo.svg)
+![Preenchimento da DP para mínimo de moedas](../../assets/images/paradigmas/programacao-dinamica/moedas-passo-a-passo.svg)
 -->
 
 ## 5. A ordem de iteração muda a resposta
@@ -296,11 +296,11 @@ Criar uma comparação entre uma tabela de mochila 0/1 completa e um vetor unidi
 - Usar setas para mostrar que a ordem decrescente impede reutilizar o item atual.
 
 Arquivo sugerido:
-../assets/images/paradigmas/programacao-dinamica/mochila-ordem.svg
+../../assets/images/paradigmas/programacao-dinamica/mochila-ordem.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Ordem de atualização na mochila 0/1](../assets/images/paradigmas/programacao-dinamica/mochila-ordem.svg)
+![Ordem de atualização na mochila 0/1](../../assets/images/paradigmas/programacao-dinamica/mochila-ordem.svg)
 -->
 
 ## 8. Erros comuns

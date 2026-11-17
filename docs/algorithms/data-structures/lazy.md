@@ -90,11 +90,11 @@ Criar um SVG de uma árvore de segmentos para soma, destacando um nó que repres
 - Manter as folhas visualmente inalteradas, com uma observação de que receberão a atualização apenas se for necessário descer até elas.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/lazy-segtree/marca-pendente.svg
+../../assets/images/estruturas-de-dados/lazy-segtree/marca-pendente.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Marca pendente em uma lazy segtree](../assets/images/estruturas-de-dados/lazy-segtree/marca-pendente.svg)
+![Marca pendente em uma lazy segtree](../../assets/images/estruturas-de-dados/lazy-segtree/marca-pendente.svg)
 -->
 
 ## 3. As operações `apply` e `push`
@@ -176,11 +176,11 @@ Criar um SVG da atualização `add(2, 6, +5)` no vetor `[2, 1, 3, 4, 5, 2, 6, 1]
 - Mostrar a nova soma da raiz, `49`.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/lazy-segtree/atualizacao-de-intervalo.svg
+../../assets/images/estruturas-de-dados/lazy-segtree/atualizacao-de-intervalo.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Atualização de intervalo com lazy propagation](../assets/images/estruturas-de-dados/lazy-segtree/atualizacao-de-intervalo.svg)
+![Atualização de intervalo com lazy propagation](../../assets/images/estruturas-de-dados/lazy-segtree/atualizacao-de-intervalo.svg)
 -->
 
 ## 5. Implementação completa: range add e range sum
@@ -369,11 +369,11 @@ Criar um diagrama em três quadros para explicar `push`.
 3. Filhos recebem a marca, ficam `8` e `9`; pai mantém `sum = 17` e sua marca torna-se `0`.
 
 Arquivo sugerido:
-../assets/images/estruturas-de-dados/lazy-segtree/push.svg
+../../assets/images/estruturas-de-dados/lazy-segtree/push.svg
 
 Substituir este comentário pelo Markdown abaixo quando a imagem estiver disponível:
 
-![Propagando uma marca pendente para os filhos](../assets/images/estruturas-de-dados/lazy-segtree/push.svg)
+![Propagando uma marca pendente para os filhos](../../assets/images/estruturas-de-dados/lazy-segtree/push.svg)
 -->
 
 ## 7. Complexidade

@@ -8,4 +8,4 @@ A coloração de grafos é um problema em que se deseja atribuir cores aos vért
 
 Um grafo é chamado de bipartido se é possível colorir seus vértices com apenas duas cores, de forma que vértices adjacentes tenham cores diferentes. Grafos bipartidos têm propriedades especiais e são frequentemente usados em problemas de correspondência e fluxo.
 
-![](images/color.drawio.svg#center)
+![](../../assets/images/grafos/conceitos-basicos/color.drawio.svg#center)

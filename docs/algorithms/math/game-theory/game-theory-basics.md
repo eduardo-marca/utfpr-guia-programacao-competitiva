@@ -95,7 +95,7 @@ Normalmente se começa classificando os estados terminais do jogo, que são esta
 
 Abaixo um exemplo dos estados de um jogo representados por um grafo, onde estados perdedores estão em vermelho e estados vencedores estão em verde.
 
-![Grafo de Estados](images/states-graph.drawio.svg)
+![Grafo de Estados](../../../assets/images/matematica/teoria-dos-jogos/states-graph.drawio.svg)
 
 ### Jogo da Pilha
 
@@ -130,7 +130,7 @@ for(int i = 0; i <= size; i++) {
 
 Abaixo a representação do vetor de estados do jogo da pilha, com estados perdedores em vermelho e estados vencedores em verde.
 
-![Array de Estados](images/states-array.drawio.svg)
+![Array de Estados](../../../assets/images/matematica/teoria-dos-jogos/states-array.drawio.svg)
 
 !!! note "Nota"
     Uma outra forma de analisar o jogo da pilha é utilizando o conceito de módulo. Se o número máximo de objetos que podem ser removidos em uma jogada for `k`, então os estados do jogo podem ser classificados com base no valor do estado atual módulo `k + 1`. Se o estado atual for congruente a 0 módulo `k + 1`, então é um estado perdedor, caso contrário, é um estado vencedor.
