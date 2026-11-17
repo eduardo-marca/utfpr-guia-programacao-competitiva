@@ -106,13 +106,13 @@ nav:
       - STL: fundamentos/stl.md
   - Técnicas e Estruturas:
       - Técnicas:
-          #- Prefix Sum: tecnicas-estruturas/tecnicas/prefix-sum.md
+          - Prefix Sum: tecnicas-estruturas/tecnicas/prefix-sum.md
           - Two Pointers e Sliding Window: tecnicas-estruturas/tecnicas/two-pointers-sliding-window.md
           - Busca Binária: tecnicas-estruturas/tecnicas/busca-binaria.md
           - Busca Binária na Resposta: tecnicas-estruturas/tecnicas/binary-search-on-answer.md
           - Busca Completa: tecnicas-estruturas/tecnicas/complete-search.md
+          - Compressão de Coordenadas: tecnicas-estruturas/tecnicas/compressao-de-coordenadas.md
           - Algoritmos Gulosos: tecnicas-estruturas/tecnicas/greedy.md
-          #- Simulação: tecnicas-estruturas/tecnicas/simulation.md
       - Estruturas de Dados:
           - DSU: tecnicas-estruturas/estruturas/disjoint-set-union.md
           - Fenwick Tree: tecnicas-estruturas/estruturas/fenwick.md

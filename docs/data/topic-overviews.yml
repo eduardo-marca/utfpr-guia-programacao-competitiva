@@ -18,6 +18,12 @@ tecnicas-estruturas/tecnicas/prefix-sum.md:
   prerequisites: [vetores, laços]
   concepts: [consultas de intervalo, pré-processamento, somas acumuladas]
 
+tecnicas-estruturas/tecnicas/compressao-de-coordenadas.md:
+  summary: Converta valores esparsos em ranks compactos sem perder a ordem nem a igualdade entre eles.
+  difficulty: intermediate
+  prerequisites: [vetores, ordenação, busca binária]
+  concepts: [ranks, lower bound, upper bound, valores esparsos, Fenwick Tree]
+
 tecnicas-estruturas/tecnicas/two-pointers-sliding-window.md:
   summary: Mantenha um intervalo móvel para processar subarrays e substrings de forma linear.
   difficulty: intermediate

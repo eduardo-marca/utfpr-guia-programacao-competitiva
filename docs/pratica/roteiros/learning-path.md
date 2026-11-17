@@ -16,7 +16,6 @@ Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se
 1. [Busca Completa](../../tecnicas-estruturas/tecnicas/complete-search.md)
 2. [Busca Binária](../../tecnicas-estruturas/tecnicas/busca-binaria.md)
 3. [Algoritmos Gulosos](../../tecnicas-estruturas/tecnicas/greedy.md)
-4. [Simulação](../../tecnicas-estruturas/tecnicas/simulation.md)
 
 ## Módulo 3 - Estruturas de Dados Básicas
 
