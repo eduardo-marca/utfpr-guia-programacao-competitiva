@@ -43,7 +43,7 @@ $$
 $$
 
 $$
-\sum_{i=1}^{n} i^3=\left(\frac{n(n+1)}{2}\right)^2
+\sum_{i=1}^{n} i^3=\left(\frac{n(n+1)}{2}\right)^2=\left[ \sum_{i=1}^{n} i \right]^2
 $$
 
 Para uma progressão geométrica, quando `r ≠ 1`:

@@ -18,7 +18,7 @@
       platform: CSES
       difficulty: medium
       topics: [crivo, frequências, divisores]
-      objective: Inverta a perspectiva: percorra possíveis divisores em vez de pares de valores.
+      objective: Inverta a perspectiva, percorra possíveis divisores em vez de pares de valores.
 {% endset %}
 
 # Números primos e crivo

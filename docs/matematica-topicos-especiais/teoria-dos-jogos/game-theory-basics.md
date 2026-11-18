@@ -1,185 +1,109 @@
 {% set exercises %}
   recommended:
-    - name: Nim Game I
-      url: https://cses.fi/problemset/task/1730
-      platform: CSES
-      difficulty: easy
-      topics: [Nim, XOR]
-    - name: Nim Game II
-      url: https://cses.fi/problemset/task/1098
-      platform: CSES
-      difficulty: medium
-      topics: [Nim, XOR]
     - name: Stones
       url: https://atcoder.jp/contests/dp/tasks/dp_k
       platform: AtCoder
       difficulty: medium
-      topics: [jogos imparciais, programação dinâmica]
-    - name: Removal Game
-      url: https://cses.fi/problemset/task/1097
-      platform: CSES
-      difficulty: medium
-      topics: [jogos, programação dinâmica]
-    - name: Game on Tree
-      url: https://atcoder.jp/contests/agc017/tasks/agc017_d
-      platform: AtCoder
-      difficulty: hard
-      topics: [Nim, árvores]
+      topics: [estados vencedores, jogo da pilha, programação dinâmica]
+      objective: Classifique posições de uma pilha para um conjunto arbitrário de retiradas.
   additional:
     - name: Tree Tag
       url: https://codeforces.com/contest/1404/problem/B
       platform: Codeforces
       difficulty: medium
-      topics: [jogos, árvores]
-    - name: Game of Pairs
-      url: https://codeforces.com/contest/1404/problem/D
-      platform: Codeforces
-      difficulty: hard
-      topics: [jogos, grafos]
-    - name: Sagheer and Apple Tree
-      url: https://codeforces.com/contest/812/problem/E
-      platform: Codeforces
-      difficulty: hard
-      topics: [Nim, árvores]
-    - name: Game of Stones
-      url: https://codeforces.com/problemset/problem/768/E
-      platform: Codeforces
-      difficulty: hard
-      topics: [Sprague-Grundy]
-    - name: Arpa and a game with Mojtaba
-      url: https://codeforces.com/contest/850/problem/C
-      platform: Codeforces
-      difficulty: hard
-      topics: [Sprague-Grundy, fatoração]
-    - name: Interval Game 2
-      url: https://atcoder.jp/contests/abc206/tasks/abc206_f
-      platform: AtCoder
-      difficulty: hard
-      topics: [Sprague-Grundy, intervalos]
-    - name: Strange Nim
-      url: https://atcoder.jp/contests/arc091/tasks/arc091_d
-      platform: AtCoder
-      difficulty: hard
-      topics: [Nim, teoria dos jogos]
+      topics: [estratégia, árvores, distâncias]
+      objective: Decida o vencedor a partir de invariantes, em vez de simular turnos.
 {% endset %}
 
-# Introdução à Teoria dos Jogos
+# Fundamentos e análise de estados
 
-Teoria dos Jogos é um ramo da matemática que estuda estratégias em situações de conflito ou cooperação entre diferentes agentes racionais.
+Esta seção trata principalmente de jogos **finitos**, de **dois jogadores**, determinísticos, de informação perfeita e soma zero: o ganho de um jogador é a derrota do outro. Jogadores alternam turnos e ambos escolhem a melhor jogada possível.
 
-Em programação competitiva, a teoria dos jogos é frequentemente aplicada para resolver problemas que envolvem decisões estratégicas entre dois jogadores, como jogos de tabuleiro, jogos de cartas, e outros cenários onde os jogadores precisam tomar decisões baseadas nas ações dos outros.
+## 1. Classificando o jogo
 
-O objetivo geralmente é achar uma estratégia ótima para um jogador, considerando que o outro jogador também está tentando maximizar seu próprio resultado. A teoria dos jogos fornece ferramentas e conceitos para analisar essas situações e determinar as melhores estratégias possíveis.
+Um jogo é **imparcial** quando as jogadas disponíveis dependem apenas da posição, não de quem joga. Nim e jogos de retirar pedras são exemplos. Em um jogo **partidário**, cada jogador pode ter movimentos diferentes; ele exige ferramentas mais gerais.
 
-A grande maioria dos jogos vistos em problemas de programação competitiva envolvendo teoria dos jogos são jogos determinísticos (onde toda jogado possível é conhecida por ambos os jogadores em todo momento) e simétricos (onde as jogados independem do jogador atual). Esse tipo de problemas tem a vantagem de não terem elementos aleatórios e de sempre existir uma estratégia ótima que garante a vitória para algum jogador, tornando esses jogos ideais para problemas de programação.
+No jogo de **condição normal**, quem faz a última jogada vence. No jogo **misère**, quem faz a última jogada perde. A diferença parece pequena, mas altera os estados terminais e pode invalidar uma estratégia baseada em XOR.
 
-Alguns problemas envolvem apenas dizer se um certo estado do jogo é vencedor ou perdedor (isto é, se o jogador com o movimento tem uma estratégia que força a vitória ou não) enquanto outros podem envolver jogar o jogo em si com a melhor estratégia. Isso é mais comum em problemas iterativos.
+Também separe jogos de vitória/derrota de jogos de pontuação. Se o objetivo é terminar com mais pontos, veja [Jogos de Pontuação e Minimax](jogos-de-pontuacao.md), não apenas posições vencedoras.
 
-Como veremos, uma enorme quantidade de jogos podem ser resolvidos a partir de um jogo chamado *Jogo de Nim* e suas variações, mas primeiramente veremos alguns conceitos básicos da teoria dos jogos.
+## 2. Posições vencedoras e perdedoras
 
-## Análise de Estados
+Represente o jogo por um grafo dirigido: um nó é uma posição e uma aresta é uma jogada legal. Para jogos normais sem ciclos, usamos duas classes:
 
-Muitos jogos podem ser representados como uma árvore ou grafo de estados, onde cada nó representa um estado do jogo e as arestas representam as ações possíveis que os jogadores podem tomar. Cada estado pode ser classificado como:
+- **posição perdedora (P)**: o jogador da vez perde com jogo perfeito;
+- **posição vencedora (N)**: o jogador da vez possui uma jogada que força vitória.
 
-- **Estado Vencedor**: Um estado do jogo em que o jogador que está prestes a jogar tem uma estratégia que garante a vitória, independentemente das ações do adversário.
-- **Estado Perdedor**: Um estado do jogo em que o jogador que está prestes a jogar não tem uma estratégia que garanta a vitória, assumindo que o adversário jogue de forma ótima.
+As regras recursivas são a base de quase toda DP de jogos:
 
-O interessante é que é possível determinar a classificação de cada estado olhando apenas os estados que podem ser alcançados a partir dele. Se pelo menos um dos estados alcançáveis for um estado perdedor, então o estado atual é um estado vencedor, pois o jogador pode forçar o adversário a entrar em um estado perdedor. Por outro lado, se todos os estados alcançáveis forem estados vencedores, então o estado atual é um estado perdedor, pois o jogador não tem como evitar que o adversário vença.
+1. uma posição terminal é `P`, pois não há jogada;
+2. uma posição é `N` se possui ao menos uma transição para `P`;
+3. uma posição é `P` se todas as transições levam a `N`.
 
-Resumindo:
+Essas regras são também uma demonstração por indução na distância até o fim do jogo. Se existe um sucessor perdedor, escolha-o; se todos os sucessores são vencedores, o adversário sempre recebe uma posição favorável.
 
-- Um estado é **vencedor** se pelo menos um dos estados alcançáveis for **perdedor**.
-- Um estado é **perdedor** se todos os estados alcançáveis forem **vencedores**.
+![Grafo de estados com posições vencedoras e perdedoras](images/states-graph.drawio.svg)
 
-Normalmente se começa classificando os estados terminais do jogo, que são estados em que o jogo termina e não há mais movimentos possíveis e portando são estados perdedores. A partir desses estados terminais, é possível propagar a classificação para os estados anteriores na árvore de estados, até chegar ao estado inicial do jogo.
+!!! warning "Ciclos e empates"
+    A recorrência direta pressupõe que toda partida termina. Se movimentos podem repetir estados, o jogo pode ter empate e a classificação binária `P/N` deixa de ser suficiente. Problemas desse tipo exigem análise de grafos, retrograde analysis ou regras extras sobre repetição.
 
-Abaixo um exemplo dos estados de um jogo representados por um grafo, onde estados perdedores estão em vermelho e estados vencedores estão em verde.
+## 3. Jogo da pilha
 
-![Grafo de Estados](images/states-graph.drawio.svg)
-
-### Jogo da Pilha
-
-Um jogo clássico envolve uma pilha de objetos (geralmente gravetos ou pedras) e dois jogadores que se revezam removendo objetos da pilha. O jogador que remove o último objeto vence o jogo. O número de objetos que um jogador pode remover em sua vez é limitado a um número máximo, que é definido no início do jogo. A estratégia vencedora para este tipo de jogo pode ser determinada analisando os estados do jogo e aplicando a classificação de estados vencedores e perdedores.
-
-Por exemplo, considere um jogo com uma pilha de 10 objetos, onde cada jogador pode remover 1, 2 ou 3 objetos por vez. Podemos definir cada estado como o número de objetos restantes na pilha. O estado inicial é 10. A partir desse estado, os jogadores podem alcançar os estados 9, 8 ou 7. O estado 0 é um estado terminal (pois não existem mais movimentos possíveis) e, portanto, é um estado perdedor. A partir daí, podemos classificar os estados anteriores:
-
-- Os estados 1, 2 e 3 são estados vencedores, pois o jogador pode remover todos os objetos restantes e vencer, ou seja, ele pode alcançar o estado 0, que é perdedor.
-- O estado 4 é um estado perdedor, pois qualquer movimento leva a um estado vencedor (3, 2 ou 1).
-- Os estados 5, 6 e 7 são estados vencedores, pois o jogador pode alcançar o estado 4, que é perdedor.
-- O estado 8 é um estado perdedor, pois qualquer movimento leva a um estado vencedor (5, 6 ou 7).
-- Por fim, os estados 9 e 10 são estados vencedores, pois o jogador pode alcançar o estado 8, que é perdedor.
-
-Com a análise de estados, podemos determinar que o jogador que começa com 10 objetos tem uma estratégia vencedora, pois ele pode sempre forçar o adversário a entrar em um estado perdedor. Essa mesma análise pode ser aplicado a uma pilha de qualquer tamanho e com diferentes limites de objetos que podem ser removidos em cada jogada.
-
-Uma forma de implementar essa análise em código é utilizando [programação dinâmica](../../algoritmos/programacao-dinamica/dynamic-programming.md) para classificar os estados do jogo, onde utilizamos um array/vetor para armazenar se um estado é vencedor (1), perdedor (0) ou ainda não definido (-1):
+Em um jogo de retirada, há uma pilha com `s` pedras e, a cada turno, é permitido retirar uma quantidade de um conjunto `moves`. Para condição normal, `win[s]` é verdadeiro se existe uma retirada que deixa uma posição perdedora.
 
 ```cpp
-int size = 10; // tamanho da pilha
-int moves = 3; // a quantidade máxima de objetos que podem ser removidos por vez
+vector<char> winning_positions(int max_stones, const vector<int>& moves) {
+    vector<char> win(max_stones + 1, false); // win[0] = posição P
 
-vll dp(size + 1, -1);
-
-for(int i = 0; i <= size; i++) {
-    if(dp[i] != -1) continue;
-    dp[i] = 0; // se ainda não foi definido, então é um estado perdedor
-    for(int j = i+1; j <= i+moves; j++) {
-        dp[j] = 1; // se pode chegar a um estado perdedor, então é um estado vencedor
+    for (int stones = 1; stones <= max_stones; stones++) {
+        for (int take : moves) {
+            if (take <= stones && !win[stones - take]) {
+                win[stones] = true;
+                break;
+            }
+        }
     }
+    return win;
 }
 ```
 
-Abaixo a representação do vetor de estados do jogo da pilha, com estados perdedores em vermelho e estados vencedores em verde.
+Se `moves={1,3,4}`, os primeiros estados são:
 
-![Array de Estados](images/states-array.drawio.svg)
+| Pedras `s` | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Posição | P | N | P | N | N | N | N | P |
 
-!!! note "Nota"
-    Uma outra forma de analisar o jogo da pilha é utilizando o conceito de módulo. Se o número máximo de objetos que podem ser removidos em uma jogada for `k`, então os estados do jogo podem ser classificados com base no valor do estado atual módulo `k + 1`. Se o estado atual for congruente a 0 módulo `k + 1`, então é um estado perdedor, caso contrário, é um estado vencedor.
-    
-    Essa análise é mais eficiente do que a análise de estados, pois não requer a construção de uma árvore de estados completa, mas é menos geral do que a análise de estados, pois não se aplica a todos os jogos de pilha, apenas àqueles com um número máximo fixo de objetos que podem ser removidos em cada jogada.
+Para vencer, escolha uma retirada que alcance uma coluna `P`. A DP também registra a jogada escolhida se o problema pede a estratégia, não apenas o vencedor.
 
-A análise de estados pode ser utilizada em jogos onde existe um número finito de estados possíveis e os movimentos possíveis a partir de cada estado são conhecidos, porém em jogos mais complexos esta análise pode se mostrar muito complicada ou até mesmo inviável. Por isso esta técnica muita vezes é utilizada junto de outras técnicas ou como base para o entendimento delas. Porém ainda é muito útil conhecer essa análise, pois se aplica à muitos jogos e ajuda o entendimento de muitos outros conceitos de teoria dos jogos.
+## 4. Caso especial: retirar de 1 até k
 
-A seguir analisaremos o mesmo jogando envolvendo múltiplas pilhas de objetos, que é o caso do Jogo de Nim e suas variações.
+Quando todo valor de `1` a `k` pode ser retirado, as posições perdedoras são exatamente os múltiplos de `k+1`.
 
-## Jogo de Nim
+**Demonstração.** De um múltiplo de `k+1`, qualquer retirada entre `1` e `k` chega a um resto não nulo. De qualquer resto `r` entre `1` e `k`, retire `r` para chegar ao múltiplo anterior. Logo, por indução, múltiplos são `P` e os demais são `N`.
 
-O **Jogo de Nim** é um jogo matemático de estratégia para dois jogadores que envolve várias pilhas de objetos. Os jogadores se revezam removendo qualquer número de objetos de uma única pilha, e o jogador que remove o último objeto vence o jogo. Perceba que essa jogo é parecido com o jogo da pilha que vimos antes, mas com mais pilhas e menos restrição de movimentos.
+Em outras palavras, posições perdedoras são múltiplos de `k+1` e posições vencedoras são não múltiplos de `k+1`, pois se você estiver em uma posição que é múltiplo de `k+1`, qualquer jogada leva à uma posição que não é múltiplo de `k+1` (vencedora). E se você estiver em uma posição que não é múltiplo de `k+1`, você pode sempre jogar para um múltiplo de `k+1` (perdedora), garantindo a vitória.
 
-!!! tip "Dica"
-    Como veremos, muito outros jogos podem ser jogados da mesma forma que o Jogo de Nim, mesmo que a principio pareçam bem distintos. Por isso esse jogo é um dos mais importantes a serem estudados.
+Por exemplo , para `k = 3` e `n = 10`, as posições perdedoras e vencedoras são mostradas na figura abaixo. A estratégia vencedora é sempre deixar um múltiplo de `k+1` para o adversário.
 
-Nesse jogo, a análise de estados se torna mais complicada, pois cada estado tem que ser representado pelo conjunto de pilhas atuais, incluindo a quantidade de elementos em cada pilha, utilizando um vetor, por exemplo. Também é bem mais difícil criar as transições entre os estados. Por isso, o Jogo de Nim apresenta uma estratégia diferente para decidir se um estado é vencedor ou perdedor.
+![Estados de uma pilha como vetor](images/states-array.drawio.svg)
 
-### Estratégia
+Essa estratégia de deixar um múltiplo é um exemplo de **invariante modular**. Para um conjunto de retiradas arbitrário, entretanto, não assuma que existe um padrão simples: use a DP ou Grundy numbers.
 
-A estratégia para o jogo de Nim pode não parecer muito intuitiva a principio, por isso primeiro mostraremos a estratégia e como utiliza-la e depois mostraremos porque ela funciona.
+## 5. Estratégia como certificado
 
-Representamos o estado atual do jogo como um vetor $x=[x_1, x_2, \dots, x_n]$, onde $x_k$ representa o número de elementos na pilha $k$. Chamamos de **soma de nim** o XOR (ou exclusivo) de todas as pilhas, ou seja $s=x_1 \oplus x_2 \oplus \dots \oplus x_n$. Se $s$ for zero, o jogador que está prestes a jogar está em uma posição perdedora, caso contrário, ele está em uma posição vencedora. Assim podemos determinar se um estado é vencedor olhando apenas os tamanhos das pilhas.
+Saber que uma posição é `N` não basta para jogar. Para cada estado vencedor, guarde uma transição para um estado perdedor. Ao iniciar em `N`, escolha essa transição; depois de toda jogada adversária, a posição volta a ser `N` e o mesmo argumento se repete.
 
-### Explicação
+Esse padrão — achar uma posição ruim para o adversário e sempre devolvê-la — reaparece em Nim, Sprague–Grundy e jogos misère.
 
-Para mostrar que essa estratégia realmente funciona, iremos mostrar 3 coisas:
+<!-- AUXÍLIO VISUAL 1
 
-1. O estado final $[0, 0, \dots, 0]$ é um estado perdedor e tem $s=0$, como esperado.
-2. Em um estado com $s=0$, qualquer mudança em um único valor do vetor também altera o valor de $s$, o que torna $s\neq 0$, e portando sempre leva à um estado vencedor, que é o comportamento esperado de um estado perdedor.
-3. Por último, vamos provar que para um estado com $s \neq 0$ sempre é possível levar à um estado perdedor com $s=0$. Para isso, precisamos achar uma pilha $k$ com $x_k \oplus s < x_k$, pois podemos remover elementos da pilha $k$ até sobrarem $x_k \oplus s$ elementos na pilha, o que torna $s=0$. Sabemos que sempre existe uma pilha com esse propriedade pois sempre existe um $x_k$ que tem $1$ no bit na mesma posição do bit $1$ mais a esquerda (ou mais significativo) de $s$, o que torna $x_k \oplus s < x_k$ sempre.
+Criar uma linha de posições 0 a 10 para moves={1,3,4}, com setas para movimentos legais e cores para P/N. Destacar a estratégia de sempre apontar para uma posição P.
 
-!!! note "Nota"
-    Escolher diminuir $x_k$ para $x_k \oplus s$ torna a nova soma de nim igual zero pois o XOR de todos os elementos exceto $x_k$ pode ser escrito como $x_1 \oplus x_2 \oplus \dots \oplus x_n \oplus x_k=s \oplus x_k$ (relembre as propriedades do XOR), e então a nova soma de nim se torna $s\oplus x_k \oplus x_k \oplus s=0$.
+Arquivo sugerido: images/jogo-da-pilha.svg
+-->
 
-!!! note "Nota"
-    Sempre existe $x_k > x_k \oplus s$ pois se pegarmos a posição do bit $1$ mais à esquerda ou significativo de $s$, deve haver um $x_k$ com bit $1$ nesta mesma posição, pois caso contrário o próprio $s$ não poderia ter um bit $1$ naquela posição, pois é o XOR de todos os $x_k$.
-    
-    E esse $x_k \oplus s$ será menor que o próprio $x_k$ pois ele terá o bit $1$ naquela posição removida e não terá nenhum bit acrescentado em um posição mais à esquerda (pois aquele já era o bit mais à esquerda de $s$), e mesmo que todos os bits menos significativos que esse sejam trocados de $0$ para $1$, aquele bit sozinho tem valor maior que todos esses outros bits somados (lembre das propriedades dos números binários), logo o valor tem que diminuir.
-
-Ou seja, nessa estratégia, estados vencedores sempre podem levar à estados perdedores e estados perdedores só podem levar à estados vencedores, o que condiz com a análise de estados esperada.
+O próximo passo é [Nim](nim.md), onde muitas pilhas são resolvidas sem explorar todo o produto cartesiano de estados.
 
 ## Problemas
 
 {{ exercise_list(exercises) }}
-
-## Outros Recursos
-- [Geeks For Geeks](https://www.geeksforgeeks.org/dsa/game-theory/)
-- [USACO Guide](https://usaco.guide/adv/game-theory?lang=cpp)
-- [Geeks For Geeks - Practice Problems](https://www.geeksforgeeks.org/dsa/practice-problems-on-game-theory/)
-- [Codeforces Blog](https://codeforces.com/blog/entry/66040)

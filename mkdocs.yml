@@ -176,10 +176,14 @@ nav:
           - Números de Catalan: matematica-topicos-especiais/combinatoria/catalan.md
       - Geometria: matematica-topicos-especiais/geometria/geometry-basics.md
       - Teoria dos jogos:
-          - Fundamentos: matematica-topicos-especiais/teoria-dos-jogos/game-theory-basics.md
-          - Misère: matematica-topicos-especiais/teoria-dos-jogos/misere-games.md
-          - Sprague-Grundy: matematica-topicos-especiais/teoria-dos-jogos/sprague-grundy-theorem.md
-          - Outros jogos: matematica-topicos-especiais/teoria-dos-jogos/other-games.md
+          - Visão geral: matematica-topicos-especiais/teoria-dos-jogos/index.md
+          - Fundamentos e análise de estados: matematica-topicos-especiais/teoria-dos-jogos/game-theory-basics.md
+          - Jogo de Nim: matematica-topicos-especiais/teoria-dos-jogos/nim.md
+          - Números de Grundy: matematica-topicos-especiais/teoria-dos-jogos/grundy-numbers.md
+          - Teorema de Sprague-Grundy: matematica-topicos-especiais/teoria-dos-jogos/sprague-grundy-theorem.md
+          - Jogos misère: matematica-topicos-especiais/teoria-dos-jogos/misere-games.md
+          - Jogos clássicos: matematica-topicos-especiais/teoria-dos-jogos/other-games.md
+          - Jogos de pontuação e minimax: matematica-topicos-especiais/teoria-dos-jogos/jogos-de-pontuacao.md
   - Prática:
       - Trilha de aprendizagem: pratica/roteiros/learning-path.md
   - Contribuir:

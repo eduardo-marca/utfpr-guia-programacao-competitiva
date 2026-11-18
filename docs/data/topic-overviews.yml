@@ -301,28 +301,46 @@ matematica-topicos-especiais/combinatoria/pigeonhole.md:
   concepts: [casa dos pombos, colisões, restos módulo, prova de existência]
 
 matematica-topicos-especiais/teoria-dos-jogos/game-theory-basics.md:
-  summary: Analise jogos imparciais para decidir quais posições são vencedoras ou perdedoras.
-  difficulty: intermediate
+  summary: Classifique estados vencedores e perdedores e modele jogos de retirada com DP.
+  difficulty: beginner
   prerequisites: [recursão, programação dinâmica básica]
-  concepts: [Nim, estados vencedores, jogos imparciais]
+  concepts: [posições P e N, grafo de estados, jogo da pilha, invariante]
+
+matematica-topicos-especiais/teoria-dos-jogos/nim.md:
+  summary: Use nim-sum e XOR para decidir Nim e construir uma jogada vencedora.
+  difficulty: intermediate
+  prerequisites: [operações bit a bit, estados vencedores]
+  concepts: [Nim, XOR, nim-sum, estratégia vencedora]
+
+matematica-topicos-especiais/teoria-dos-jogos/grundy-numbers.md:
+  summary: Calcule valores mex para reduzir posições imparciais a pilhas equivalentes de Nim.
+  difficulty: intermediate
+  prerequisites: [estados vencedores, programação dinâmica]
+  concepts: [Grundy number, mex, memoização, jogos de retirada]
 
 matematica-topicos-especiais/teoria-dos-jogos/misere-games.md:
-  summary: Resolva a variação de jogos em que realizar a última jogada é uma condição de derrota.
+  summary: Analise a última jogada perdedora e aplique corretamente a exceção de misère Nim.
   difficulty: intermediate
   prerequisites: [teoria dos jogos básica, Nim]
-  concepts: [misère, posições vencedoras, estratégia]
+  concepts: [misère, misère Nim, posições vencedoras, estratégia]
 
 matematica-topicos-especiais/teoria-dos-jogos/other-games.md:
-  summary: Conheça jogos combinatórios clássicos e as ideias usadas para analisar suas posições.
+  summary: Modele Kayles, Chomp, Wythoff e Green Hackenbush com as ferramentas adequadas.
   difficulty: advanced
-  prerequisites: [teoria dos jogos básica, recursão]
+  prerequisites: [Grundy, Sprague-Grundy, recursão]
   concepts: [Kayles, Chomp, Wythoff, Hackenbush]
 
 matematica-topicos-especiais/teoria-dos-jogos/sprague-grundy-theorem.md:
-  summary: Transforme jogos imparciais em pilhas de Nim para combinar subproblemas independentes.
+  summary: Combine subgames imparciais independentes por XOR de seus Grundy numbers.
   difficulty: advanced
-  prerequisites: [teoria dos jogos básica, programação dinâmica]
+  prerequisites: [Nim, Grundy, programação dinâmica]
   concepts: [Sprague-Grundy, mex, Nim-sum]
+
+matematica-topicos-especiais/teoria-dos-jogos/jogos-de-pontuacao.md:
+  summary: Use minimax e diferença de pontuação quando o objetivo não é apenas fazer a última jogada.
+  difficulty: intermediate
+  prerequisites: [programação dinâmica, recursão]
+  concepts: [minimax, negamax, DP de intervalos, diferença de pontuação]
 
 matematica-topicos-especiais/geometria/geometry-basics.md:
   summary: Modele pontos, retas e figuras para resolver problemas geométricos com precisão numérica.
