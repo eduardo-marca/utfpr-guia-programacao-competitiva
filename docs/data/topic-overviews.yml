@@ -198,11 +198,47 @@ matematica-topicos-especiais/teoria-dos-numeros/number-theory-basics.md:
   prerequisites: [operações com inteiros]
   concepts: [primos, MDC, MMC, fatoração]
 
-matematica-topicos-especiais/combinatoria/combinatorics-basics.md:
-  summary: Conte escolhas e arranjos usando fórmulas combinatórias fundamentais.
+matematica-topicos-especiais/combinatoria/permutacoes-combinacoes.md:
+  summary: Conte ordenações, escolhas e distribuições observando ordem, repetição e posições fixas.
   difficulty: intermediate
-  prerequisites: [aritmética modular, operações com inteiros]
-  concepts: [fatorial, binomial, permutações, combinações]
+  prerequisites: [princípios de contagem, operações com inteiros]
+  concepts: [fatorial, arranjos, combinações, stars and bars, derangements]
+
+matematica-topicos-especiais/combinatoria/principios-de-contagem.md:
+  summary: Decomponha escolhas em etapas e casos para contar sem enumerar todas as possibilidades.
+  difficulty: beginner
+  prerequisites: [operações com inteiros]
+  concepts: [regra do produto, regra da soma, complemento, casos disjuntos]
+
+matematica-topicos-especiais/combinatoria/binomial-modular.md:
+  summary: Responda combinações grandes sob módulo primo com fatoriais e inversos pré-calculados.
+  difficulty: intermediate
+  prerequisites: [combinações, aritmética modular, exponenciação rápida]
+  concepts: [fatorial modular, inverso modular, pequeno teorema de Fermat, binomial]
+
+matematica-topicos-especiais/combinatoria/coeficientes-binomial.md:
+  summary: Aplique propriedades dos binomiais, Pascal e multinomiais em contagens e strings.
+  difficulty: intermediate
+  prerequisites: [combinações, fatorial]
+  concepts: [triângulo de Pascal, teorema binomial, multinomial, identidade de Vandermonde]
+
+matematica-topicos-especiais/combinatoria/catalan.md:
+  summary: Reconheça estruturas balanceadas contadas pelos números de Catalan e calcule-as sob módulo.
+  difficulty: advanced
+  prerequisites: [coeficientes binomiais, aritmética modular]
+  concepts: [Catalan, parênteses balanceados, caminhos de grade, árvores binárias]
+
+matematica-topicos-especiais/combinatoria/inclusao-exclusao.md:
+  summary: Conte uniões de conjuntos sobrepostos alternando interseções de diferentes tamanhos.
+  difficulty: intermediate
+  prerequisites: [princípios de contagem, máscaras de bits]
+  concepts: [união de conjuntos, interseção, complemento, MMC]
+
+matematica-topicos-especiais/combinatoria/pigeonhole.md:
+  summary: Demonstre que uma repetição é inevitável ao distribuir mais objetos que categorias.
+  difficulty: beginner
+  prerequisites: [princípios de contagem]
+  concepts: [casa dos pombos, colisões, restos módulo, prova de existência]
 
 matematica-topicos-especiais/teoria-dos-jogos/game-theory-basics.md:
   summary: Analise jogos imparciais para decidir quais posições são vencedoras ou perdedoras.

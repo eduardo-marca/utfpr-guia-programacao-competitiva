@@ -78,11 +78,7 @@ constexpr int MOD = 1e9 + 7; // Modulo precisa ser primo
 
 // pode ser otimizado com dp
 int inv(int a) {
-<<<<<<< HEAD
     return a <= 1 ? a : MOD - (long long)(MOD/a) * inv(MOD % a) % MOD;
-=======
-  return a <= 1 ? a : MOD - (long long)(MOD/a) * inv(MOD % a) % MOD;
->>>>>>> d6097e07ba246c603bea2ea37c8c6f8c99924f47
 }
 ```
 
