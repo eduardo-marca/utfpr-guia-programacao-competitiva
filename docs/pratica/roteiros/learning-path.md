@@ -26,7 +26,7 @@ Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se
 1. [Programação Dinâmica](../../algoritmos/programacao-dinamica/dynamic-programming.md)
 
 ## Módulo 6 - Matemática Básica
-1. [Teoria dos Números](../../matematica-topicos-especiais/teoria-dos-numeros/number-theory-basics.md)
+1. [Teoria dos Números](../../matematica-topicos-especiais/teoria-dos-numeros/index.md)
 2. [Combinatória](../../matematica-topicos-especiais/combinatoria/index.md)
 3. [Geometria](../../matematica-topicos-especiais/geometria/geometry-basics.md)
 

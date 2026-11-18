@@ -187,16 +187,76 @@ algoritmos/grafos/lca.md:
   concepts: [LCA, binary lifting, ancestral]
 
 matematica-topicos-especiais/teoria-dos-numeros/modular-arithmetic.md:
-  summary: Trabalhe com restos de divisões para calcular expressões grandes e resolver congruências.
+  summary: Calcule com restos, exponenciação rápida e os teoremas de Fermat e Euler.
   difficulty: beginner
   prerequisites: [operações com inteiros]
-  concepts: [módulo, congruências, inverso modular]
+  concepts: [módulo, congruências, exponenciação binária, pequeno teorema de Fermat]
 
 matematica-topicos-especiais/teoria-dos-numeros/number-theory-basics.md:
-  summary: Use propriedades de números inteiros para lidar com primos, divisores e fatorações.
+  summary: Aplique fórmulas de somatórios, progressões e agrupamento por quociente.
   difficulty: beginner
   prerequisites: [operações com inteiros]
-  concepts: [primos, MDC, MMC, fatoração]
+  concepts: [progressão aritmética, progressão geométrica, somatórios, floor division]
+
+matematica-topicos-especiais/teoria-dos-numeros/primos-e-crivo.md:
+  summary: Teste primalidade e pré-calcule primos ou fatores primos mínimos com crivos.
+  difficulty: beginner
+  prerequisites: [divisibilidade, operações com inteiros]
+  concepts: [números primos, crivo de Eratóstenes, SPF, fatoração]
+
+matematica-topicos-especiais/teoria-dos-numeros/fatoracao-e-divisores.md:
+  summary: Derive número, soma e produto dos divisores a partir da fatoração prima.
+  difficulty: intermediate
+  prerequisites: [números primos, fatoração]
+  concepts: [divisores, função tau, função sigma, número perfeito]
+
+matematica-topicos-especiais/teoria-dos-numeros/mdc-mmc.md:
+  summary: Calcule MDC e MMC com Euclides e reconheça suas propriedades de divisibilidade.
+  difficulty: beginner
+  prerequisites: [divisibilidade]
+  concepts: [MDC, MMC, algoritmo de Euclides, coprimalidade]
+
+matematica-topicos-especiais/teoria-dos-numeros/euclides-estendido.md:
+  summary: Encontre coeficientes de Bézout para resolver equações lineares e inversos modulares.
+  difficulty: intermediate
+  prerequisites: [MDC, algoritmo de Euclides]
+  concepts: [Euclides estendido, Bézout, diofantina linear, inverso modular]
+
+matematica-topicos-especiais/teoria-dos-numeros/totiente-euler.md:
+  summary: Conte resíduos coprimos e use a função totiente na redução de expoentes.
+  difficulty: intermediate
+  prerequisites: [fatoração, coprimalidade]
+  concepts: [totiente de Euler, função multiplicativa, crivo de totientes, teorema de Euler]
+
+matematica-topicos-especiais/teoria-dos-numeros/equacoes-diofantinas.md:
+  summary: Determine e descreva as soluções inteiras de equações e congruências lineares.
+  difficulty: intermediate
+  prerequisites: [MDC, Euclides estendido]
+  concepts: [equação diofantina, congruência linear, solução geral, divisibilidade]
+
+matematica-topicos-especiais/teoria-dos-numeros/divisibilidade.md:
+  summary: Use critérios decimais e restos acumulados para testar divisibilidade, inclusive em strings grandes.
+  difficulty: beginner
+  prerequisites: [operações com inteiros]
+  concepts: [divisibilidade, soma de dígitos, strings, aritmética modular]
+
+matematica-topicos-especiais/teoria-dos-numeros/fibonacci-e-resultados-classicos.md:
+  summary: Acelere Fibonacci e reconheça decomposições, teoremas de quadrados e triplas pitagóricas.
+  difficulty: intermediate
+  prerequisites: [recorrências, MDC, aritmética modular]
+  concepts: [Fibonacci, fast doubling, Zeckendorf, Wilson, triplas pitagóricas]
+
+matematica-topicos-especiais/teoria-dos-numeros/inverso-modular.md:
+  summary: Faça divisões sob módulo com inversos por Euclides, Fermat e pré-cálculo linear.
+  difficulty: intermediate
+  prerequisites: [MDC, Euclides estendido, aritmética modular]
+  concepts: [inverso modular, pequeno teorema de Fermat, divisão modular, fatoriais inversos]
+
+matematica-topicos-especiais/teoria-dos-numeros/sistemas-de-congruencias.md:
+  summary: Combine restrições de restos compatíveis com o Teorema Chinês do Resto.
+  difficulty: advanced
+  prerequisites: [MDC, Euclides estendido, inverso modular]
+  concepts: [CRT, sistemas de congruências, MMC, módulos coprimos]
 
 matematica-topicos-especiais/combinatoria/permutacoes-combinacoes.md:
   summary: Conte ordenações, escolhas e distribuições observando ordem, repetição e posições fixas.

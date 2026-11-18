@@ -152,8 +152,19 @@ nav:
         - KMP: algoritmos/strings/kmp.md
   - Matemática e tópicos avançados:
       - Teoria dos números:
-          - Fundamentos: matematica-topicos-especiais/teoria-dos-numeros/number-theory-basics.md
+          - Visão geral: matematica-topicos-especiais/teoria-dos-numeros/index.md
+          - Fundamentos e identidades: matematica-topicos-especiais/teoria-dos-numeros/number-theory-basics.md
+          - Números primos e crivo: matematica-topicos-especiais/teoria-dos-numeros/primos-e-crivo.md
+          - Fatoração e divisores: matematica-topicos-especiais/teoria-dos-numeros/fatoracao-e-divisores.md
+          - MDC e MMC: matematica-topicos-especiais/teoria-dos-numeros/mdc-mmc.md
+          - Euclides estendido: matematica-topicos-especiais/teoria-dos-numeros/euclides-estendido.md
+          - Totiente de Euler: matematica-topicos-especiais/teoria-dos-numeros/totiente-euler.md
+          - Equações inteiras: matematica-topicos-especiais/teoria-dos-numeros/equacoes-diofantinas.md
+          - Critérios de divisibilidade: matematica-topicos-especiais/teoria-dos-numeros/divisibilidade.md
+          - Fibonacci e resultados clássicos: matematica-topicos-especiais/teoria-dos-numeros/fibonacci-e-resultados-classicos.md
           - Aritmética modular: matematica-topicos-especiais/teoria-dos-numeros/modular-arithmetic.md
+          - Inverso modular: matematica-topicos-especiais/teoria-dos-numeros/inverso-modular.md
+          - Sistemas de congruências e CRT: matematica-topicos-especiais/teoria-dos-numeros/sistemas-de-congruencias.md
       - Combinatória:
           - Visão geral: matematica-topicos-especiais/combinatoria/index.md
           - Princípios de contagem: matematica-topicos-especiais/combinatoria/principios-de-contagem.md
