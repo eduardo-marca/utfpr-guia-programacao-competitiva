@@ -77,10 +77,10 @@ O sinal do numerador decide em qual semiespaço `P` está.
 
 | Objeto | Medida |
 |---|---|
-| Paralelogramo com lados `a,b` | $|a\times b|$ |
-| Triângulo `ABC` | $|(B-A)\times(C-A)|/2$ |
-| Paralelepípedo `a,b,c` | $|(a\times b)\cdot c|$ |
-| Tetraedro `ABCD` | $|((B-A)\times(C-A))\cdot(D-A)|/6$ |
+| Paralelogramo com lados `a,b` | $\|a\times b\|$ |
+| Triângulo `ABC` | $\|(B-A)\times(C-A)\|/2$ |
+| Paralelepípedo `a,b,c` | $\|(a\times b)\cdot c\|$ |
+| Tetraedro `ABCD` | $\|((B-A)\times(C-A))\cdot(D-A)\|/6$ |
 | Esfera de raio `r` | volume $4\pi r^3/3$, área $4\pi r^2$ |
 | Cilindro de raio `r`, altura `h` | volume $\pi r^2h$ |
 | Cone de raio `r`, altura `h` | volume $\pi r^2h/3$ |

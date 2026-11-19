@@ -1,18 +1,18 @@
 {% set exercises %}
   recommended:
-    - name: Minimum Euclidean Distance
-      url: https://cses.fi/problemset/task/2194
-      platform: CSES
-      difficulty: hard
-      topics: [distância, pares de pontos, sweep line]
-      objective: Encontre um par mais próximo sem enumerar todos os pares.
-  additional:
     - name: Point Location Test
       url: https://cses.fi/problemset/task/2189
       platform: CSES
       difficulty: easy
       topics: [distância, produto vetorial]
       objective: Relacione área orientada e distância à reta.
+  additional:
+    - name: Minimum Euclidean Distance
+      url: https://cses.fi/problemset/task/2194
+      platform: CSES
+      difficulty: hard
+      topics: [distância, pares de pontos, sweep line]
+      objective: Encontre um par mais próximo sem enumerar todos os pares.
 {% endset %}
 
 # Distâncias, projeções e reflexões
@@ -26,8 +26,8 @@ Para `A=(x₁,y₁)` e `B=(x₂,y₂)`:
 | Métrica | Fórmula | Uso típico |
 |---|---|---|
 | Euclidiana ao quadrado | $(x_1-x_2)^2+(y_1-y_2)^2$ | distância geométrica, par mais próximo |
-| Manhattan | $|x_1-x_2|+|y_1-y_2|$ | movimentos em grade ortogonal |
-| Chebyshev | $\max(|x_1-x_2|,|y_1-y_2|)$ | movimentos em oito direções |
+| Manhattan | $\|x_1-x_2\|+\|y_1-y_2\|$ | movimentos em grade ortogonal |
+| Chebyshev | $\max(\|x_1-x_2\|,\|y_1-y_2\|)$ | movimentos em oito direções |
 
 Uma rotação de 45 graus relaciona Manhattan e Chebyshev: com `u=x+y` e `v=x-y`, várias consultas de Manhattan se tornam comparações de máximos e mínimos em novas coordenadas.
 

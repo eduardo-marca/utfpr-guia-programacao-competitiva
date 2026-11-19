@@ -41,9 +41,9 @@ Se `d` é a distância entre centros:
 |---|---|
 | $d>r_1+r_2$ | separados externamente |
 | $d=r_1+r_2$ | tangentes externamente |
-| $|r_1-r_2|<d<r_1+r_2$ | duas interseções |
-| $d=|r_1-r_2|$ | tangentes internamente |
-| $d<|r_1-r_2|$ | um dentro do outro, sem interseção |
+| $\|r_1-r_2\|<d<r_1+r_2$ | duas interseções |
+| $d=\|r_1-r_2\|$ | tangentes internamente |
+| $d<\|r_1-r_2\|$ | um dentro do outro, sem interseção |
 
 Centros iguais exigem um caso separado: raios diferentes não intersectam; raios iguais representam o mesmo círculo e possuem infinitos pontos em comum.
 
