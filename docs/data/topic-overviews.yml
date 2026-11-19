@@ -343,10 +343,70 @@ matematica-topicos-especiais/teoria-dos-jogos/jogos-de-pontuacao.md:
   concepts: [minimax, negamax, DP de intervalos, diferença de pontuação]
 
 matematica-topicos-especiais/geometria/geometry-basics.md:
-  summary: Modele pontos, retas e figuras para resolver problemas geométricos com precisão numérica.
+  summary: Escolha representações, tipos numéricos e tolerâncias seguras para problemas geométricos.
+  difficulty: beginner
+  prerequisites: [operações com ponto flutuante]
+  concepts: [pontos, vetores, EPS, precisão numérica]
+
+matematica-topicos-especiais/geometria/pontos-vetores.md:
+  summary: Modele posições e deslocamentos com operações, rotações e ordenação angular.
+  difficulty: beginner
+  prerequisites: [coordenadas cartesianas, operações com ponto flutuante]
+  concepts: [pontos, vetores, norma, rotação, ordem polar]
+
+matematica-topicos-especiais/geometria/produto-escalar-vetorial.md:
+  summary: Use dot e cross product para ângulos, projeções, áreas e orientação.
   difficulty: intermediate
-  prerequisites: [geometria plana, operações com ponto flutuante]
-  concepts: [pontos, vetores, orientação, EPS]
+  prerequisites: [pontos, vetores]
+  concepts: [produto escalar, produto vetorial, projeção, orientação]
+
+matematica-topicos-especiais/geometria/distancias.md:
+  summary: Calcule distâncias, projeções e relações entre pontos, retas e segmentos.
+  difficulty: intermediate
+  prerequisites: [pontos, vetores, produto escalar]
+  concepts: [distância euclidiana, Manhattan, projeção, ponto-segmento]
+
+matematica-topicos-especiais/geometria/orientacao-e-intersecao.md:
+  summary: Decida lados, colinearidade e interseções de retas ou segmentos com predicados robustos.
+  difficulty: intermediate
+  prerequisites: [produto vetorial, coordenadas inteiras]
+  concepts: [orientação, segmentos, retas, interseção, __int128]
+
+matematica-topicos-especiais/geometria/poligonos-e-areas.md:
+  summary: Calcule áreas, orientação, perímetros e pontos de grade de polígonos simples.
+  difficulty: intermediate
+  prerequisites: [produto vetorial, MDC]
+  concepts: [shoelace, teorema de Pick, centroide, clipping]
+
+matematica-topicos-especiais/geometria/point-in-polygon.md:
+  summary: Classifique consultas em polígonos gerais ou convexos, inclusive na fronteira.
+  difficulty: intermediate
+  prerequisites: [orientação, segmentos, polígonos]
+  concepts: [ray casting, winding number, ponto no polígono, busca binária]
+
+matematica-topicos-especiais/geometria/convex-hull.md:
+  summary: Construa a envoltória convexa e use suas propriedades para consultas e extremos geométricos.
+  difficulty: advanced
+  prerequisites: [orientação, ordenação, polígonos]
+  concepts: [convex hull, monotonic chain, rotating calipers, Minkowski]
+
+matematica-topicos-especiais/geometria/geometria-circulos.md:
+  summary: Modele círculos, relações métricas, tangências e interseções com retas ou outros círculos.
+  difficulty: intermediate
+  prerequisites: [distâncias, projeção, ponto flutuante]
+  concepts: [círculos, tangência, interseção, potência de um ponto]
+
+matematica-topicos-especiais/geometria/sweep-line.md:
+  summary: Processe eventos geométricos ordenados para pares próximos, cruzamentos e cobertura.
+  difficulty: advanced
+  prerequisites: [ordenação, distâncias, segmentos]
+  concepts: [sweep line, eventos, conjunto ativo, par mais próximo]
+
+matematica-topicos-especiais/geometria/geometria-espacial.md:
+  summary: Trabalhe com pontos, planos, volumes e produtos vetoriais em três dimensões.
+  difficulty: intermediate
+  prerequisites: [pontos, produto escalar, produto vetorial]
+  concepts: [3D, planos, produto misto, tetraedro, volumes]
 
 tecnicas-estruturas/tecnicas/complete-search.md:
   summary: Enumere possibilidades de forma organizada quando o espaço de busca é pequeno o suficiente.

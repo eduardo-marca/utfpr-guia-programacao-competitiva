@@ -174,7 +174,19 @@ nav:
           - Princípio da casa dos pombos: matematica-topicos-especiais/combinatoria/pigeonhole.md
           - Inclusão-exclusão: matematica-topicos-especiais/combinatoria/inclusao-exclusao.md
           - Números de Catalan: matematica-topicos-especiais/combinatoria/catalan.md
-      - Geometria: matematica-topicos-especiais/geometria/geometry-basics.md
+      - Geometria:
+          - Visão geral: matematica-topicos-especiais/geometria/index.md
+          - Fundamentos e precisão: matematica-topicos-especiais/geometria/geometry-basics.md
+          - Pontos e vetores: matematica-topicos-especiais/geometria/pontos-vetores.md
+          - Produtos escalar e vetorial: matematica-topicos-especiais/geometria/produto-escalar-vetorial.md
+          - Distâncias e projeções: matematica-topicos-especiais/geometria/distancias.md
+          - Retas, orientação e interseções: matematica-topicos-especiais/geometria/orientacao-e-intersecao.md
+          - Polígonos, áreas e pontos de grade: matematica-topicos-especiais/geometria/poligonos-e-areas.md
+          - Localização de pontos: matematica-topicos-especiais/geometria/point-in-polygon.md
+          - Convex hull e aplicações: matematica-topicos-especiais/geometria/convex-hull.md
+          - Círculos: matematica-topicos-especiais/geometria/geometria-circulos.md
+          - Sweep line e pares próximos: matematica-topicos-especiais/geometria/sweep-line.md
+          - Geometria espacial: matematica-topicos-especiais/geometria/geometria-espacial.md
       - Teoria dos jogos:
           - Visão geral: matematica-topicos-especiais/teoria-dos-jogos/index.md
           - Fundamentos e análise de estados: matematica-topicos-especiais/teoria-dos-jogos/game-theory-basics.md

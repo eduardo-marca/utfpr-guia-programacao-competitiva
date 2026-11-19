@@ -28,7 +28,7 @@ Essa trilha de aprendizagem apresenta uma ordem mais natural e didática para se
 ## Módulo 6 - Matemática Básica
 1. [Teoria dos Números](../../matematica-topicos-especiais/teoria-dos-numeros/index.md)
 2. [Combinatória](../../matematica-topicos-especiais/combinatoria/index.md)
-3. [Geometria](../../matematica-topicos-especiais/geometria/geometry-basics.md)
+3. [Geometria](../../matematica-topicos-especiais/geometria/index.md)
 
 ## Módulo 7 - Estruturas de Dados Avançadas
 
